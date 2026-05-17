@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Classes - AEC Assemble Education Community</title>
+    
+    <meta name="title" content="Classes - AEC Assemble Education Community">
+    <meta name="description" content="Browse our class offerings at Assemble Education Community. Academic programs for all grade levels starting 2026.">
+    <meta name="keywords" content="AEC, classes, courses, Yangon, Myanmar, education, enrollment, 2026">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: {
+                    neutral: {
+                        50: '#f8f9fa', 100: '#f1f3f5', 200: '#e9ecef', 300: '#dee2e6',
+                        400: '#ced4da', 500: '#adb5bd', 600: '#6c757d', 700: '#495057',
+                        800: '#343a40', 900: '#212529'
+                    },
+                    primary: {
+                        50: '#f0f7f4', 100: '#d9e9e0', 200: '#b8d4c7', 300: '#8fb8a5',
+                        400: '#5f957d', 500: '#407a61', 600: '#1b4332', 700: '#0d2f22',
+                        800: '#0a261c', 900: '#051f16'
+                    },
+                    accent: { gold: '#D4AF37', terracotta: '#BC6C25', cream: '#fffcf2' }
+                }
+            }
+        }
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #e9ecef; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes fadeOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(20px); } }
+        @keyframes searchPulse {
+            0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: scale(1); }
+            50% { box-shadow: 0 8px 25px rgba(27, 67, 50, 0.4); transform: scale(1.05); }
+        }
+        
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+        
+        .class-card { transition: all 0.3s ease; }
+        .class-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(27, 67, 50, 0.15); }
+        
+        .discount-badge { 
+            background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);
+            animation: pulse 2s infinite;
+        }
+        
+        .btn-primary { 
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); 
+            transition: all 0.3s ease; 
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(27, 67, 50, 0.3); }
+        
+        .btn-accent { 
+            background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%); 
+            transition: all 0.3s ease; 
+        }
+        .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(188, 108, 37, 0.3); }
+        
+        .filter-btn { transition: all 0.3s ease; }
+        .filter-btn.active { 
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); 
+            color: white; 
+            border-color: transparent;
+        }
+        
+        .search-panel {
+            position: fixed;
+            top: 5rem;
+            right: 2rem;
+            z-index: 99;
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border: 2px solid #e5e7eb;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            width: 380px;
+        }
+        .search-panel.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+        
+        .search-btn {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .search-btn svg {
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .search-btn:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 8px 25px rgba(27, 67, 50, 0.4);
+            border-color: #1b4332;
+            animation: searchPulse 2s ease-in-out infinite;
+        }
+        .search-btn:hover svg {
+            transform: scale(1.2) rotate(-10deg);
+            color: #1b4332;
+        }
+        .search-btn.active {
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            border-color: #1b4332;
+            color: white;
+            animation: searchPulse 2s ease-in-out infinite;
+        }
+        .search-btn.active svg {
+            transform: rotate(90deg) scale(1.1);
+            color: white;
+        }
+        .search-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(27, 67, 50, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        .search-btn:active::before {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .modal-content {
+            background: white;
+            border-radius: 2rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+            position: relative;
+        }
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .modal-close:hover {
+            background: #f3f4f6;
+            transform: rotate(90deg);
+        }
+        
+        @media (max-width: 768px) {
+            a, button { min-height: 44px; min-width: 44px; }
+            body { font-size: 16px; }
+            .search-panel { width: calc(100% - 2rem); right: 1rem; }
+        }
+    </style>
+</head>
+<body class="bg-neutral-200">
+
+<!-- ⭐ HEADER CONTAINER ⭐ -->
+<div id="header-container"></div>
+
+<!-- ⭐ SEARCH & FILTER BUTTON ⭐ -->
+<div style="position: fixed; top: 5rem; right: 2rem; z-index: 100;" class="hidden lg:block">
+    <button onclick="toggleSearch()" class="search-btn" id="searchBtn" title="Search & Filter">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+    </button>
+</div>
+
+<!-- ⭐ SEARCH PANEL ⭐ -->
+<div class="search-panel" id="searchPanel">
+    <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-bold text-gray-900">Search & Filter</h3>
+        <button onclick="toggleSearch()" class="text-gray-400 hover:text-gray-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    
+    <div class="mb-4">
+        <input type="text" id="searchInput" placeholder="Search classes..." 
+            class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-600 focus:outline-none transition-colors">
+    </div>
+    
+    <div class="mb-4">
+        <label class="block text-sm font-bold text-gray-700 mb-2">Categories</label>
+        <div class="flex flex-wrap gap-2">
+            <button onclick="filterByCategory('')" class="filter-btn active px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 hover:border-primary-600 transition-all">All</button>
+            <button onclick="filterByCategory('academic')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 hover:border-primary-600 transition-all">Academic</button>
+            <button onclick="filterByCategory('arts')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 hover:border-primary-600 transition-all">Arts</button>
+            <button onclick="filterByCategory('sports')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 hover:border-primary-600 transition-all">Sports</button>
+            <button onclick="filterByCategory('music')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 hover:border-primary-600 transition-all">Music</button>
+            <button onclick="filterByCategory('language')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 hover:border-primary-600 transition-all">Language</button>
+        </div>
+    </div>
+    
+    <div class="pt-4 border-t-2 border-gray-100 mb-4">
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="discountOnly" onchange="applyFilters()" class="w-4 h-4">
+            <span class="text-sm font-bold text-gray-700">Show discount only</span>
+        </label>
+    </div>
+    
+    <div class="pt-4 border-t-2 border-gray-100 flex items-center justify-between">
+        <p class="text-xs text-gray-500">
+            Showing <span id="showingCount" class="font-bold text-primary-600">0</span> of 
+            <span id="totalCount" class="font-bold">0</span>
+        </p>
+        <button onclick="resetFilters()" class="text-xs font-bold text-accent-terracotta hover:text-accent-gold transition-colors">Reset</button>
+    </div>
+</div>
+
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl lg:text-6xl font-black text-gray-900 mb-4 animate-fade-in-up gradient-text">Our Classes</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto font-medium animate-fade-in-up delay-200">Find the perfect class for you</p>
+    </div>
+</section>
+
+<section class="py-16 bg-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="classesGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div class="col-span-full text-center py-16">
+                <div class="text-6xl mb-4 animate-float">📚</div>
+                <p class="text-gray-600 text-lg mb-2">Loading classes...</p>
+            </div>
+        </div>
+        <div id="noResults" class="hidden text-center py-16">
+            <div class="text-6xl mb-4">🔍</div>
+            <h3 class="text-2xl font-black text-gray-900 mb-2">No Classes Found</h3>
+            <p class="text-gray-600 mb-6">Try adjusting your search or filter criteria.</p>
+            <button onclick="resetFilters()" class="btn-primary px-6 py-3 rounded-xl font-bold text-white hover:scale-105 transition-transform">Reset Filters</button>
+        </div>
+        <div id="noClasses" class="hidden text-center py-16">
+            <div class="text-6xl mb-4">📚</div>
+            <h3 class="text-2xl font-black text-gray-900 mb-2">No Classes Available</h3>
+            <p class="text-gray-600 mb-6">We're currently updating our class offerings. Check back soon!</p>
+            <a href="enroll.html" class="btn-accent inline-block px-6 py-3 rounded-xl font-bold text-white hover:scale-105 transition-transform">Join Waitlist</a>
+        </div>
+    </div>
+</section>
+
+<div id="classModal" class="modal">
+    <div class="modal-close" onclick="closeModal()">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </div>
+    <div class="modal-content" id="modalContent"></div>
+</div>
+
+<section class="py-20" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl lg:text-5xl font-black text-white mb-6 animate-fade-in-up">Ready to Enroll?</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">Join our community starting 2026! Limited seats available for each grade level.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
+            <a href="enroll.html" class="btn-accent px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">Apply Now</a>
+            <a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg border-2 border-white/60 hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ FOOTER CONTAINER ⭐ -->
+<div id="footer-container"></div>
+
+<script src="assets/js/load-components.js" defer></script>
+
+<script type="module">
+// ⭐ CLASSES FUNCTIONALITY (same as before, no changes needed) ⭐
+const API_URL = 'https://api.assembleeducationcommunity.org';
+
+let allClasses = [];
+let filteredClasses = [];
+let isSearchOpen = false;
+
+window.toggleSearch = function() {
+    const panel = document.getElementById('searchPanel');
+    const btn = document.getElementById('searchBtn');
+    const input = document.getElementById('searchInput');
+    isSearchOpen = !isSearchOpen;
+    if (isSearchOpen) {
+        panel.classList.add('active');
+        btn.classList.add('active');
+        input.focus();
+    } else {
+        panel.classList.remove('active');
+        btn.classList.remove('active');
+    }
+};
+
+document.addEventListener('click', function(e) {
+    const btn = document.getElementById('searchBtn');
+    const panel = document.getElementById('searchPanel');
+    if (btn && panel && !btn.contains(e.target) && !panel.contains(e.target) && isSearchOpen) {
+        toggleSearch();
+    }
+});
+
+function calculateDiscountedPrice(price, discountHas, discountValue, discountType) {
+    if (!discountHas) return null;
+    const originalPrice = parseFloat(price.replace(/[^0-9]/g, '')) || 0;
+    const discountNum = parseFloat(discountValue.replace(/[^0-9]/g, '')) || 0;
+    if (discountType === 'percentage') {
+        return originalPrice - (originalPrice * discountNum / 100);
+    } else {
+        return originalPrice - discountNum;
+    }
+}
+
+function getDiscountLabel(discountValue, discountType) {
+    if (discountType === 'percentage') {
+        return `${discountValue}% OFF`;
+    } else {
+        return `${parseInt(discountValue).toLocaleString()} MMK OFF`;
+    }
+}
+
+async function loadClasses() {
+    try {
+        const response = await fetch(`${API_URL}/api/classes`);
+        allClasses = await response.json();
+        filteredClasses = [...allClasses];
+        updateCount();
+        renderClasses();
+    } catch (error) {
+        console.error('Error loading classes:', error);
+        document.getElementById('classesGrid').innerHTML = `
+            <div class="col-span-full text-center py-16">
+                <div class="text-6xl mb-4">❌</div>
+                <p class="text-red-500 text-lg">Error loading classes. Please try again later.</p>
+            </div>
+        `;
+    }
+}
+
+window.openClassModal = function(classId) {
+    const cls = allClasses.find(c => c.id === classId);
+    if (!cls) return;
+    
+    const hasDiscount = cls.discount_has === 1;
+    const discountedPrice = hasDiscount ? calculateDiscountedPrice(cls.price, true, cls.discount_value, cls.discount_type) : null;
+    const savings = hasDiscount ? (parseFloat(cls.price.replace(/[^0-9]/g, '')) - discountedPrice) : 0;
+    
+    const modalContent = document.getElementById('modalContent');
+    const durationBlock = cls.duration && cls.duration.trim() !== '' ? `
+        <div class="flex items-center gap-3 p-4 rounded-xl bg-neutral-100">
+            <div>
+                <p class="text-xs text-gray-500 font-bold">Duration</p>
+                <p class="font-bold text-gray-900">${cls.duration}</p>
+            </div>
+        </div>
+    ` : '';
+    
+    const gradeDurationGrid = cls.duration && cls.duration.trim() !== '' ? 
+        `<div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="flex items-center gap-3 p-4 rounded-xl bg-neutral-100">
+                <div><p class="text-xs text-gray-500 font-bold">Grade</p><p class="font-bold text-gray-900">${cls.grade}</p></div>
+            </div>
+            ${durationBlock}
+        </div>` :
+        `<div class="flex items-center gap-3 p-4 rounded-xl bg-neutral-100 mb-6">
+            <div><p class="text-xs text-gray-500 font-bold">Grade</p><p class="font-bold text-gray-900">${cls.grade}</p></div>
+        </div>`;
+    
+    modalContent.innerHTML = `
+        <div>
+            <div class="h-64 relative overflow-hidden rounded-t-3xl" style="background: linear-gradient(135deg, ${cls.color || '#1b4332'} 0%, ${cls.color || '#2d6a4f'}dd 100%)">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-9xl opacity-20">${cls.title.charAt(0).toUpperCase()}</span>
+                </div>
+                ${hasDiscount ? `<div class="absolute top-6 right-6 discount-badge text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">${getDiscountLabel(cls.discount_value, cls.discount_type)}</div>` : ''}
+                ${cls.highlight ? '<div class="absolute top-6 left-6 bg-accent-gold text-white px-4 py-2 rounded-full text-sm font-bold">Featured</div>' : ''}
+                <div class="absolute bottom-6 left-6 right-6">
+                    <span class="px-4 py-2 rounded-full text-sm font-bold bg-white/95 text-gray-700 capitalize">${cls.category}</span>
+                </div>
+            </div>
+            <div class="p-8">
+                <h2 class="text-3xl font-black text-gray-900 mb-4">${cls.title}</h2>
+                ${gradeDurationGrid}
+                <div class="mb-6">
+                    <h3 class="text-lg font-black text-gray-900 mb-3">Description</h3>
+                    <p class="text-gray-600 leading-relaxed">${cls.full_description || cls.description}</p>
+                </div>
+                ${cls.requirements ? `
+                <div class="mb-6">
+                    <h3 class="text-lg font-black text-gray-900 mb-3">Requirements</h3>
+                    <p class="text-gray-600 leading-relaxed">${cls.requirements}</p>
+                </div>
+                ` : ''}
+                <div class="p-6 rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 mb-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-lg font-bold text-gray-700">Price:</span>
+                        ${hasDiscount ? `
+                            <div class="text-right">
+                                <p class="text-gray-400 line-through text-lg">${cls.price} MMK/month</p>
+                                <p class="text-accent-terracotta font-black text-3xl">${discountedPrice.toLocaleString()} MMK<span class="text-lg font-normal">/month</span></p>
+                            </div>
+                        ` : `
+                            <p class="text-gray-900 font-black text-3xl">${cls.price} MMK<span class="text-lg font-normal">/month</span></p>
+                        `}
+                    </div>
+                    ${hasDiscount ? `
+                        <div class="flex items-center justify-between pt-3 border-t-2 border-green-200">
+                            <span class="text-green-700 font-bold">You Save:</span>
+                            <span class="text-accent-terracotta font-black text-xl">${savings.toLocaleString()} MMK<span class="text-sm font-normal">/month</span> (${cls.discount_value}%)</span>
+                        </div>
+                    ` : ''}
+                </div>
+                <div class="flex gap-4">
+                    <a href="enroll.html" class="flex-1 py-4 rounded-xl font-bold text-center text-white btn-accent hover:shadow-xl text-lg">Enroll Now</a>
+                    <a href="contact.html" class="flex-1 py-4 rounded-xl font-bold text-center text-primary-600 bg-white border-2 border-primary-200 hover:bg-primary-50 transition-all text-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    `;
+    document.getElementById('classModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeModal = function() {
+    document.getElementById('classModal').classList.remove('active');
+    document.body.style.overflow = '';
+};
+
+document.getElementById('classModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+        if (isSearchOpen) toggleSearch();
+    }
+});
+
+function renderClasses() {
+    const grid = document.getElementById('classesGrid');
+    const noResults = document.getElementById('noResults');
+    const noClasses = document.getElementById('noClasses');
+    
+    if (allClasses.length === 0) {
+        grid.classList.add('hidden');
+        noResults.classList.add('hidden');
+        noClasses.classList.remove('hidden');
+        return;
+    }
+    
+    if (filteredClasses.length === 0) {
+        grid.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        noClasses.classList.add('hidden');
+        return;
+    }
+    
+    grid.classList.remove('hidden');
+    noResults.classList.add('hidden');
+    noClasses.classList.add('hidden');
+    
+    grid.innerHTML = filteredClasses.map(cls => {
+        const hasDiscount = cls.discount_has === 1;
+        const discountedPrice = hasDiscount ? calculateDiscountedPrice(cls.price, true, cls.discount_value, cls.discount_type) : null;
+        const discountBadge = hasDiscount ? `<div class="discount-badge text-white px-3 py-1 rounded-full text-xs font-bold absolute top-4 right-4 animate-pulse z-10">${getDiscountLabel(cls.discount_value, cls.discount_type)}</div>` : '';
+        const priceDisplay = hasDiscount ? `
+            <div class="flex items-center gap-3">
+                <span class="text-gray-400 line-through text-sm">${cls.price} MMK/month</span>
+                <span class="text-accent-terracotta font-black text-xl">${discountedPrice.toLocaleString()} MMK<span class="text-sm font-normal">/month</span></span>
+            </div>
+        ` : `<span class="text-gray-900 font-black text-xl">${cls.price} MMK<span class="text-sm font-normal">/month</span></span>`;
+        const durationBadge = cls.duration && cls.duration.trim() !== '' ? `<span class="px-3 py-1.5 rounded-lg bg-neutral-100 text-xs font-semibold text-gray-700">${cls.duration}</span>` : '';
+        return `
+            <div class="class-card bg-white rounded-2xl overflow-hidden shadow-lg relative group">
+                ${discountBadge}
+                ${cls.highlight ? '<div class="absolute top-4 left-4 bg-accent-gold text-white px-3 py-1 rounded-full text-xs font-bold z-10">Featured</div>' : ''}
+                <div class="h-56 relative overflow-hidden" style="background: linear-gradient(135deg, ${cls.color || '#1b4332'} 0%, ${cls.color || '#2d6a4f'}dd 100%)">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-8xl opacity-20">${cls.title.charAt(0).toUpperCase()}</span>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-white/95 text-gray-700 inline-block capitalize">${cls.category}</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-black text-gray-900 mb-2">${cls.title}</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">${cls.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1.5 rounded-lg bg-neutral-100 text-xs font-semibold text-gray-700">${cls.grade}</span>
+                        ${durationBadge}
+                    </div>
+                    <div class="pt-4 border-t-2 border-gray-100 mb-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500 font-bold">Price:</span>
+                            ${priceDisplay}
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button onclick="openClassModal('${cls.id}')" class="flex-1 py-3 rounded-xl font-bold text-center text-white transition-all hover:shadow-xl hover:scale-105" style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">Learn More</button>
+                        <a href="enroll.html" class="flex-1 py-3 rounded-xl font-bold text-center transition-all hover:bg-primary-50" style="color: #1b4332; background: white; border: 2px solid #1b4332;">Enroll</a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+    updateCount();
+}
+
+function updateCount() {
+    document.getElementById('showingCount').textContent = filteredClasses.length;
+    document.getElementById('totalCount').textContent = allClasses.length;
+}
+
+window.filterByCategory = function(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (category === '') {
+        document.querySelectorAll('.filter-btn')[0].classList.add('active');
+    } else {
+        const target = Array.from(document.querySelectorAll('.filter-btn')).find(btn => btn.textContent.toLowerCase() === category);
+        if (target) target.classList.add('active');
+    }
+    applyFilters();
+};
+
+window.applyFilters = function() {
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const category = Array.from(document.querySelectorAll('.filter-btn')).find(btn => btn.classList.contains('active'))?.textContent.toLowerCase() || '';
+    const discountOnly = document.getElementById('discountOnly').checked;
+    
+    filteredClasses = allClasses.filter(cls => {
+        const matchesSearch = !search || cls.title.toLowerCase().includes(search) || cls.grade.toLowerCase().includes(search) || cls.description.toLowerCase().includes(search) || cls.category.toLowerCase().includes(search);
+        const matchesCategory = !category || category === 'all' || cls.category.toLowerCase() === category;
+        const matchesDiscount = !discountOnly || cls.discount_has === 1;
+        return matchesSearch && matchesCategory && matchesDiscount;
+    });
+    renderClasses();
+    updateCount();
+};
+
+window.resetFilters = function() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('discountOnly').checked = false;
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.filter-btn')[0].classList.add('active');
+    if (isSearchOpen) toggleSearch();
+    filteredClasses = [...allClasses];
+    renderClasses();
+    updateCount();
+};
+
+document.getElementById('searchInput').addEventListener('input', applyFilters);
+document.getElementById('searchInput').addEventListener('keydown', function(e) { if (e.key === 'Escape') toggleSearch(); });
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadClasses);
+else loadClasses();
+</script>
+</body>
+</html>

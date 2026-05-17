@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Settings - AEC Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { primary: { 500: '#f97316', 600: '#ea580c', 700: '#c2410c' } } } } }</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f9fafb; }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100%;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            z-index: 40;
+            transition: transform 0.3s ease;
+            transform: translateX(0);
+        }
+        .main-content { margin-left: 280px; padding: 32px; transition: margin 0.3s ease; }
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 50;
+            background: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: #374151;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin: 4px 12px;
+        }
+        .nav-item:hover { background: #fff7ed; color: #ea580c; transform: translateX(4px); }
+        .nav-item.active { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; }
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+            border: 1px solid #ffedd5;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-4px); border-color: #fed7aa; }
+        .form-input { transition: all 0.2s ease; }
+        .form-input:focus { border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.1); outline: none; }
+        .contact-card { transition: all 0.2s; }
+        .contact-card:hover { transform: translateX(4px); background-color: #f9fafb; }
+        .role-badge { padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }
+        .role-super_admin { background: #fee2e2; color: #dc2626; }
+        .btn-danger { background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); }
+        .btn-danger:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(220,38,38,0.3); }
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.open { transform: translateX(0); }
+            .main-content { margin-left: 0; }
+            .mobile-menu-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars text-gray-700 text-xl"></i>
+</button>
+
+<div class="sidebar" id="sidebar">
+    <div class="p-6 border-b border-gray-100">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-xl" style="background: linear-gradient(135deg, #f97316, #ea580c);">A</div>
+            <div><div class="font-black text-gray-900">AEC Admin</div><div class="text-xs text-gray-500">Settings</div></div>
+        </div>
+    </div>
+    <nav class="py-4">
+        <a href="dashboard.html" class="nav-item"><i class="fas fa-chart-line w-5"></i> Dashboard</a>
+        <a href="classes-manager.html" class="nav-item"><i class="fas fa-book-open w-5"></i> Manage Classes</a>
+        <a href="events-manager.html" class="nav-item"><i class="fas fa-calendar-alt w-5"></i> Manage Events</a>
+        <a href="jobs-manager.html" class="nav-item"><i class="fas fa-briefcase w-5"></i> Manage Jobs</a>
+        <a href="applications-manager.html" class="nav-item"><i class="fas fa-file-alt w-5"></i> Applications</a>
+        <a href="projects-manager.html" class="nav-item"><i class="fas fa-project-diagram w-5"></i> Projects</a>
+        <a href="volunteers-manager.html" class="nav-item"><i class="fas fa-hand-peace w-5"></i> Volunteers</a>
+        <a href="admin-users-manager.html" class="nav-item"><i class="fas fa-users w-5"></i> Admin Users</a>
+        <a href="settings.html" class="nav-item active"><i class="fas fa-sliders-h w-5"></i> Settings</a>
+        <a href="../index.html" class="nav-item mt-8 text-red-500 hover:text-red-600"><i class="fas fa-arrow-left w-5"></i> Back to Site</a>
+    </nav>
+</div>
+
+<main class="main-content" id="mainContent">
+    <div class="max-w-5xl mx-auto">
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+            <div><h1 class="text-3xl md:text-4xl font-black text-gray-900">Settings</h1><p class="text-gray-500 mt-1">Manage your account and site configuration</p></div>
+            <div class="flex items-center gap-3">
+                <span class="role-badge role-super_admin" id="roleBadgeDisplay">SUPER ADMIN</span>
+                <button onclick="logout()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all shadow-md"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+
+        <!-- Account Information -->
+        <div class="bg-white rounded-2xl p-6 mb-8 shadow-sm border border-gray-100">
+            <h2 class="text-xl font-bold text-gray-900 mb-5"><i class="fas fa-user-circle mr-2 text-primary-500"></i> Account Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="bg-gray-50 rounded-xl p-4"><p class="text-sm text-gray-500 font-medium">Username</p><p class="text-gray-900 font-semibold text-lg" id="accountUsername">Loading...</p></div>
+                <div class="bg-gray-50 rounded-xl p-4"><p class="text-sm text-gray-500 font-medium">Email</p><p class="text-gray-900 font-semibold text-lg" id="accountEmail">Loading...</p></div>
+                <div class="bg-gray-50 rounded-xl p-4"><p class="text-sm text-gray-500 font-medium">Role</p><p class="text-gray-900 font-semibold text-lg" id="accountRole">Loading...</p></div>
+                <div class="bg-gray-50 rounded-xl p-4"><p class="text-sm text-gray-500 font-medium">Last Login</p><p class="text-gray-900 font-semibold text-lg" id="accountLastLogin">Loading...</p></div>
+            </div>
+        </div>
+
+        <!-- Change Password -->
+        <div class="bg-white rounded-2xl p-6 mb-8 shadow-sm border border-gray-100">
+            <h2 class="text-xl font-bold text-gray-900 mb-5"><i class="fas fa-lock mr-2 text-primary-500"></i> Security</h2>
+            <p class="text-gray-600 text-sm mb-4">Change your password</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-lg">
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Current Password</label><input type="password" id="currentPassword" class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">New Password</label><input type="password" id="newPassword" class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label><input type="password" id="confirmPassword" class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div class="md:col-span-2"><button onclick="changePassword()" class="px-6 py-2.5 rounded-xl font-semibold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all shadow-sm">Update Password</button></div>
+            </div>
+        </div>
+
+        <!-- Contact Information Management -->
+        <div id="contactSection" class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-5">
+                <h2 class="text-xl font-bold text-gray-900"><i class="fas fa-address-card mr-2 text-primary-500"></i> Contact Information</h2>
+                <button id="addContactBtn" onclick="showAddContact()" class="flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all shadow-sm"><i class="fas fa-plus-circle"></i> Add Contact</button>
+            </div>
+            <div id="contactList" class="space-y-3"><p class="text-center text-gray-500 py-8"><i class="fas fa-spinner fa-pulse mr-2"></i> Loading contacts...</p></div>
+        </div>
+    </div>
+</main>
+
+<script type="module">
+    import { getAuthHeaders, getCurrentUser, logout as logoutFn, hasPermission, escapeHtml } from './js/admin-config.js';
+    const API_URL = 'https://api.assembleeducationcommunity.org';
+
+    let allContacts = [], isEditingContact = false, editingContactId = null;
+    const typeIcons = { phone: '📞', email: '✉️', address: '📍', social: '🌐', website: '🌍', other: '📌' };
+
+    function ensureAuth() {
+        const user = getCurrentUser();
+        if (!user || !user.username) {
+            window.location.href = 'login.html';
+            return false;
+        }
+        return true;
+    }
+
+    async function loadAccountInfo() {
+        const user = getCurrentUser();
+        if (user) {
+            document.getElementById('accountUsername').textContent = escapeHtml(user.username || 'N/A');
+            document.getElementById('accountEmail').textContent = escapeHtml(user.email || 'N/A');
+            document.getElementById('accountRole').textContent = (user.role || 'N/A').replace('_', ' ').toUpperCase();
+            document.getElementById('accountLastLogin').textContent = escapeHtml(user.last_login || 'Never');
+        }
+    }
+
+    async function loadContacts() {
+        try {
+            const response = await fetch(`${API_URL}/api/contact_info`, { headers: getAuthHeaders() });
+            const data = await response.json();
+            allContacts = Array.isArray(data) ? data : (data.results || []);
+            renderContacts();
+        } catch (error) {
+            document.getElementById('contactList').innerHTML = `<p class="text-red-500 text-center">Error loading contacts: ${escapeHtml(error.message)}</p>`;
+        }
+    }
+
+    function renderContacts() {
+        const container = document.getElementById('contactList');
+        if (!allContacts.length) {
+            container.innerHTML = `<div class="text-center py-12"><i class="fas fa-address-card text-5xl text-gray-300 mb-3"></i><p class="text-gray-500">No contacts yet. Click "Add Contact" to create one.</p></div>`;
+            return;
+        }
+        const canEdit = hasPermission('edit_settings');
+        container.innerHTML = allContacts.map(contact => `
+            <div class="contact-card flex items-center justify-between p-4 rounded-xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition-all">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">${typeIcons[contact.type] || '📌'}</span>
+                    <div>
+                        <p class="font-semibold text-gray-900">${escapeHtml(contact.label)}</p>
+                        <p class="text-gray-600 text-sm">${escapeHtml(contact.value)}</p>
+                        ${contact.is_primary ? '<span class="text-xs text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded-full">Primary</span>' : ''}
+                    </div>
+                </div>
+                ${canEdit ? `
+                <div class="flex gap-2">
+                    <button onclick="editContact('${contact.id}')" class="px-3 py-1.5 rounded-xl text-sm font-semibold text-primary-600 border border-primary-200 hover:bg-primary-50 transition-all"><i class="fas fa-edit mr-1"></i>Edit</button>
+                    <button onclick="deleteContact('${contact.id}')" class="px-3 py-1.5 rounded-xl text-sm font-semibold text-red-600 border border-red-200 hover:bg-red-50 transition-all"><i class="fas fa-trash-alt mr-1"></i>Delete</button>
+                </div>
+                ` : ''}
+            </div>
+        `).join('');
+    }
+
+    window.showAddContact = () => {
+        if (!hasPermission('edit_settings')) { alert('You do not have permission to edit contacts.'); return; }
+        isEditingContact = false;
+        editingContactId = null;
+        const modalHtml = `
+            <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                <div class="bg-white rounded-2xl max-w-md w-full p-6">
+                    <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold text-gray-900">Add Contact</h3><button onclick="closeContactModal()" class="text-gray-400 hover:text-gray-600"><i class="fas fa-times"></i></button></div>
+                    <form id="contactForm" class="space-y-4">
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Type *</label><select id="contactType" class="form-input w-full p-2 border border-gray-200 rounded-xl"><option value="phone">Phone</option><option value="email">Email</option><option value="address">Address</option><option value="social">Social Media</option><option value="website">Website</option><option value="other">Other</option></select></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Label *</label><input type="text" id="contactLabel" class="form-input w-full p-2 border border-gray-200 rounded-xl" required></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Value *</label><input type="text" id="contactValue" class="form-input w-full p-2 border border-gray-200 rounded-xl" required></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Display Order</label><input type="number" id="contactOrder" class="form-input w-full p-2 border border-gray-200 rounded-xl" value="0"></div>
+                        <div class="flex items-center gap-2"><input type="checkbox" id="contactPrimary" class="w-4 h-4"><label class="text-sm text-gray-700">Mark as Primary</label></div>
+                        <button type="submit" class="w-full py-2 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all">Save Contact</button>
+                    </form>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+        document.getElementById('contactForm').addEventListener('submit', async (e) => { e.preventDefault(); await saveContact(); });
+    };
+
+    window.editContact = (id) => {
+        if (!hasPermission('edit_settings')) { alert('You do not have permission to edit contacts.'); return; }
+        const contact = allContacts.find(c => c.id === id);
+        if (!contact) return;
+        isEditingContact = true;
+        editingContactId = id;
+        const modalHtml = `
+            <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                <div class="bg-white rounded-2xl max-w-md w-full p-6">
+                    <div class="flex justify-between items-center mb-4"><h3 class="text-xl font-bold text-gray-900">Edit Contact</h3><button onclick="closeContactModal()" class="text-gray-400 hover:text-gray-600"><i class="fas fa-times"></i></button></div>
+                    <form id="contactForm" class="space-y-4">
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Type *</label><select id="contactType" class="form-input w-full p-2 border border-gray-200 rounded-xl"><option value="phone" ${contact.type === 'phone' ? 'selected' : ''}>Phone</option><option value="email" ${contact.type === 'email' ? 'selected' : ''}>Email</option><option value="address" ${contact.type === 'address' ? 'selected' : ''}>Address</option><option value="social" ${contact.type === 'social' ? 'selected' : ''}>Social Media</option><option value="website" ${contact.type === 'website' ? 'selected' : ''}>Website</option><option value="other" ${contact.type === 'other' ? 'selected' : ''}>Other</option></select></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Label *</label><input type="text" id="contactLabel" class="form-input w-full p-2 border border-gray-200 rounded-xl" value="${escapeHtml(contact.label)}" required></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Value *</label><input type="text" id="contactValue" class="form-input w-full p-2 border border-gray-200 rounded-xl" value="${escapeHtml(contact.value)}" required></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-1">Display Order</label><input type="number" id="contactOrder" class="form-input w-full p-2 border border-gray-200 rounded-xl" value="${contact.display_order || 0}"></div>
+                        <div class="flex items-center gap-2"><input type="checkbox" id="contactPrimary" class="w-4 h-4" ${contact.is_primary ? 'checked' : ''}><label class="text-sm text-gray-700">Mark as Primary</label></div>
+                        <button type="submit" class="w-full py-2 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all">Update Contact</button>
+                    </form>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+        document.getElementById('contactForm').addEventListener('submit', async (e) => { e.preventDefault(); await saveContact(); });
+    };
+
+    async function saveContact() {
+        const contactData = {
+            type: document.getElementById('contactType').value,
+            label: document.getElementById('contactLabel').value,
+            value: document.getElementById('contactValue').value,
+            display_order: parseInt(document.getElementById('contactOrder').value) || 0,
+            is_primary: document.getElementById('contactPrimary').checked ? 1 : 0
+        };
+        if (!contactData.label || !contactData.value) { alert('Please fill in all required fields'); return; }
+        try {
+            const url = isEditingContact ? `${API_URL}/api/contact_info/${editingContactId}` : `${API_URL}/api/contact_info`;
+            const method = isEditingContact ? 'PUT' : 'POST';
+            const response = await fetch(url, { method, headers: getAuthHeaders(), body: JSON.stringify(contactData) });
+            if (!response.ok) throw new Error((await response.json()).error || 'Failed to save');
+            alert('✅ Contact saved!');
+            closeContactModal();
+            await loadContacts();
+        } catch (error) { alert('Error: ' + error.message); }
+    }
+
+    window.closeContactModal = () => { const modal = document.getElementById('contactModal'); if (modal) modal.remove(); };
+    window.deleteContact = async (id) => { if (!hasPermission('edit_settings')) { alert('You do not have permission to delete contacts.'); return; } if (!confirm('Delete this contact?')) return; try { const response = await fetch(`${API_URL}/api/contact_info/${id}`, { method: 'DELETE', headers: getAuthHeaders() }); if (!response.ok) throw new Error((await response.json()).error || 'Failed to delete'); alert('✅ Contact deleted!'); await loadContacts(); } catch (error) { alert('Error: ' + error.message); } };
+
+    window.changePassword = async () => {
+        const currentPassword = document.getElementById('currentPassword').value;
+        const newPassword = document.getElementById('newPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        if (!currentPassword || !newPassword || !confirmPassword) { alert('Please fill in all password fields'); return; }
+        if (newPassword !== confirmPassword) { alert('New passwords do not match'); return; }
+        if (newPassword.length < 6) { alert('Password must be at least 6 characters'); return; }
+        try {
+            const user = getCurrentUser();
+            if (!user || !user.id) throw new Error('User not found');
+            const response = await fetch(`${API_URL}/api/admin-users/${user.id}`, {
+                method: 'PUT',
+                headers: getAuthHeaders(),
+                body: JSON.stringify({ password: newPassword })
+            });
+            if (!response.ok) throw new Error((await response.json()).error || 'Failed to update password');
+            alert('✅ Password updated successfully! Please login again.');
+            logoutFn();
+        } catch (error) { alert('Error: ' + error.message); }
+    };
+
+    function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        if (!ensureAuth()) return;
+        const user = getCurrentUser();
+        document.getElementById('roleBadgeDisplay').textContent = (user.role || 'viewer').replace('_', ' ').toUpperCase();
+        await loadAccountInfo();
+        await loadContacts();
+
+        if (!hasPermission('view_settings')) {
+            document.getElementById('contactSection').style.display = 'none';
+        } else {
+            if (!hasPermission('edit_settings')) {
+                const addBtn = document.getElementById('addContactBtn');
+                if (addBtn) addBtn.style.display = 'none';
+            }
+        }
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
+    });
+
+    window.logout = () => { if (confirm('Logout?')) logoutFn(); };
+</script>
+</body>
+</html>

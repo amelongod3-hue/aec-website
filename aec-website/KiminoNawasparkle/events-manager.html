@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Manage Events - AEC Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { primary: { 500: '#f97316', 600: '#ea580c', 700: '#c2410c' } } } } }</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f9fafb; }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100%;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            z-index: 40;
+            transition: transform 0.3s ease;
+            transform: translateX(0);
+        }
+        .main-content { margin-left: 280px; padding: 32px; transition: margin 0.3s ease; }
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 50;
+            background: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: #374151;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin: 4px 12px;
+        }
+        .nav-item:hover { background: #fff7ed; color: #ea580c; transform: translateX(4px); }
+        .nav-item.active { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; }
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+            border: 1px solid #ffedd5;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-4px); border-color: #fed7aa; }
+        .form-input { transition: all 0.2s ease; }
+        .form-input:focus { border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.1); outline: none; }
+        .event-card { transition: all 0.2s; }
+        .event-card:hover { transform: translateY(-2px); box-shadow: 0 12px 20px -8px rgba(0,0,0,0.1); border-color: #fed7aa; }
+        .role-badge { padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }
+        .role-super_admin { background: #fee2e2; color: #dc2626; }
+        .prize-badge {
+            background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            margin-left: 8px;
+        }
+        .media-preview { width: 100%; max-width: 300px; height: 200px; border-radius: 12px; object-fit: cover; margin-top: 12px; display: none; }
+        .media-preview.show { display: block; }
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.open { transform: translateX(0); }
+            .main-content { margin-left: 0; }
+            .mobile-menu-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars text-gray-700 text-xl"></i>
+</button>
+
+<div class="sidebar" id="sidebar">
+    <div style="padding: 28px 24px; border-bottom: 1px solid #f3f4f6;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-xl" style="background: linear-gradient(135deg, #f97316, #ea580c);">A</div>
+            <div>
+                <div class="font-black text-gray-900 text-lg">AEC Admin</div>
+                <div class="text-xs text-gray-500">Events Manager</div>
+            </div>
+        </div>
+    </div>
+    <nav style="padding: 20px 0;">
+        <a href="dashboard.html" class="nav-item"><i class="fas fa-chart-line w-5"></i><span>Dashboard</span></a>
+        <a href="classes-manager.html" class="nav-item"><i class="fas fa-book-open w-5"></i><span>Manage Classes</span></a>
+        <a href="events-manager.html" class="nav-item active"><i class="fas fa-calendar-alt w-5"></i><span>Manage Events</span></a>
+        <a href="jobs-manager.html" class="nav-item"><i class="fas fa-briefcase w-5"></i><span>Manage Jobs</span></a>
+        <a href="applications-manager.html" class="nav-item"><i class="fas fa-file-alt w-5"></i><span>Applications</span></a>
+        <a href="projects-manager.html" class="nav-item"><i class="fas fa-project-diagram w-5"></i><span>Projects</span></a>
+        <a href="volunteers-manager.html" class="nav-item"><i class="fas fa-hand-peace w-5"></i><span>Volunteers</span></a>
+        <a href="admin-users-manager.html" class="nav-item"><i class="fas fa-users w-5"></i><span>Admin Users</span></a>
+        <a href="settings.html" class="nav-item"><i class="fas fa-sliders-h w-5"></i><span>Settings</span></a>
+        <a href="../index.html" class="nav-item mt-8 text-red-500 hover:text-red-600"><i class="fas fa-arrow-left w-5"></i><span>Back to Site</span></a>
+    </nav>
+</div>
+
+<main class="main-content" id="mainContent">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+            <div><h1 class="text-3xl md:text-4xl font-black text-gray-900">Manage Events</h1><p class="text-gray-500 mt-1">Add, edit, or remove school events</p></div>
+            <div class="flex items-center gap-3">
+                <span class="role-badge role-super_admin" id="roleBadgeDisplay">SUPER ADMIN</span>
+                <button id="addEventBtn" onclick="showAddEvent()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all shadow-md"><i class="fas fa-plus-circle"></i> Add Event</button>
+                <button onclick="logout()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all shadow-md"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Total Events</p><p class="text-3xl font-black text-gray-900 mt-1" id="statTotal">0</p></div><div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl text-orange-600"><i class="fas fa-calendar-alt"></i></div></div></div>
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">This Month</p><p class="text-3xl font-black text-gray-900 mt-1" id="statThisMonth">0</p></div><div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl text-blue-600"><i class="fas fa-calendar-week"></i></div></div></div>
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Featured</p><p class="text-3xl font-black text-gray-900 mt-1" id="statFeatured">0</p></div><div class="w-12 h-12 rounded-2xl bg-yellow-100 flex items-center justify-center text-2xl text-yellow-600"><i class="fas fa-star"></i></div></div></div>
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Categories</p><p class="text-3xl font-black text-gray-900 mt-1" id="statCategories">0</p></div><div class="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center text-2xl text-purple-600"><i class="fas fa-folder"></i></div></div></div>
+        </div>
+
+        <div id="eventFormContainer" class="hidden bg-white rounded-2xl p-6 mb-8 shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center mb-6"><h2 class="text-xl font-bold text-gray-900" id="formTitle">Add New Event</h2><button onclick="hideEventForm()" class="text-gray-400 hover:text-gray-600"><i class="fas fa-times text-xl"></i></button></div>
+            <form id="eventForm" class="grid md:grid-cols-2 gap-5">
+                <input type="hidden" id="eventId">
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Event Title *</label><input type="text" id="eventTitle" required class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Category *</label><select id="eventCategory" required class="form-input w-full p-3 border border-gray-200 rounded-xl"><option value="academic">Academic</option><option value="sports">Sports</option><option value="cultural">Cultural</option><option value="holiday">Holiday</option><option value="meeting">Meeting</option><option value="other">Other</option></select></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Event Date *</label><input type="date" id="eventDate" required class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Event Time</label><input type="time" id="eventTime" class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Location</label><input type="text" id="eventLocation" class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Prize</label><input type="text" id="eventPrize" class="form-input w-full p-3 border border-gray-200 rounded-xl" placeholder="e.g., $500"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Color</label><input type="color" id="eventColor" value="#f97316" class="form-input w-full p-2 h-12 border border-gray-200 rounded-xl"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Type (e.g., Competition)</label><input type="text" id="eventType" class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div class="md:col-span-2"><label class="form-label block text-sm font-medium text-gray-700 mb-1">Description *</label><textarea id="eventDescription" required rows="3" class="form-input w-full p-3 border border-gray-200 rounded-xl"></textarea></div>
+                <div class="md:col-span-2"><label class="form-label block text-sm font-medium text-gray-700 mb-1">Requirements</label><textarea id="eventRequirements" rows="3" class="form-input w-full p-3 border border-gray-200 rounded-xl"></textarea></div>
+                <div class="md:col-span-2">
+                    <label class="form-label block text-sm font-medium text-gray-700 mb-1">Media (Image/Video URL)</label>
+                    <input type="text" id="eventMediaUrl" class="form-input w-full p-3 border border-gray-200 rounded-xl" onchange="previewMedia('event')">
+                    <select id="eventMediaType" class="form-input w-full p-3 border border-gray-200 rounded-xl mt-2"><option value="">Select Media Type</option><option value="image">🖼️ Image</option><option value="video">🎥 Video</option></select>
+                    <img id="eventMediaPreview" class="media-preview" alt="Preview"><video id="eventVideoPreview" class="media-preview" controls></video>
+                </div>
+                <div class="md:col-span-2 flex items-center gap-3"><input type="checkbox" id="eventHighlight" class="w-5 h-5"><label class="text-sm font-medium text-gray-700">Highlight on Homepage</label></div>
+                <div class="md:col-span-2"><button type="submit" id="eventSubmitBtn" class="w-full py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all shadow-md">Save Event</button></div>
+            </form>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-6"><h2 class="text-xl font-bold text-gray-900">All Events</h2><div class="flex gap-3"><select id="filterCategory" class="form-input p-2 border border-gray-200 rounded-xl text-sm" onchange="filterEvents()"><option value="">All Categories</option><option value="academic">Academic</option><option value="sports">Sports</option><option value="cultural">Cultural</option><option value="holiday">Holiday</option><option value="meeting">Meeting</option><option value="other">Other</option></select><input type="text" id="searchEvents" placeholder="Search..." class="form-input p-2 border border-gray-200 rounded-xl text-sm w-40" onkeyup="filterEvents()"></div></div>
+            <div id="eventsList" class="space-y-4"><p class="text-center text-gray-500 py-8"><i class="fas fa-spinner fa-pulse mr-2"></i> Loading events...</p></div>
+        </div>
+    </div>
+</main>
+
+<script type="module">
+    import { getAuthHeaders, getCurrentUser, logout as logoutFn, hasPermission, escapeHtml } from './js/admin-config.js';
+    const API_URL = 'https://api.assembleeducationcommunity.org';
+
+    function previewMedia(type) { const url = document.getElementById(`${type}MediaUrl`).value; const mediaType = document.getElementById(`${type}MediaType`).value; const img = document.getElementById(`${type}MediaPreview`); const vid = document.getElementById(`${type}VideoPreview`); if (!url) { img.classList.remove('show'); vid.classList.remove('show'); return; } if (mediaType === 'image' || url.match(/\.(jpg|jpeg|png|gif|webp)$/i)) { img.src = url; img.classList.add('show'); vid.classList.remove('show'); } else if (mediaType === 'video' || url.match(/\.(mp4|webm|ogg)$/i)) { vid.src = url; vid.classList.add('show'); img.classList.remove('show'); } }
+    window.previewMedia = previewMedia;
+
+    function ensureAuth() { const user = getCurrentUser(); if (!user || !user.username) { window.location.href = 'login.html'; return false; } return true; }
+    let allEvents = [], isEditing = false, editingId = null;
+
+    async function loadEvents() {
+        try {
+            const response = await fetch(`${API_URL}/api/events`, { headers: getAuthHeaders() });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const data = await response.json();
+            allEvents = Array.isArray(data) ? data : (data.results || []);
+            document.getElementById('statTotal').textContent = allEvents.length;
+            const thisMonth = allEvents.filter(e => { const d = new Date(e.date); const now = new Date(); return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear(); });
+            document.getElementById('statThisMonth').textContent = thisMonth.length;
+            document.getElementById('statFeatured').textContent = allEvents.filter(e => e.highlight).length;
+            document.getElementById('statCategories').textContent = [...new Set(allEvents.map(e => e.type))].length;
+            renderEvents();
+        } catch (error) { document.getElementById('eventsList').innerHTML = `<p class="text-red-500 text-center">Error: ${escapeHtml(error.message)}</p>`; }
+    }
+
+    function formatDate(dateStr) { if (!dateStr) return 'TBD'; const date = new Date(dateStr); return date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }); }
+
+    function renderEvents() {
+        const search = document.getElementById('searchEvents').value.toLowerCase();
+        const category = document.getElementById('filterCategory').value;
+        const filtered = allEvents.filter(evt => (evt.title.toLowerCase().includes(search) || evt.description.toLowerCase().includes(search)) && (!category || evt.type === category));
+        const container = document.getElementById('eventsList');
+        if (filtered.length === 0) { container.innerHTML = `<div class="text-center py-12"><i class="fas fa-calendar-alt text-5xl text-gray-300 mb-3"></i><p class="text-gray-500">No events found.</p></div>`; return; }
+        const canEdit = hasPermission('edit_events'); const canDelete = hasPermission('delete_events');
+        container.innerHTML = filtered.map(evt => {
+            const dateDisplay = formatDate(evt.date); const timeDisplay = evt.time ? ` at ${evt.time}` : '';
+            const mediaHtml = evt.media_url ? (evt.media_type === 'video' ? `<video src="${escapeHtml(evt.media_url)}" controls style="width: 100%; max-width: 300px; border-radius: 12px; margin-top: 12px;"></video>` : `<img src="${escapeHtml(evt.media_url)}" alt="${escapeHtml(evt.title)}" style="width: 100%; max-width: 300px; border-radius: 12px; margin-top: 12px;">`) : '';
+            return `<div class="event-card bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all"><div class="flex flex-wrap items-start justify-between gap-4"><div class="flex gap-5"><div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white text-2xl font-bold" style="background-color: ${escapeHtml(evt.color) || '#f97316'}"><i class="fas fa-calendar-alt"></i></div><div><div class="flex flex-wrap items-center gap-2 mb-1"><h3 class="text-lg font-bold text-gray-900">${escapeHtml(evt.title)}</h3>${evt.highlight ? '<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full"><i class="fas fa-star mr-1"></i>Featured</span>' : ''}${evt.prize ? `<span class="prize-badge"><i class="fas fa-trophy mr-1"></i>${escapeHtml(evt.prize)}</span>` : ''}</div><p class="text-gray-600 text-sm mb-1">${escapeHtml(dateDisplay)}${escapeHtml(timeDisplay)}</p><p class="text-gray-500 text-sm mb-2">${escapeHtml(evt.description)}</p><div class="flex flex-wrap items-center gap-3 text-sm text-gray-500"><span class="bg-gray-100 px-2 py-1 rounded-full capitalize">${escapeHtml(evt.type)}</span>${evt.location ? `<span><i class="fas fa-map-marker-alt mr-1"></i>${escapeHtml(evt.location)}</span>` : ''}</div>${mediaHtml}</div></div><div class="flex gap-2">${canEdit ? `<button onclick="editEvent('${evt.id}')" class="px-3 py-1.5 rounded-xl text-sm font-semibold text-primary-600 border border-primary-200 hover:bg-primary-50 transition-all"><i class="fas fa-edit mr-1"></i>Edit</button>` : ''}${canDelete ? `<button onclick="deleteEvent('${evt.id}')" class="px-3 py-1.5 rounded-xl text-sm font-semibold text-red-600 border border-red-200 hover:bg-red-50 transition-all"><i class="fas fa-trash-alt mr-1"></i>Delete</button>` : ''}</div></div></div>`;
+        }).join('');
+    }
+
+    window.showAddEvent = () => { if (!hasPermission('edit_events')) { alert('You do not have permission to add events.'); return; } isEditing = false; editingId = null; document.getElementById('formTitle').textContent = 'Add New Event'; document.getElementById('eventFormContainer').classList.remove('hidden'); document.getElementById('eventForm').reset(); document.getElementById('eventColor').value = '#f97316'; document.querySelectorAll('.media-preview').forEach(el => el.classList.remove('show')); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    window.hideEventForm = () => document.getElementById('eventFormContainer').classList.add('hidden');
+    window.editEvent = (id) => { if (!hasPermission('edit_events')) { alert('You do not have permission to edit events.'); return; } const evt = allEvents.find(e => e.id === id); if (!evt) { alert('Event not found!'); return; } isEditing = true; editingId = id; document.getElementById('formTitle').textContent = 'Edit Event'; document.getElementById('eventId').value = evt.id; document.getElementById('eventTitle').value = evt.title; document.getElementById('eventCategory').value = evt.type || 'academic'; document.getElementById('eventDate').value = evt.date || ''; document.getElementById('eventTime').value = evt.time || ''; document.getElementById('eventLocation').value = evt.location || ''; document.getElementById('eventPrize').value = evt.prize || ''; document.getElementById('eventDescription').value = evt.description || ''; document.getElementById('eventRequirements').value = evt.requirements || ''; document.getElementById('eventColor').value = evt.color || '#f97316'; document.getElementById('eventType').value = evt.type || ''; document.getElementById('eventMediaUrl').value = evt.media_url || ''; document.getElementById('eventMediaType').value = evt.media_type || ''; document.getElementById('eventHighlight').checked = evt.highlight === 1; previewMedia('event'); document.getElementById('eventFormContainer').classList.remove('hidden'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    window.deleteEvent = async (id) => { if (!hasPermission('delete_events')) { alert('You do not have permission to delete events.'); return; } if (!confirm('Delete this event?')) return; try { const response = await fetch(`${API_URL}/api/events/${id}`, { method: 'DELETE', headers: getAuthHeaders() }); if (!response.ok) throw new Error((await response.json()).error || 'Failed to delete'); alert('✅ Event deleted!'); await loadEvents(); } catch (error) { alert('Error: ' + error.message); } };
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        if (!ensureAuth()) return;
+        const user = getCurrentUser();
+        document.getElementById('roleBadgeDisplay').textContent = (user.role || 'viewer').replace('_', ' ').toUpperCase();
+        if (!hasPermission('edit_events')) { const addBtn = document.getElementById('addEventBtn'); if (addBtn) addBtn.style.display = 'none'; }
+        await loadEvents();
+        const form = document.getElementById('eventForm');
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!hasPermission('edit_events')) { alert('You do not have permission to save events.'); return; }
+                const btn = document.getElementById('eventSubmitBtn');
+                btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-pulse mr-2"></i> Saving...';
+                const eventData = {
+                    title: document.getElementById('eventTitle').value,
+                    type: document.getElementById('eventCategory').value,
+                    date: document.getElementById('eventDate').value,
+                    time: document.getElementById('eventTime').value,
+                    location: document.getElementById('eventLocation').value,
+                    prize: document.getElementById('eventPrize').value,
+                    description: document.getElementById('eventDescription').value,
+                    requirements: document.getElementById('eventRequirements').value,
+                    color: document.getElementById('eventColor').value,
+                    media_url: document.getElementById('eventMediaUrl').value,
+                    media_type: document.getElementById('eventMediaType').value,
+                    highlight: document.getElementById('eventHighlight').checked ? 1 : 0
+                };
+                try {
+                    const url = isEditing ? `${API_URL}/api/events/${editingId}` : `${API_URL}/api/events`;
+                    const method = isEditing ? 'PUT' : 'POST';
+                    const response = await fetch(url, { method, headers: getAuthHeaders(), body: JSON.stringify(eventData) });
+                    if (!response.ok) throw new Error((await response.json()).error || 'Failed to save');
+                    alert('✅ Event saved!');
+                    hideEventForm();
+                    await loadEvents();
+                } catch (error) { alert('Error: ' + error.message); }
+                finally { btn.disabled = false; btn.innerHTML = isEditing ? 'Update Event' : 'Save Event'; }
+            });
+        }
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        if (menuBtn) menuBtn.addEventListener('click', () => { document.getElementById('sidebar').classList.toggle('open'); });
+    });
+    window.filterEvents = () => renderEvents();
+    window.logout = () => { if (confirm('Logout?')) logoutFn(); };
+</script>
+</body>
+</html>

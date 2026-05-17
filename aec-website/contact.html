@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Contact Us - AEC Assemble Education Community</title>
+    
+    <meta name="title" content="Contact Us - AEC Assemble Education Community">
+    <meta name="description" content="Get in touch with Assemble Education Community. Contact us for inquiries, admissions, and more. Starting 2026 in Yangon, Myanmar.">
+    <meta name="keywords" content="AEC, contact, Yangon, Myanmar, education, inquiries">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: {
+                    neutral: {
+                        50: '#f8f9fa', 100: '#f1f3f5', 200: '#e9ecef', 300: '#dee2e6',
+                        400: '#ced4da', 500: '#adb5bd', 600: '#6c757d', 700: '#495057',
+                        800: '#343a40', 900: '#212529'
+                    },
+                    primary: {
+                        50: '#f0f7f4', 100: '#d9e9e0', 200: '#b8d4c7', 300: '#8fb8a5',
+                        400: '#5f957d', 500: '#407a61', 600: '#1b4332', 700: '#0d2f22',
+                        800: '#0a261c', 900: '#051f16'
+                    },
+                    accent: { gold: '#D4AF37', terracotta: '#BC6C25', cream: '#fffcf2' }
+                }
+            }
+        }
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #e9ecef; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        .gradient-text { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn-primary { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(27, 67, 50, 0.3); }
+        .btn-accent { background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%); transition: all 0.3s ease; }
+        .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(188, 108, 37, 0.3); }
+        .contact-card { transition: all 0.3s ease; cursor: pointer; }
+        .contact-card:hover { transform: translateX(5px); background-color: #f8f9fa; }
+        .contact-card:active { transform: scale(0.98); }
+        .copy-success { animation: copySuccess 0.3s ease; background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; }
+        @keyframes copySuccess { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .map-container { border-radius: 1.5rem; overflow: hidden; box-shadow: 0 10px 30px rgba(27, 67, 50, 0.15); }
+        input, textarea, select { transition: all 0.2s ease; }
+        input:focus, textarea:focus, select:focus { border-color: #1b4332; box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1); }
+        
+        @media (max-width: 1024px) { .map-container { display: none !important; } }
+        @media (max-width: 768px) { a, button { min-height: 44px; min-width: 44px; } body { font-size: 16px; } }
+    </style>
+</head>
+<body class="bg-neutral-200">
+
+<!-- ⭐ HEADER CONTAINER ⭐ -->
+<div id="header-container"></div>
+
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl lg:text-6xl font-black text-gray-900 mb-4 animate-fade-in-up gradient-text">Contact Us</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-200">We're here to help. Reach out with any questions or inquiries.</p>
+    </div>
+</section>
+
+<section class="py-16 bg-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+            <div class="animate-fade-in-up delay-100">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">Get in Touch</h2>
+                    <div id="contactInfo" class="space-y-4">
+                        <div class="text-center py-4"><div class="spinner inline-block w-8 h-8 border-2 border-primary-600 border-t-transparent rounded-full animate-spin"></div><p class="text-gray-500 mt-2">Loading contact info...</p></div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t-2 border-gray-100"><a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-xl font-bold text-white w-full text-center hover:scale-[1.02] transition-transform">Send Us a Message</a></div>
+                </div>
+            </div>
+            <div class="animate-fade-in-up delay-200">
+                <div class="map-container h-full min-h-[400px] shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.464!2d96.1286337!3d16.8163686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb34335a92f5:0xea3210d0410309d7!2sTimes%20City%20Yangon!5e0!3m2!1sen!2smm!4v1711234567890" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Times City Yangon - AEC Location"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-16 animate-fade-in-up delay-300">
+            <div class="bg-white rounded-2xl p-8 shadow-lg max-w-3xl mx-auto">
+                <h2 class="text-3xl font-black text-gray-900 mb-6 text-center">Send a Message</h2>
+                <form id="contactForm" class="space-y-5">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div><label class="block text-sm font-bold text-gray-700 mb-2">Your Name *</label><input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-600 focus:outline-none"></div>
+                        <div><label class="block text-sm font-bold text-gray-700 mb-2">Email *</label><input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-600 focus:outline-none"></div>
+                    </div>
+                    <div><label class="block text-sm font-bold text-gray-700 mb-2">Phone (optional)</label><input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-600 focus:outline-none"></div>
+                    <div><label class="block text-sm font-bold text-gray-700 mb-2">Message *</label><textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-600 focus:outline-none"></textarea></div>
+                    <button type="submit" class="btn-accent w-full py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all">Send Message</button>
+                </form>
+                <div id="formSuccess" class="hidden mt-4 p-3 bg-green-100 text-green-800 rounded-xl text-center">✅ Message sent successfully! We'll get back to you soon.</div>
+                <div id="formError" class="hidden mt-4 p-3 bg-red-100 text-red-800 rounded-xl text-center">❌ Something went wrong. Please try again.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ FOOTER CONTAINER ⭐ -->
+<div id="footer-container"></div>
+
+<script src="assets/js/load-components.js" defer></script>
+
+<script>
+const API_URL = 'https://api.assembleeducationcommunity.org';
+
+function copyToClipboard(text, element) {
+    navigator.clipboard.writeText(text).then(() => {
+        element.classList.add('copy-success');
+        setTimeout(() => element.classList.remove('copy-success'), 300);
+        showNotification(`Copied: ${text}`);
+    }).catch(() => {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showNotification(`Copied: ${text}`);
+    });
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'fixed bottom-4 right-4 bg-primary-600 text-white px-6 py-3 rounded-xl shadow-lg z-50 animate-fade-in-up';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    setTimeout(() => {
+        notification.style.animation = 'fadeOut 0.3s ease';
+        setTimeout(() => document.body.removeChild(notification), 300);
+    }, 3000);
+}
+
+async function loadContactInfo() {
+    try {
+        const res = await fetch(`${API_URL}/api/contact_info`);
+        const contacts = await res.json();
+        const container = document.getElementById('contactInfo');
+        if (contacts.length > 0) {
+            const grouped = contacts.reduce((acc, c) => { if(!acc[c.type]) acc[c.type]=[]; acc[c.type].push(c); return acc; }, {});
+            const icons = { phone:'📞', email:'✉️', address:'📍', social:'🌐', website:'🌍', other:'📌' };
+            let html = '';
+            Object.keys(grouped).forEach(type => {
+                grouped[type].forEach(c => {
+                    html += `<div class="contact-card flex items-start gap-4 p-4 rounded-xl bg-neutral-100 group" onclick="copyToClipboard('${c.value}', this)"><div class="w-12 h-12 rounded-xl bg-primary-600 flex items-center justify-center flex-shrink-0"><span class="text-white text-xl">${icons[c.type]||'📌'}</span></div><div class="flex-1"><h4 class="font-bold text-gray-900 mb-1">${c.label||type}</h4>${c.type==='email'?`<a href="mailto:${c.value}" class="text-primary-600 hover:text-primary-700 font-semibold">${c.value}</a>`:c.type==='phone'?`<a href="tel:${c.value}" class="text-primary-600 hover:text-primary-700 font-semibold">${c.value}</a>`:`<p class="text-gray-600">${c.value}</p>`}</div></div>`;
+                });
+            });
+            container.innerHTML = html;
+        }
+    } catch(e) { console.error('Error loading contact info:', e); }
+}
+
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        document.getElementById('formError').textContent = 'Please fill all required fields.';
+        document.getElementById('formError').classList.remove('hidden');
+        setTimeout(() => document.getElementById('formError').classList.add('hidden'), 4000);
+        return;
+    }
+
+    const submitBtn = document.querySelector('#contactForm button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch(`${API_URL}/api/applications`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name, email, contact_method: 'phone', contact_value: phone, position: 'General Inquiry', type: 'contact', message, parent_name: ''
+            })
+        });
+        if (response.ok) {
+            document.getElementById('contactForm').reset();
+            document.getElementById('formSuccess').classList.remove('hidden');
+            document.getElementById('formError').classList.add('hidden');
+            setTimeout(() => document.getElementById('formSuccess').classList.add('hidden'), 5000);
+        } else throw new Error('Submission failed');
+    } catch (err) {
+        console.error(err);
+        document.getElementById('formError').textContent = 'Submission failed. Please try again later.';
+        document.getElementById('formError').classList.remove('hidden');
+        setTimeout(() => document.getElementById('formError').classList.add('hidden'), 5000);
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
+
+loadContactInfo();
+</script>
+</body>
+</html>

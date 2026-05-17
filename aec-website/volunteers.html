@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Volunteers - AEC Assemble Education Community</title>
+    <meta name="title" content="Volunteers - AEC Assemble Education Community">
+    <meta name="description" content="Meet our dedicated volunteers at Assemble Education Community. Join our volunteer team starting 2026.">
+    <meta name="keywords" content="AEC, volunteers, community, Yangon, Myanmar, team, 2026">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: {
+                    neutral: {
+                        50: '#f8f9fa', 100: '#f1f3f5', 200: '#e9ecef', 300: '#dee2e6',
+                        400: '#ced4da', 500: '#adb5bd', 600: '#6c757d', 700: '#495057',
+                        800: '#343a40', 900: '#212529'
+                    },
+                    primary: {
+                        50: '#f0f7f4', 100: '#d9e9e0', 200: '#b8d4c7', 300: '#8fb8a5',
+                        400: '#5f957d', 500: '#407a61', 600: '#1b4332', 700: '#0d2f22',
+                        800: '#0a261c', 900: '#051f16'
+                    },
+                    accent: { gold: '#D4AF37', terracotta: '#BC6C25', cream: '#fffcf2' }
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #e9ecef; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+        .volunteer-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 4px 15px rgba(27, 67, 50, 0.1); transition: all 0.4s ease; display: flex; flex-direction: column; }
+        .volunteer-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(27, 67, 50, 0.2); }
+        .volunteer-description-section { padding: 32px 32px 0 32px; text-align: center; }
+        .volunteer-description { font-size: 1rem; color: #6c757d; line-height: 1.7; font-style: italic; }
+        .volunteer-photo-section { width: 100%; height: 350px; padding: 24px 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f0f7f4 0%, #e9ecef 100%); }
+        .volunteer-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 6px solid white; box-shadow: 0 8px 25px rgba(27, 67, 50, 0.15); transition: transform 0.4s ease; }
+        .volunteer-card:hover .volunteer-photo { transform: scale(1.05); }
+        .volunteer-info-section { padding: 0 32px 32px 32px; text-align: center; }
+        .volunteer-name { font-size: 1.75rem; font-weight: 800; color: #1b4332; margin-bottom: 8px; }
+        .volunteer-role { font-size: 1rem; color: #BC6C25; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; display: inline-block; padding: 6px 20px; background: rgba(188, 108, 37, 0.1); border-radius: 9999px; }
+        .featured-badge { position: absolute; top: 16px; right: 16px; background: linear-gradient(135deg, #D4AF37 0%, #BC6C25 100%); color: white; padding: 6px 16px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); }
+        .volunteer-placeholder { width: 280px; height: 280px; border-radius: 50%; background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); display: flex; align-items: center; justify-content: center; border: 6px solid white; box-shadow: 0 8px 25px rgba(27, 67, 50, 0.15); }
+        .volunteer-placeholder svg { width: 140px; height: 140px; fill: rgba(255, 255, 255, 0.3); }
+        .video-container { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 6px solid white; box-shadow: 0 8px 25px rgba(27, 67, 50, 0.15); }
+        .video-container iframe, .video-container video { width: 100%; height: 100%; object-fit: cover; }
+        .volunteer-card-container { position: relative; }
+        .cta-section { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); padding: 80px 24px; text-align: center; margin-top: 80px; }
+        @media (max-width: 768px) { .volunteer-description-section { padding: 24px 24px 0 24px; } .volunteer-photo-section { height: 300px; padding: 20px 0; } .volunteer-photo, .volunteer-placeholder, .video-container { width: 220px; height: 220px; } .volunteer-info-section { padding: 0 24px 24px 24px; } .volunteer-name { font-size: 1.5rem; } .volunteer-role { font-size: 0.875rem; } }
+        @media (max-width: 480px) { .volunteer-photo-section { height: 280px; } .volunteer-photo, .volunteer-placeholder, .video-container { width: 200px; height: 200px; } }
+    </style>
+</head>
+<body class="bg-neutral-200">
+
+<div id="header-container"></div>
+
+<section class="py-24 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h1 class="text-5xl lg:text-6xl font-black text-gray-900 mb-4 animate-fade-in-up">Our Volunteers</h1><p class="text-xl text-gray-600 max-w-2xl mx-auto font-medium animate-fade-in-up delay-200">Meet the amazing people who make our community possible</p></div></section>
+
+<section class="py-16 bg-neutral-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div id="volunteersGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"><div class="col-span-full text-center py-16"><div class="text-6xl mb-4 animate-float">🤝</div><p class="text-gray-600 text-lg mb-2">Loading volunteers...</p></div></div><div id="noVolunteers" class="hidden text-center py-16"><div class="text-6xl mb-4">🤝</div><h3 class="text-2xl font-black text-gray-900 mb-2">No Volunteers Yet</h3><p class="text-gray-600 mb-6">Be the first to join our volunteer community!</p><a href="contact.html" class="inline-block px-8 py-4 rounded-xl font-bold text-white hover:scale-105 transition-transform" style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">Join Now</a></div></div></section>
+
+<section class="cta-section"><div class="max-w-4xl mx-auto"><h2 class="text-4xl lg:text-5xl font-black text-white mb-6 animate-fade-in-up">Want to Make a Difference?</h2><p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">Join our volunteer community and help shape the future of education in Yangon. Your time and skills can change lives!</p><div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200"><a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105" style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">Become a Volunteer</a><a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg border-2 border-white/60 hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105">Learn More</a></div></div></section>
+
+<div id="footer-container"></div>
+
+<script src="assets/js/load-components.js" defer></script>
+
+<script>
+const API_URL = 'https://api.assembleeducationcommunity.org';
+let allVolunteers = [];
+
+async function loadVolunteers() {
+    try {
+        const response = await fetch(`${API_URL}/api/volunteers`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        allVolunteers = await response.json();
+        renderVolunteers();
+    } catch (error) {
+        console.error(error);
+        document.getElementById('volunteersGrid').innerHTML = `<div class="col-span-full text-center py-16"><div class="text-6xl mb-4">❌</div><p class="text-red-500 text-lg">Error loading volunteers: ${error.message}</p></div>`;
+    }
+}
+
+function escapeHtml(str) { if (!str) return ''; return str.replace(/[&<>]/g, function(m) { if (m === '&') return '&amp;'; if (m === '<') return '&lt;'; if (m === '>') return '&gt;'; return m; }); }
+
+function renderVolunteers() {
+    const grid = document.getElementById('volunteersGrid');
+    const noVolunteers = document.getElementById('noVolunteers');
+    if (allVolunteers.length === 0) { grid.classList.add('hidden'); noVolunteers.classList.remove('hidden'); return; }
+    grid.classList.remove('hidden'); noVolunteers.classList.add('hidden');
+    let html = '';
+    allVolunteers.forEach((volunteer, index) => {
+        const isVideo = volunteer.media_type === 'video' && volunteer.media_url;
+        const isImage = volunteer.media_url && !isVideo;
+        let mediaHtml = '';
+        if (isImage) mediaHtml = `<img src="${volunteer.media_url}" alt="${volunteer.name}" class="volunteer-photo" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%236c757d\'%3E%3Cpath d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\'/%3E%3C/svg%3E';">`;
+        else if (isVideo) {
+            if (volunteer.media_url.includes('youtube.com')) mediaHtml = `<div class="video-container"><iframe src="${volunteer.media_url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+            else mediaHtml = `<div class="video-container"><video src="${volunteer.media_url}" controls></video></div>`;
+        } else mediaHtml = `<div class="volunteer-placeholder"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>`;
+        html += `<div class="volunteer-card-container animate-fade-in-up" style="animation-delay: ${index * 0.1}s">${volunteer.highlight ? '<span class="featured-badge">⭐ Featured</span>' : ''}<div class="volunteer-card"><div class="volunteer-description-section"><p class="volunteer-description">${volunteer.description ? `"${escapeHtml(volunteer.description)}"` : '"Dedicated volunteer making a difference in our community."'}</p></div><div class="volunteer-photo-section">${mediaHtml}</div><div class="volunteer-info-section"><h3 class="volunteer-name">${escapeHtml(volunteer.name || 'Anonymous Volunteer')}</h3>${volunteer.role ? `<span class="volunteer-role">${escapeHtml(volunteer.role)}</span>` : ''}</div></div></div>`;
+    });
+    grid.innerHTML = html;
+}
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadVolunteers); else loadVolunteers();
+</script>
+</body>
+</html>

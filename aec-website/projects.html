@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Projects - AEC Assemble Education Community</title>
+    <meta name="title" content="Projects - AEC Assemble Education Community">
+    <meta name="description" content="Explore our community projects at Assemble Education Community. Initiatives, competitions, and programs starting 2026.">
+    <meta name="keywords" content="AEC, projects, initiatives, Yangon, Myanmar, community, education, 2026">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] },
+                colors: {
+                    neutral: {
+                        50: '#f8f9fa', 100: '#f1f3f5', 200: '#e9ecef', 300: '#dee2e6',
+                        400: '#ced4da', 500: '#adb5bd', 600: '#6c757d', 700: '#495057',
+                        800: '#343a40', 900: '#212529'
+                    },
+                    primary: {
+                        50: '#f0f7f4', 100: '#d9e9e0', 200: '#b8d4c7', 300: '#8fb8a5',
+                        400: '#5f957d', 500: '#407a61', 600: '#1b4332', 700: '#0d2f22',
+                        800: '#0a261c', 900: '#051f16'
+                    },
+                    accent: { gold: '#D4AF37', terracotta: '#BC6C25', cream: '#fffcf2' }
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #fffcf2; color: #212529; }
+        ::-webkit-scrollbar { width: 8px; background: #f1f3f5; } ::-webkit-scrollbar-thumb { background: #1b4332; border-radius: 4px; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        .animate-slide-up { animation: slideUp 0.8s ease-out forwards; }
+        .gradient-text { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .newspaper-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 2fr 1fr; gap: 32px; }
+        .masthead { border-bottom: 4px double #1b4332; padding: 24px 0; margin-bottom: 32px; text-align: center; }
+        .masthead-date { font-size: 0.875rem; color: #6c757d; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+        .masthead-title { font-family: 'Merriweather', serif; font-size: 2.5rem; font-weight: 900; color: #1b4332; letter-spacing: -1px; margin-bottom: 4px; }
+        .masthead-subtitle { font-size: 1.125rem; color: #6c757d; font-style: italic; }
+        .featured-article { grid-column: 1 / -1; background: white; border: 1px solid #dee2e6; padding: 32px; margin-bottom: 32px; position: relative; }
+        .featured-article::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #1b4332, #D4AF37); }
+        .featured-badge { position: absolute; top: 16px; right: 16px; background: linear-gradient(135deg, #D4AF37 0%, #BC6C25 100%); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .featured-image { width: 100%; height: 400px; object-fit: cover; margin: 24px 0; border: 1px solid #dee2e6; }
+        .featured-title { font-family: 'Merriweather', serif; font-size: 2rem; font-weight: 900; color: #1b4332; line-height: 1.2; margin-bottom: 16px; }
+        .featured-excerpt { font-family: 'Merriweather', serif; font-size: 1.125rem; line-height: 1.8; color: #495057; margin-bottom: 24px; }
+        .articles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .article-card { background: white; border: 1px solid #dee2e6; padding: 24px; transition: all 0.3s ease; }
+        .article-card:hover { border-color: #1b4332; box-shadow: 0 4px 12px rgba(27, 67, 50, 0.1); }
+        .article-category { display: inline-block; font-size: 0.75rem; font-weight: 700; color: #1b4332; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; padding: 2px 8px; background: #f0f7f4; border-radius: 2px; }
+        .article-title { font-family: 'Merriweather', serif; font-size: 1.25rem; font-weight: 700; color: #1b4332; line-height: 1.4; margin-bottom: 12px; }
+        .article-title:hover { color: #BC6C25; }
+        .article-meta { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; color: #6c757d; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px dashed #dee2e6; }
+        .article-excerpt { font-family: 'Merriweather', serif; font-size: 1rem; line-height: 1.7; color: #495057; margin-bottom: 16px; }
+        .article-cta { display: inline-flex; align-items: center; gap: 4px; font-size: 0.875rem; font-weight: 600; color: #1b4332; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
+        .article-cta:hover { border-bottom-color: #D4AF37; color: #BC6C25; }
+        .sidebar { position: sticky; top: 100px; height: fit-content; }
+        .sidebar-section { background: white; border: 1px solid #dee2e6; padding: 24px; margin-bottom: 24px; }
+        .sidebar-title { font-family: 'Merriweather', serif; font-size: 1.25rem; font-weight: 700; color: #1b4332; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #D4AF37; }
+        .filter-list { display: flex; flex-direction: column; gap: 8px; }
+        .filter-btn { padding: 8px 16px; border: 1px solid #dee2e6; border-radius: 4px; background: white; font-size: 0.875rem; font-weight: 500; color: #495057; cursor: pointer; transition: all 0.3s ease; text-align: left; }
+        .filter-btn:hover, .filter-btn.active { background: #1b4332; color: white; border-color: #1b4332; }
+        .featured-list { display: flex; flex-direction: column; gap: 16px; }
+        .featured-item { display: flex; gap: 12px; }
+        .featured-item-image { width: 80px; height: 60px; object-fit: cover; border: 1px solid #dee2e6; flex-shrink: 0; }
+        .featured-item-title { font-family: 'Merriweather', serif; font-size: 0.9rem; font-weight: 600; color: #1b4332; line-height: 1.4; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; backdrop-filter: blur(5px); }
+        .modal.active { display: flex; align-items: center; justify-content: center; animation: fadeIn 0.3s ease; }
+        .modal-content { background: white; border-radius: 0; max-width: 900px; width: 90%; max-height: 85vh; overflow-y: auto; animation: slideUp 0.3s ease; position: relative; font-family: 'Merriweather', serif; }
+        .modal-close { position: absolute; top: 1rem; right: 1rem; width: 3rem; height: 3rem; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-size: 1.5rem; }
+        .modal-close:hover { background: #f3f4f6; transform: rotate(90deg); }
+        .cta-section { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); padding: 64px 24px; text-align: center; margin-top: 64px; }
+        @media (max-width: 1024px) { .newspaper-container { grid-template-columns: 1fr; } .sidebar { position: static; } .articles-grid { grid-template-columns: 1fr; } .featured-title { font-size: 1.5rem; } .featured-image { height: 300px; } }
+        @media (max-width: 768px) { a, button { min-height: 44px; min-width: 44px; } .masthead-title { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<main class="py-12">
+    <header class="masthead animate-fade-in">
+        <div class="masthead-date" id="currentDate"></div>
+        <h1 class="masthead-title">The AEC Chronicle</h1>
+        <p class="masthead-subtitle">Community Projects & Initiatives</p>
+    </header>
+    
+    <div class="newspaper-container">
+        <div class="main-content">
+            <article id="featuredArticle" class="featured-article animate-slide-up"></article>
+            <div id="articlesGrid" class="articles-grid"></div>
+            <div id="noResults" class="hidden text-center py-16 col-span-full"><div class="text-6xl mb-4">📰</div><h3 class="text-2xl font-black text-gray-900 mb-2" style="font-family: 'Merriweather', serif;">No Projects Found</h3><p class="text-gray-600 mb-6">Try adjusting your filter criteria.</p><button onclick="resetFilters()" class="px-6 py-3 rounded-xl font-bold text-white hover:scale-105 transition-transform" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);">Reset Filters</button></div>
+        </div>
+        <aside class="sidebar">
+            <div class="sidebar-section"><h3 class="sidebar-title">Categories</h3><div class="filter-list" id="categoryFilters"><button onclick="filterByCategory('')" class="filter-btn active">All Projects</button></div></div>
+            <div class="sidebar-section"><h3 class="sidebar-title">Filter</h3><div class="filter-list"><label class="flex items-center gap-2"><input type="checkbox" id="prizeOnly" onchange="applyFilters()" class="w-4 h-4"><span class="text-sm">Show projects with prizes only</span></label></div></div>
+            <div class="sidebar-section"><h3 class="sidebar-title">Featured Projects</h3><div class="featured-list" id="featuredList"></div></div>
+            <div class="sidebar-section"><h3 class="sidebar-title">Project Stats</h3><div class="space-y-3 text-sm"><div class="flex justify-between"><span class="text-gray-600">Total Projects:</span><span class="font-bold text-primary-600" id="totalProjects">0</span></div><div class="flex justify-between"><span class="text-gray-600">With Prizes:</span><span class="font-bold text-accent-terracotta" id="withPrizes">0</span></div><div class="flex justify-between"><span class="text-gray-600">Featured:</span><span class="font-bold text-accent-gold" id="featuredCount">0</span></div></div></div>
+        </aside>
+    </div>
+</main>
+
+<div id="projectModal" class="modal"><div class="modal-close" onclick="closeModal()">×</div><div class="modal-content" id="modalContent"></div></div>
+
+<section class="cta-section"><div class="max-w-4xl mx-auto"><h2 class="text-4xl lg:text-5xl font-black text-white mb-6" style="font-family: 'Merriweather', serif;">Want to Start a Project?</h2><p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Have an idea for a community initiative? We'd love to hear from you. Let's build something amazing together in 2026!</p><div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105" style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">Propose a Project</a><a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg border-2 border-white/60 hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105">Contact Us</a></div></div></section>
+
+<div id="footer-container"></div>
+
+<script src="assets/js/load-components.js" defer></script>
+
+<script type="module">
+const API_URL = 'https://api.assembleeducationcommunity.org';
+let allProjects = [], filteredProjects = [], currentCategory = '';
+
+document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+async function loadProjects() {
+    try {
+        const response = await fetch(`${API_URL}/api/projects`);
+        allProjects = await response.json();
+        filteredProjects = [...allProjects];
+        const categories = ['Community', 'Education', 'Innovation', 'Arts', 'Sports'];
+        const catContainer = document.getElementById('categoryFilters');
+        categories.forEach(cat => {
+            const btn = document.createElement('button');
+            btn.textContent = cat;
+            btn.className = 'filter-btn';
+            btn.onclick = () => filterByCategory(cat);
+            catContainer.appendChild(btn);
+        });
+        document.getElementById('totalProjects').textContent = allProjects.length;
+        document.getElementById('withPrizes').textContent = allProjects.filter(p => p.prize_pool).length;
+        document.getElementById('featuredCount').textContent = allProjects.filter(p => p.highlight).length;
+        loadFeaturedList();
+        renderProjects();
+    } catch(error) { console.error(error); document.getElementById('articlesGrid').innerHTML = `<div class="col-span-full text-center py-16"><div class="text-6xl mb-4">❌</div><p class="text-red-500 text-lg">Error loading projects.</p></div>`; }
+}
+
+function loadFeaturedList() {
+    const featured = allProjects.filter(p => p.highlight).slice(0, 3);
+    const container = document.getElementById('featuredList');
+    if (featured.length === 0) { container.innerHTML = '<p class="text-sm text-gray-500">No featured projects yet.</p>'; return; }
+    container.innerHTML = featured.map(project => `<div class="featured-item">${project.media_url && project.media_type === 'image' ? `<img src="${project.media_url}" alt="${project.title}" class="featured-item-image">` : `<div class="featured-item-image flex items-center justify-center bg-neutral-100 text-2xl">📋</div>`}<div><a href="#" onclick="openProjectModal('${project.id}'); return false;" class="featured-item-title hover:text-accent-terracotta transition-colors">${project.title}</a>${project.prize_pool ? `<p class="text-xs text-accent-terracotta font-bold mt-1">🏆 ${project.prize_pool}</p>` : ''}</div></div>`).join('');
+}
+
+window.openProjectModal = function(projectId) {
+    const project = allProjects.find(p => p.id === projectId);
+    if (!project) return;
+    const modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = `<article style="padding: 40px;"><div style="margin-bottom: 24px;"><span class="article-category">${project.title.substring(0, 20)}...</span></div><h1 style="font-family: 'Merriweather', serif; font-size: 2.5rem; font-weight: 900; color: #1b4332; line-height: 1.2; margin-bottom: 16px;">${project.title}</h1><div style="display: flex; align-items: center; gap: 16px; font-size: 0.875rem; color: #6c757d; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px dashed #dee2e6;"><span>📅 ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span><span>•</span><span>📋 ${project.description.substring(0, 30)}...</span>${project.places ? `<span>• 👥 ${project.places}</span>` : ''}</div>${project.media_url ? `<div style="margin: 32px 0;">${project.media_type === 'video' ? `<video src="${project.media_url}" controls style="width: 100%; border-radius: 0; border: 1px solid #dee2e6;"></video>` : `<img src="${project.media_url}" alt="${project.title}" style="width: 100%; border-radius: 0; border: 1px solid #dee2e6;">`}</div>` : ''}<div style="font-family: 'Merriweather', serif; font-size: 1.125rem; line-height: 1.8; color: #495057; margin-bottom: 32px;"><p style="margin-bottom: 16px;">${project.description}</p></div>${project.prize_pool ? `<div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #22c55e; border-radius: 0; padding: 24px; margin: 32px 0;"><h3 style="font-family: 'Merriweather', serif; font-size: 1.25rem; font-weight: 700; color: #1b4332; margin-bottom: 12px;">🏆 Prize Pool</h3><p style="font-size: 1.5rem; font-weight: 900; color: #BC6C25;">${project.prize_pool}</p>${project.places ? `<p style="font-size: 1rem; color: #6c757d; margin-top: 8px;">👥 Available for: ${project.places}</p>` : ''}</div>` : ''}<div style="display: flex; gap: 16px; margin-top: 40px; padding-top: 24px; border-top: 2px solid #dee2e6;"><a href="contact.html" class="flex-1 py-4 rounded-xl font-bold text-center text-white hover:shadow-xl text-lg" style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">Participate Now</a><a href="contact.html" class="flex-1 py-4 rounded-xl font-bold text-center text-primary-600 bg-white border-2 border-primary-200 hover:bg-primary-50 transition-all text-lg">Learn More</a></div></article>`;
+    document.getElementById('projectModal').classList.add('active'); document.body.style.overflow = 'hidden';
+};
+
+window.closeModal = function() { document.getElementById('projectModal').classList.remove('active'); document.body.style.overflow = ''; };
+document.getElementById('projectModal').addEventListener('click', e => { if (e.target === this) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+function renderProjects() {
+    const grid = document.getElementById('articlesGrid');
+    const noResults = document.getElementById('noResults');
+    const featuredArticle = document.getElementById('featuredArticle');
+    if (allProjects.length === 0) { grid.classList.add('hidden'); noResults.classList.add('hidden'); featuredArticle.innerHTML = `<div class="text-center py-16"><div class="text-6xl mb-4">📰</div><h3 class="text-2xl font-black text-gray-900 mb-2" style="font-family: 'Merriweather', serif;">No Projects Yet</h3><p class="text-gray-600">Check back soon for exciting community initiatives!</p></div>`; return; }
+    if (filteredProjects.length === 0) { grid.classList.add('hidden'); noResults.classList.remove('hidden'); return; }
+    grid.classList.remove('hidden'); noResults.classList.add('hidden');
+    const featured = filteredProjects.find(p => p.highlight) || filteredProjects[0];
+    if (featured) {
+        const dateDisplay = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        featuredArticle.innerHTML = `<span class="featured-badge">Featured</span><span class="article-category">${featured.title.substring(0, 20)}...</span><h2 class="featured-title">${featured.title}</h2><div class="article-meta"><span>📅 ${dateDisplay}</span>${featured.places ? `<span>👥 ${featured.places}</span>` : ''}${featured.prize_pool ? `<span>🏆 ${featured.prize_pool}</span>` : ''}</div><p class="featured-excerpt">${featured.description.substring(0, 200)}${featured.description.length > 200 ? '...' : ''}</p>${featured.media_url ? `<img src="${featured.media_url}" alt="${featured.title}" class="featured-image">` : ''}<a href="#" onclick="openProjectModal('${featured.id}'); return false;" class="article-cta">Read Full Story <span>→</span></a>`;
+    }
+    const otherProjects = filteredProjects.filter(p => p.id !== featured?.id).slice(0, 6);
+    grid.innerHTML = otherProjects.map(project => { const dateDisplay = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); return `<article class="article-card animate-fade-in"><span class="article-category">${project.title.substring(0, 15)}...</span><h3 class="article-title"><a href="#" onclick="openProjectModal('${project.id}'); return false;">${project.title}</a></h3><div class="article-meta"><span>📅 ${dateDisplay}</span>${project.prize_pool ? `<span>🏆 ${project.prize_pool}</span>` : ''}</div><p class="article-excerpt">${project.description.substring(0, 120)}${project.description.length > 120 ? '...' : ''}</p><a href="#" onclick="openProjectModal('${project.id}'); return false;" class="article-cta">Read More <span>→</span></a></article>`; }).join('');
+}
+
+window.filterByCategory = function(category) { currentCategory = category; document.querySelectorAll('#categoryFilters .filter-btn').forEach(btn => { btn.classList.remove('active'); if ((category === '' && btn.textContent === 'All Projects') || btn.textContent === category) btn.classList.add('active'); }); applyFilters(); };
+window.applyFilters = function() { const prizeOnly = document.getElementById('prizeOnly').checked; filteredProjects = allProjects.filter(project => { const matchesCategory = !currentCategory || project.title.toLowerCase().includes(currentCategory.toLowerCase()); const matchesPrize = !prizeOnly || project.prize_pool; return matchesCategory && matchesPrize; }); renderProjects(); };
+window.resetFilters = function() { document.getElementById('prizeOnly').checked = false; currentCategory = ''; document.querySelectorAll('.filter-btn').forEach(btn => { btn.classList.remove('active'); if (btn.textContent === 'All Projects') btn.classList.add('active'); }); filteredProjects = [...allProjects]; renderProjects(); };
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadProjects); else loadProjects();
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* assets/css/components.css */
+/* ⭐ Reusable UI Components (Cards, Badges, Forms, Utilities) ⭐ */
+
+/* --- Cards --- */
+.aec-card {
+  background: var(--color-background, #ffffff);
+  border-radius: var(--radius-xl, 1rem);
+  padding: 1.375rem; /* 22px */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+  will-change: transform, box-shadow;
+}
+
+.aec-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
+}
+
+/* --- Badges --- */
+.aec-badge {
+  display: inline-block;
+  background: var(--color-primary-100, #dcfce7);
+  color: var(--color-primary-700, #166534);
+  padding: 0.25rem 0.625rem; /* 4px 10px */
+  border-radius: 9999px;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+/* --- Buttons (Admin & Public) --- */
+.aec-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg, 0.75rem);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+}
+
+.aec-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.3);
+}
+
+.aec-btn-primary {
+  background: var(--color-primary-600, #1b4332);
+  color: #ffffff;
+}
+.aec-btn-primary:hover {
+  background: var(--color-primary-700, #166534);
+  transform: translateY(-1px);
+}
+
+.aec-btn-accent {
+  background: var(--color-accent-600, #D4AF37);
+  color: #0d2f22;
+}
+.aec-btn-accent:hover {
+  background: var(--color-accent-700, #b45309);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* --- Form Inputs --- */
+.aec-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-lg, 0.75rem);
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #ffffff;
+}
+
+.aec-input:focus {
+  outline: none;
+  border-color: var(--color-primary-600, #1b4332);
+  box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1);
+}
+
+.aec-input::placeholder {
+  color: #9ca3af;
+}
+
+/* --- Status Badges (Applications/Enrollments) --- */
+.status-new { background: #dbeafe; color: #1e40af; }
+.status-reviewed { background: #fef3c7; color: #92400e; }
+.status-shortlisted { background: #d1fae5; color: #065f46; }
+.status-rejected { background: #fee2e2; color: #991b1b; }
+.status-pending { background: #f3f4f6; color: #374151; }
+
+/* --- Loading Skeleton --- */
+.aec-skeleton {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: aec-pulse 1.5s infinite;
+  border-radius: var(--radius-md, 0.5rem);
+}
+
+@keyframes aec-pulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 640px) {
+  .aec-card { padding: 1rem; }
+  .aec-btn { width: 100%; }
+}

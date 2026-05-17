@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aec-backend",
+  "main": "src/index.js",
+  "compatibility_date": "2024-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "aec-database",
+      "database_id": "6f8204cd-3dd3-4f7a-8519-9d5ce956beae"
+    }
+  ],
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+}

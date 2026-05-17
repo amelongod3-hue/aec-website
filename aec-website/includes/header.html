@@ -1,0 +1,127 @@
+<!-- ⭐ HEADER WITH WORKING MOBILE MENU ⭐ -->
+<nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo with Image -->
+      <div class="flex-shrink-0 flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <!-- Logo Image with Fallback -->
+          <div class="w-12 h-12 rounded-xl overflow-hidden transition-all duration-300 group-hover:scale-110"
+               id="header-logo"
+               style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); box-shadow: 0 4px 15px rgba(27, 67, 50, 0.3);">
+            <img src="assets/images/logo.jpg"
+                 alt="AEC Logo"
+                 class="w-full h-full object-cover"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'w-full h-full flex items-center justify-center text-white font-black text-2xl\'>A</span>'">
+          </div>
+          <!-- Logo Text -->
+          <div class="transition-all duration-300 group-hover:translate-x-1">
+            <span class="text-2xl font-black tracking-tight text-gray-900">AEC</span>
+            <p class="text-xs text-gray-500 -mt-0.5 hidden-mobile">Assemble Education Community</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Menu - ALL LINKS -->
+      <div class="hidden lg:flex items-center space-x-1">
+        <a href="index.html" class="nav-link px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:text-[#1b4332] hover:bg-[#e9ecef]">Home</a>
+        <a href="classes.html" class="nav-link px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:text-[#1b4332] hover:bg-[#e9ecef]">Classes</a>
+        <a href="events.html" class="nav-link px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:text-[#1b4332] hover:bg-[#e9ecef]">Events</a>
+        <a href="jobs.html" class="nav-link px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:text-[#1b4332] hover:bg-[#e9ecef]">Jobs Offer</a>
+        <a href="projects.html" class="nav-link px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:text-[#1b4332] hover:bg-[#e9ecef]">Next Project</a>
+        <a href="volunteers.html" class="nav-link px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:text-[#1b4332] hover:bg-[#e9ecef]">Volunteers</a>
+        <a href="about.html" class="nav-link px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:text-[#1b4332] hover:bg-[#e9ecef]">About Us</a>
+        <!-- Enroll Button -->
+        <a href="enroll.html" class="ml-4 text-white px-6 py-2.5 rounded-xl font-bold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
+           style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">
+          Enroll Now
+        </a>
+      </div>
+
+      <!-- ⭐ MOBILE MENU BUTTON (HAMBURGER - 3 LINES) ⭐ -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-all focus:outline-none focus:ring-2 focus:ring-[#1b4332] z-50 flex-shrink-0" aria-label="Toggle menu" type="button">
+        <!-- Hamburger Icon (3 Lines) -->
+        <svg id="hamburger-icon" class="w-7 h-7 text-gray-700 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <!-- X Icon (hidden by default) -->
+        <svg id="close-icon" class="w-7 h-7 text-gray-700 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ⭐ MOBILE MENU (Hidden by Default) ⭐ -->
+  <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-100 shadow-lg hidden">
+    <nav class="px-4 py-4 space-y-2">
+      <a href="index.html" class="block px-4 py-3 rounded-lg text-gray-700 font-semibold hover:text-[#1b4332] hover:bg-[#e9ecef] transition-all">🏠 Home</a>
+      <a href="classes.html" class="block px-4 py-3 rounded-lg text-gray-700 font-semibold hover:text-[#1b4332] hover:bg-[#e9ecef] transition-all">📚 Classes</a>
+      <a href="events.html" class="block px-4 py-3 rounded-lg text-gray-700 font-semibold hover:text-[#1b4332] hover:bg-[#e9ecef] transition-all">📅 Events</a>
+      <a href="jobs.html" class="block px-4 py-3 rounded-lg text-gray-700 font-semibold hover:text-[#1b4332] hover:bg-[#e9ecef] transition-all">💼 Jobs Offer</a>
+      <a href="projects.html" class="block px-4 py-3 rounded-lg text-gray-700 font-semibold hover:text-[#1b4332] hover:bg-[#e9ecef] transition-all">🚀 Next Project</a>
+      <a href="volunteers.html" class="block px-4 py-3 rounded-lg text-gray-700 font-semibold hover:text-[#1b4332] hover:bg-[#e9ecef] transition-all">🤝 Volunteers</a>
+      <a href="about.html" class="block px-4 py-3 rounded-lg text-gray-700 font-semibold hover:text-[#1b4332] hover:bg-[#e9ecef] transition-all">ℹ️ About Us</a>
+      <a href="enroll.html" class="block px-4 py-3 rounded-lg text-white font-bold text-center mt-4" style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">
+        🎓 Enroll Now
+      </a>
+    </nav>
+  </div>
+</nav>
+
+<!-- ⭐ Spacer for Fixed Header ⭐ -->
+<div class="h-20 lg:h-20"></div>
+
+<!-- ⭐ CSS - Mobile Fix ⭐ -->
+<style>
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+/* Nav link hover effect */
+.nav-link:hover { color: #1b4332 !important; }
+/* Logo pulse animation */
+@keyframes logoPulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(27, 67, 50, 0.3); }
+  50% { box-shadow: 0 4px 25px rgba(27, 67, 50, 0.5); }
+}
+#header-logo { animation: logoPulse 2s ease-in-out infinite; }
+/* Hide main page scrollbar */
+::-webkit-scrollbar { width: 0px; background: transparent; }
+body { -ms-overflow-style: none; scrollbar-width: none; }
+/* ⭐ MOBILE HEADER FIX - Hide subtitle to save space ⭐ */
+@media (max-width: 768px) {
+  /* Hide the subtitle text on mobile */
+  #navbar p.text-xs,
+  #navbar .hidden-mobile {
+    display: none !important;
+  }
+  /* Make logo text slightly smaller on mobile */
+  #navbar span.text-2xl {
+    font-size: 1.25rem !important;
+  }
+  /* Reduce logo container size on mobile */
+  #navbar .w-12.h-12 {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  /* Tighten gap between logo and text */
+  #navbar .flex.items-center.gap-3 {
+    gap: 0.5rem !important;
+  }
+  /* Ensure hamburger button stays visible */
+  #mobile-menu-btn {
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+    z-index: 60 !important;
+  }
+}
+@media (max-width: 480px) {
+  /* Extra small screens */
+  #navbar span.text-2xl {
+    font-size: 1.125rem !important;
+  }
+  #navbar .w-12.h-12 {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+  }
+}
+</style>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>AEC - Assemble Education Community | Excellence in Education</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="AEC - Assemble Education Community | Excellence in Education">
+    <meta name="description" content="Nurturing young minds through innovative teaching. Join Assemble Education Community starting 2026 in Yangon, Myanmar.">
+    <meta name="keywords" content="AEC, Assemble Education Community, Yangon school, Myanmar education, classes, enrollment, 2026">
+    <meta name="author" content="Assemble Education Community">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Color Configuration - 60-30-10 Rule -->
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: {
+                    neutral: {
+                        50: '#f8f9fa', 100: '#f1f3f5', 200: '#e9ecef', 300: '#dee2e6',
+                        400: '#ced4da', 500: '#adb5bd', 600: '#6c757d', 700: '#495057',
+                        800: '#343a40', 900: '#212529'
+                    },
+                    primary: {
+                        50: '#f0f7f4', 100: '#d9e9e0', 200: '#b8d4c7', 300: '#8fb8a5',
+                        400: '#5f957d', 500: '#407a61', 600: '#1b4332', 700: '#0d2f22',
+                        800: '#0a261c', 900: '#051f16'
+                    },
+                    accent: { gold: '#D4AF37', terracotta: '#BC6C25', cream: '#fffcf2' }
+                }
+            }
+        }
+    }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #e9ecef; }
+        
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes shimmer { 0% { background-position: -1000px 0; } 100% { background-position: 1000px 0; } }
+        @keyframes copySuccess { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        @keyframes fadeOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(20px); } }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-slide-in-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slide-in-right { animation: slideInRight 0.8s ease-out forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; } .delay-600 { animation-delay: 0.6s; }
+        
+        /* Video Background */
+        .video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
+        .video-background iframe { position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; transform: translate(-50%, -50%); pointer-events: none; }
+        .video-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(27, 67, 50, 0.85) 0%, rgba(45, 106, 79, 0.75) 50%, rgba(27, 67, 50, 0.85) 100%); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; }
+        
+        /* Cards & Buttons */
+        .feature-card, .explore-card, .contact-card { transition: all 0.3s ease; }
+        .feature-card:hover, .explore-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(27, 67, 50, 0.15); }
+        .contact-card:hover { transform: translateX(5px); cursor: pointer; }
+        .contact-card:active { transform: scale(0.98); }
+        
+        /* Primary Button (Forest Green - 30%) */
+        .btn-primary { 
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); 
+            transition: all 0.3s ease; 
+        }
+        .btn-primary:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 25px rgba(27, 67, 50, 0.3); 
+        }
+        
+        /* Accent Button (Terracotta/Gold - 10%) */
+        .btn-accent { 
+            background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%); 
+            transition: all 0.3s ease; 
+        }
+        .btn-accent:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 25px rgba(188, 108, 37, 0.3); 
+        }
+        
+        /* Map */
+        .map-container { border-radius: 1.5rem; overflow: hidden; box-shadow: 0 10px 30px rgba(27, 67, 50, 0.15); }
+        
+        /* Copy Success */
+        .copy-success { animation: copySuccess 0.3s ease; background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; }
+        
+        /* Shimmer Effect */
+        .shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); background-size: 1000px 100%; animation: shimmer 2s infinite; }
+        
+        /* Gradient Text */
+        .gradient-text { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        
+        /* Section Pattern */
+        .section-pattern { background-image: radial-gradient(#1b4332 1px, transparent 1px); background-size: 30px 30px; opacity: 0.05; }
+        
+        /* Scroll Reveal */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Loading Spinner */
+        .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #1b4332; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }
+        
+        /* Page Transition */
+        .page-transition { animation: fadeIn 0.5s ease-out; }
+        
+        /* Mobile - Hide About AEC Squares on Mobile */
+        @media (max-width: 1024px) {
+            .about-squares { display: none !important; }
+            .about-section .grid { grid-template-columns: 1fr !important; }
+        }
+        
+        /* ⭐ ENHANCED MOBILE OPTIMIZATIONS ⭐ */
+        @media (max-width: 1024px) {
+            .map-container { display: none !important; }
+            .contact-section-grid { grid-template-columns: 1fr !important; }
+            .hero-content h1 { font-size: 2.5rem !important; line-height: 1.2 !important; }
+            .hero-content p { font-size: 1.125rem !important; }
+            .hero-stats { grid-template-columns: repeat(3, 1fr) !important; gap: 1rem !important; }
+            .video-background iframe { display: none; }
+            .hero-content { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%) !important; }
+            .feature-card, .explore-card { padding: 1.5rem !important; }
+            .feature-icon { width: 60px !important; height: 60px !important; font-size: 1.75rem !important; }
+            .btn-primary, .btn-accent, button, a[href] { min-height: 48px !important; min-width: 48px !important; padding: 0.75rem 1.5rem !important; font-size: 1rem !important; }
+            input, select, textarea { font-size: 16px !important; padding: 0.875rem !important; }
+            .animate-float, .animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right { animation: none !important; transform: none !important; opacity: 1 !important; }
+            .stats-number { font-size: 2rem !important; }
+            .stats-label { font-size: 0.875rem !important; }
+            section { padding: 3rem 1rem !important; }
+            .grid { gap: 1.5rem !important; }
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 16px !important; line-height: 1.6 !important; }
+            h1 { font-size: 2rem !important; }
+            h2 { font-size: 1.75rem !important; }
+            h3 { font-size: 1.25rem !important; }
+            p { font-size: 1rem !important; }
+            .feature-card, .explore-card, .contact-card { border-radius: 1rem !important; margin-bottom: 1rem !important; }
+            .contact-card { flex-direction: column !important; text-align: center !important; padding: 1.25rem !important; gap: 0.75rem !important; }
+            .contact-card .w-12 { margin: 0 auto 0.5rem !important; width: 3rem !important; height: 3rem !important; }
+            .contact-card .w-12 span { font-size: 1.5rem !important; }
+            .contact-card .flex-1 { width: 100% !important; }
+            .contact-card h4 { font-size: 1rem !important; margin-bottom: 0.25rem !important; }
+            .contact-card p, .contact-card a { font-size: 0.9rem !important; word-break: break-word !important; }
+            .contact-card a { display: block !important; padding: 0.5rem 0 !important; min-height: 44px !important; }
+            footer { padding: 2rem 1rem !important; }
+            footer .grid { grid-template-columns: 1fr !important; text-align: center !important; }
+            footer ul { align-items: center !important; }
+            .section-pattern, .video-overlay { display: none !important; }
+            a, button { -webkit-tap-highlight-color: rgba(27, 67, 50, 0.2); touch-action: manipulation; }
+            body, html { overflow-x: hidden !important; max-width: 100vw !important; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 2rem !important; }
+            .btn-primary, .btn-accent { width: 100% !important; }
+            .flex-wrap { flex-direction: column !important; }
+            .gap-4 { gap: 0.75rem !important; }
+            .hero-stats { grid-template-columns: 1fr !important; }
+            .explore-card { text-align: center !important; }
+            .explore-card .w-16 { margin: 0 auto 1rem !important; }
+            .contact-card { padding: 1rem !important; }
+            .contact-card .w-12 { width: 2.5rem !important; height: 2.5rem !important; }
+            .contact-card h4 { font-size: 0.9rem !important; }
+            .contact-card p, .contact-card a { font-size: 0.85rem !important; }
+        }
+        
+        img[loading="lazy"] { transition: opacity 0.3s ease; opacity: 0; }
+        img[loading="lazy"].loaded { opacity: 1; }
+        a:focus, button:focus, input:focus { outline: 2px solid #D4AF37 !important; outline-offset: 2px !important; }
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #1a1a2e !important; }
+            .bg-white { background-color: #16213e !important; color: #e9ecef !important; }
+            .text-gray-900 { color: #ffffff !important; }
+            .text-gray-600 { color: #adb5bd !important; }
+        }
+    </style>
+</head>
+<body class="bg-neutral-200 page-transition">
+
+<!-- ⭐ HEADER CONTAINER ⭐ -->
+<div id="header-container"></div>
+
+<!-- ⭐ HERO SECTION WITH VIDEO BACKGROUND (30% Primary) ⭐ -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);">
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/Vy73aOm0JZw?autoplay=1&mute=1&loop=1&playlist=Vy73aOm0JZw&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-overlay"></div>
+    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white animate-slide-in-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6 border border-white/30 animate-float">
+                    <span class="w-2 h-2 bg-accent-gold rounded-full animate-pulse"></span>
+                    <span class="text-sm font-semibold">🎓 Enrollment Open for 2026</span>
+                </div>
+                <h1 class="text-5xl lg:text-6xl font-black mb-6 leading-tight drop-shadow-lg animate-fade-in-up">Excellence in<br/><span class="text-accent-gold drop-shadow-lg">Education</span></h1>
+                <p class="text-xl text-white/95 mb-8 leading-relaxed max-w-lg drop-shadow-md animate-fade-in-up delay-200">Nurturing young minds through innovative teaching. Join our community starting 2026 in Yangon, Myanmar.</p>
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
+                    <a href="enroll.html" class="btn-accent px-8 py-4 rounded-xl font-bold text-white text-lg shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 group shimmer overflow-hidden relative">
+                        <span class="relative z-10">Apply Now</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </a>
+                    <a href="classes.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg border-2 border-white/50 hover:bg-white/20 backdrop-blur-sm transition-all flex items-center justify-center gap-2 group">
+                        <span>View Classes</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </a>
+                </div>
+                <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/30 animate-fade-in-up delay-400 hero-stats">
+                    <div class="text-center sm:text-left animate-float" style="animation-delay: 0s;"><div class="text-3xl font-black">2026</div><div class="text-sm text-white/80">Starting Year</div></div>
+                    <div class="text-center sm:text-left animate-float" style="animation-delay: 0.5s;"><div class="text-3xl font-black">100%</div><div class="text-sm text-white/80">Dedication</div></div>
+                    <div class="text-center sm:text-left animate-float" style="animation-delay: 1s;"><div class="text-3xl font-black">24/7</div><div class="text-sm text-white/80">Support</div></div>
+                </div>
+            </div>
+            <div class="hidden lg:block animate-slide-in-right delay-200">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-white/10 rounded-3xl transform rotate-3 backdrop-blur-sm animate-float"></div>
+                    <div class="relative bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-white/30 shadow-2xl">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/20 rounded-2xl p-6 text-center backdrop-blur-sm hover:bg-white/30 transition-all transform hover:scale-105"><div class="text-4xl mb-2">📚</div><div class="font-bold text-sm">Quality Education</div></div>
+                            <div class="bg-white/20 rounded-2xl p-6 text-center backdrop-blur-sm hover:bg-white/30 transition-all transform hover:scale-105"><div class="text-4xl mb-2">👨‍🏫</div><div class="font-bold text-sm">Expert Teachers</div></div>
+                            <div class="bg-white/20 rounded-2xl p-6 text-center backdrop-blur-sm hover:bg-white/30 transition-all transform hover:scale-105"><div class="text-4xl mb-2">🏆</div><div class="font-bold text-sm">Proven Results</div></div>
+                            <div class="bg-white/20 rounded-2xl p-6 text-center backdrop-blur-sm hover:bg-white/30 transition-all transform hover:scale-105"><div class="text-4xl mb-2">🌟</div><div class="font-bold text-sm">Bright Future</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hero-content">
+        <svg class="w-6 h-6 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+    </div>
+</section>
+
+<!-- ⭐ ABOUT SECTION (60% Neutral) ⭐ -->
+<section class="py-20 bg-white reveal about-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in-up">
+                <div class="inline-block px-4 py-2 rounded-full bg-accent-gold/20 text-accent-terracotta text-sm font-semibold mb-4">About AEC</div>
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6 gradient-text">Building Tomorrow's<br/><span class="text-primary-600">Leaders Today</span></h2>
+                <p class="text-gray-600 text-lg mb-6 leading-relaxed">Assemble Education Community is committed to providing exceptional education that prepares students for success in the modern world. Our innovative teaching methods and dedicated faculty ensure every student reaches their full potential.</p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-center gap-3 transform hover:translate-x-2 transition-transform"><div class="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700">Experienced & Qualified Teachers</span></div>
+                    <div class="flex items-center gap-3 transform hover:translate-x-2 transition-transform"><div class="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700">Modern Learning Facilities</span></div>
+                    <div class="flex items-center gap-3 transform hover:translate-x-2 transition-transform"><div class="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700">Personalized Attention</span></div>
+                    <div class="flex items-center gap-3 transform hover:translate-x-2 transition-transform"><div class="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div><span class="text-gray-700">Holistic Development Approach</span></div>
+                </div>
+                <a href="about.html" class="btn-primary inline-block px-8 py-4 rounded-xl font-bold text-white hover:scale-105 transition-transform">Learn More About Us</a>
+            </div>
+            <div class="grid grid-cols-2 gap-4 animate-fade-in-up delay-200 about-squares">
+                <div class="space-y-4">
+                    <div class="bg-neutral-200 rounded-2xl h-48 flex items-center justify-center transform hover:scale-105 transition-transform cursor-pointer"><span class="text-6xl">📖</span></div>
+                    <div class="bg-primary-600 rounded-2xl h-64 flex items-center justify-center transform hover:scale-105 transition-transform cursor-pointer"><span class="text-6xl">🎓</span></div>
+                </div>
+                <div class="space-y-4 pt-8">
+                    <div class="bg-primary-600 rounded-2xl h-64 flex items-center justify-center transform hover:scale-105 transition-transform cursor-pointer"><span class="text-6xl">🏫</span></div>
+                    <div class="bg-neutral-200 rounded-2xl h-48 flex items-center justify-center transform hover:scale-105 transition-transform cursor-pointer"><span class="text-6xl">✏️</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ EXPLORE AEC SECTION (60% Neutral) ⭐ -->
+<section class="py-20 bg-neutral-200 relative overflow-hidden reveal">
+    <div class="absolute inset-0 section-pattern"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12 animate-fade-in-up">
+            <div class="inline-block px-4 py-2 rounded-full bg-white text-primary-600 text-sm font-semibold mb-4">Discover More</div>
+            <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4 gradient-text">Explore AEC</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Discover all the opportunities and programs we offer.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="classes.html" class="explore-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fade-in-up delay-100 group"><div class="w-16 h-16 rounded-2xl bg-primary-600 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><span class="text-3xl">📚</span></div><h3 class="text-xl font-bold text-gray-900 mb-3">Classes</h3><p class="text-gray-600 mb-4">Academic programs for all grade levels</p><span class="text-accent-terracotta font-semibold group-hover:translate-x-2 inline-block transition-transform">View All →</span></a>
+            <a href="events.html" class="explore-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fade-in-up delay-200 group"><div class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><span class="text-3xl">📅</span></div><h3 class="text-xl font-bold text-gray-900 mb-3">Events</h3><p class="text-gray-600 mb-4">School activities and special occasions</p><span class="text-accent-terracotta font-semibold group-hover:translate-x-2 inline-block transition-transform">View All →</span></a>
+            <a href="jobs.html" class="explore-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fade-in-up delay-300 group"><div class="w-16 h-16 rounded-2xl bg-primary-700 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><span class="text-3xl">💼</span></div><h3 class="text-xl font-bold text-gray-900 mb-3">Job Offers</h3><p class="text-gray-600 mb-4">Career opportunities at AEC</p><span class="text-accent-terracotta font-semibold group-hover:translate-x-2 inline-block transition-transform">View All →</span></a>
+            <a href="projects.html" class="explore-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fade-in-up delay-400 group"><div class="w-16 h-16 rounded-2xl bg-primary-600 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><span class="text-3xl">🚀</span></div><h3 class="text-xl font-bold text-gray-900 mb-3">Next Project</h3><p class="text-gray-600 mb-4">Upcoming initiatives and developments</p><span class="text-accent-terracotta font-semibold group-hover:translate-x-2 inline-block transition-transform">View All →</span></a>
+            <a href="volunteers.html" class="explore-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fade-in-up delay-500 group"><div class="w-16 h-16 rounded-2xl bg-primary-500 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><span class="text-3xl">🤝</span></div><h3 class="text-xl font-bold text-gray-900 mb-3">Volunteers</h3><p class="text-gray-600 mb-4">Join our volunteer community</p><span class="text-accent-terracotta font-semibold group-hover:translate-x-2 inline-block transition-transform">View All →</span></a>
+            <a href="about.html" class="explore-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all animate-fade-in-up delay-600 group"><div class="w-16 h-16 rounded-2xl bg-primary-700 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform"><span class="text-3xl">ℹ️</span></div><h3 class="text-xl font-bold text-gray-900 mb-3">About Us</h3><p class="text-gray-600 mb-4">Learn more about our mission</p><span class="text-accent-terracotta font-semibold group-hover:translate-x-2 inline-block transition-transform">Learn More →</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ HIGHLIGHTS SECTION (60% Neutral) ⭐ -->
+<section class="py-20 bg-white relative overflow-hidden reveal">
+    <div class="absolute inset-0 section-pattern"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="highlightsContainer">
+            <div class="col-span-full text-center py-16 animate-fade-in">
+                <div class="spinner mb-4"></div>
+                <p class="text-gray-600 text-lg">Loading featured content...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ CONTACT & MAP SECTION (60% Neutral) ⭐ -->
+<section class="py-20 bg-neutral-200 relative overflow-hidden reveal contact-section">
+    <div class="absolute inset-0 section-pattern"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12 animate-fade-in-up">
+            <div class="inline-block px-4 py-2 rounded-full bg-white text-primary-600 text-sm font-semibold mb-4">Get In Touch</div>
+            <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4 gradient-text">Contact Us</h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Have questions? We're here to help. Click to copy contact information.</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 contact-section-grid">
+            <!-- Contact Information -->
+            <div class="animate-fade-in-up delay-100">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-black text-gray-900 mb-6">Contact Information</h3>
+                    <div id="contactInfo" class="space-y-6">
+                        <!-- Loaded from API -->
+                        <div class="text-center py-4"><div class="spinner inline-block"></div><p class="text-gray-500 mt-2">Loading contact info...</p></div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t-2 border-gray-100"><a href="contact.html" class="btn-accent inline-block px-8 py-4 rounded-xl font-bold text-white w-full text-center hover:scale-[1.02] transition-transform">Send Us a Message</a></div>
+                </div>
+            </div>
+            <!-- Google Map - Times City Yangon (Hidden on Mobile) -->
+            <div class="animate-fade-in-up delay-200">
+                <div class="map-container h-full min-h-[500px] transform hover:scale-[1.02] transition-transform">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.464!2d96.1286337!3d16.8163686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb34335a92f5:0xea3210d0410309d7!2sTimes%20City%20Yangon!5e0!3m2!1sen!2smm!4v1711234567890" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 500px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Times City Yangon - AEC Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ CTA SECTION (30% Primary) ⭐ -->
+<section class="py-20 reveal" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl lg:text-5xl font-black text-white mb-6 animate-fade-in-up">Ready to Join Our Community?</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">Enrollment is now open for 2026. Limited seats available for each grade level.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
+            <a href="enroll.html" class="btn-accent px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">Apply Now</a>
+            <a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg border-2 border-white/60 hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ FOOTER CONTAINER ⭐ -->
+<div id="footer-container"></div>
+
+<!-- ⭐ SCRIPTS ⭐ -->
+<!-- Load components (header, footer) -->
+<script src="assets/js/load-components.js" defer></script>
+
+<!-- ⭐ COPY TO CLIPBOARD ⭐ -->
+<script>
+function copyToClipboard(text, element) {
+    navigator.clipboard.writeText(text).then(() => {
+        element.classList.add('copy-success');
+        setTimeout(() => { element.classList.remove('copy-success'); }, 300);
+        showNotification(`Copied: ${text}`);
+    }).catch(err => {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showNotification(`Copied: ${text}`);
+    });
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'fixed bottom-4 right-4 bg-primary-600 text-white px-6 py-3 rounded-xl shadow-lg z-50 animate-fade-in-up';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    setTimeout(() => {
+        notification.style.animation = 'fadeOut 0.3s ease';
+        setTimeout(() => { document.body.removeChild(notification); }, 300);
+    }, 3000);
+}
+</script>
+
+<!-- ⭐ SCROLL REVEAL ⭐ -->
+<script>
+function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 150;
+        reveals.forEach((reveal) => {
+            const elementTop = reveal.getBoundingClientRect().top;
+            if (elementTop < windowHeight - elementVisible) {
+                reveal.classList.add('active');
+            }
+        });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+}
+document.addEventListener('DOMContentLoaded', initScrollReveal);
+</script>
+
+<!-- ⭐ MOBILE PERFORMANCE & LAZY LOAD ⭐ -->
+<script>
+// Lazy load images on mobile
+if ('loading' in HTMLImageElement.prototype) {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+    });
+} else {
+    // Fallback for browsers that don't support lazy loading
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        if (img.dataset.src) {
+            img.src = img.dataset.src;
+        }
+        img.removeAttribute('loading');
+        img.classList.add('loaded');
+    });
+}
+
+// Reduce motion for users who prefer it
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('*').forEach(el => {
+        el.style.transition = 'none !important';
+        el.style.animation = 'none !important';
+    });
+}
+
+// Prevent zoom on input focus (iOS)
+document.querySelectorAll('input, select, textarea').forEach(el => {
+    el.addEventListener('focus', function() {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+            viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        }
+    });
+    el.addEventListener('blur', function() {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+            viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
+        }
+    });
+});
+</script>
+
+<!-- ⭐ LOAD HIGHLIGHTS & CONTACT INFO (API) ⭐ -->
+<script type="module">
+const API_URL = 'https://api.assembleeducationcommunity.org';
+
+async function loadHighlights() {
+    try {
+        const container = document.getElementById('highlightsContainer');
+        const allHighlights = [];
+        const endpoints = [
+            { url: '/api/classes', type: 'class', icon: '📚', color: '#1b4332' },
+            { url: '/api/events', type: 'event', icon: '📅', color: '#2d6a4f' },
+            { url: '/api/jobs', type: 'job', icon: '💼', color: '#407a61' },
+            { url: '/api/projects', type: 'project', icon: '🚀', color: '#5f957d' }
+        ];
+        const promises = endpoints.map(async ep => {
+            try { const res = await fetch(`${API_URL}${ep.url}`); const data = await res.json(); return data.filter(i => i.highlight === 1).map(i => ({...i, sourceType: ep.type, icon: ep.icon, color: ep.color})); } catch(e) { return []; }
+        });
+        const results = await Promise.all(promises);
+        results.forEach(items => allHighlights.push(...items));
+        allHighlights.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        const highlights = allHighlights.slice(0, 6);
+        if (highlights.length > 0) {
+            container.innerHTML = highlights.map((item, index) => {
+                const typeLabels = { class: 'Class', event: 'Event', job: 'Job', project: 'Project' };
+                const typeColors = { class: 'bg-primary-600', event: 'bg-primary-500', job: 'bg-primary-700', project: 'bg-primary-400' };
+                const typeUrls = { class: 'classes.html', event: 'events.html', job: 'jobs.html', project: 'projects.html' };
+                return `<div class="feature-card bg-white rounded-2xl overflow-hidden shadow-lg relative animate-fade-in-up delay-${(index+1)*100}"><div class="absolute top-4 left-4 ${typeColors[item.sourceType]} text-white px-3 py-1 rounded-full text-xs font-bold z-10">${typeLabels[item.sourceType]}</div><div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color} 0%, ${item.color}dd 100%)"><span class="text-6xl opacity-50">${item.icon}</span></div><div class="p-6"><h3 class="text-xl font-bold text-gray-900 mb-2">${item.title}</h3><p class="text-gray-600 mb-4 line-clamp-2">${item.description || 'Learn more'}</p><a href="${typeUrls[item.sourceType]}" class="text-primary-600 font-semibold hover:text-primary-700">View Details →</a></div></div>`;
+            }).join('');
+        } else { container.innerHTML = `<div class="col-span-full text-center py-16 animate-fade-in"><div class="text-6xl mb-4 animate-float">🌟</div><p class="text-gray-600 text-lg">No highlights yet. Check back soon!</p></div>`; }
+    } catch(e) { console.error('Error loading highlights:', e); }
+}
+
+async function loadContactInfo() {
+    try {
+        const res = await fetch(`${API_URL}/api/contact_info`);
+        const contacts = await res.json();
+        const container = document.getElementById('contactInfo');
+        if (contacts.length > 0) {
+            const grouped = contacts.reduce((acc, c) => { if(!acc[c.type]) acc[c.type]=[]; acc[c.type].push(c); return acc; }, {});
+            const icons = { phone:'📞', email:'✉️', address:'📍', social:'🌐', website:'🌍', other:'📌' };
+            let html = '';
+            Object.keys(grouped).forEach(type => {
+                grouped[type].forEach(c => {
+                    html += `<div class="contact-card flex items-start gap-4 p-4 rounded-xl bg-neutral-100 group" onclick="copyToClipboard('${c.value}', this)"><div class="w-12 h-12 rounded-xl bg-primary-600 flex items-center justify-center flex-shrink-0"><span class="text-white text-xl">${icons[c.type]||'📌'}</span></div><div class="flex-1"><h4 class="font-bold text-gray-900 mb-1">${c.label||type}</h4>${c.type==='email'?`<a href="mailto:${c.value}" class="text-primary-600 hover:text-primary-700 font-semibold">${c.value}</a>`:c.type==='phone'?`<a href="tel:${c.value}" class="text-primary-600 hover:text-primary-700 font-semibold">${c.value}</a>`:`<p class="text-gray-600">${c.value}</p>`}</div></div>`;
+                });
+            });
+            container.innerHTML = html;
+        }
+    } catch(e) { console.error('Error loading contact info:', e); }
+}
+
+if(document.readyState==='loading') { document.addEventListener('DOMContentLoaded', ()=>{ loadHighlights(); loadContactInfo(); }); } else { loadHighlights(); loadContactInfo(); }
+</script>
+
+</body>
+</html>

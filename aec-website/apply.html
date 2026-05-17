@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Job Application - AEC Assemble Education Community</title>
+    <meta name="description" content="Apply for a job at Assemble Education Community. Fill out our online application form. Starting 2026 in Yangon, Myanmar.">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #e9ecef; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .gradient-text { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .form-iframe { width: 100%; min-height: 80vh; border: none; border-radius: 1.5rem; }
+        @media (max-width: 768px) {
+            a, button { min-height: 44px; min-width: 44px; }
+            .form-iframe { min-height: 90vh; }
+        }
+    </style>
+</head>
+<body class="bg-neutral-200">
+
+<div id="header-container"></div>
+
+<section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-6 animate-fade-in-up">
+            <h1 class="text-4xl lg:text-5xl font-black text-gray-900 mb-4 gradient-text">Job Application</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Please fill out the form below. All fields marked with * are required.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl p-4 md:p-6 animate-fade-in-up delay-100">
+            <!-- Google Form Embed -->
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSd147t7Y5Ub-N1wdCmtmvuIGDrzlBBTPY5aLpib05uMi_CajA/viewform?embedded=true" 
+                class="form-iframe"
+                title="Job Application Form">
+                Loading…
+            </iframe>
+            <p class="text-center text-gray-500 text-sm mt-4">
+                ⚡ If the form does not load, <a href="https://docs.google.com/forms/d/e/1FAIpQLSd147t7Y5Ub-N1wdCmtmvuIGDrzlBBTPY5aLpib05uMi_CajA/viewform" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">click here to open it in a new tab</a>.
+            </p>
+        </div>
+    </div>
+</section>
+
+<div id="footer-container"></div>
+
+<script src="assets/js/load-components.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Career Opportunities - AEC Assemble Education Community</title>
+    <meta name="title" content="Career Opportunities - AEC Assemble Education Community">
+    <meta name="description" content="Join our team at Assemble Education Community. Explore teaching and administrative positions starting 2026.">
+    <meta name="keywords" content="AEC, jobs, careers, Yangon, Myanmar, teaching, employment, 2026">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: {
+                    neutral: {
+                        50: '#f8f9fa', 100: '#f1f3f5', 200: '#e9ecef', 300: '#dee2e6',
+                        400: '#ced4da', 500: '#adb5bd', 600: '#6c757d', 700: '#495057',
+                        800: '#343a40', 900: '#212529'
+                    },
+                    primary: {
+                        50: '#f0f7f4', 100: '#d9e9e0', 200: '#b8d4c7', 300: '#8fb8a5',
+                        400: '#5f957d', 500: '#407a61', 600: '#1b4332', 700: '#0d2f22',
+                        800: '#0a261c', 900: '#051f16'
+                    },
+                    accent: { gold: '#D4AF37', terracotta: '#BC6C25', cream: '#fffcf2' }
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #e9ecef; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+        .gradient-text { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .job-card { transition: all 0.3s ease; }
+        .job-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(27, 67, 50, 0.15); }
+        .bonus-badge { background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%); animation: pulse 2s infinite; }
+        .btn-primary { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(27, 67, 50, 0.3); }
+        .btn-accent { background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%); transition: all 0.3s ease; }
+        .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(188, 108, 37, 0.3); }
+        .filter-btn { transition: all 0.3s ease; }
+        .filter-btn.active { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); color: white; border-color: transparent; }
+        .search-panel { position: fixed; top: 5rem; right: 2rem; z-index: 99; background: white; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border: 2px solid #e5e7eb; opacity: 0; visibility: hidden; transform: translateY(-20px) scale(0.95); transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); width: 380px; }
+        .search-panel.active { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+        .search-btn { width: 3.5rem; height: 3.5rem; border-radius: 50%; background: white; border: 2px solid #e5e7eb; display: flex; align-items: center; justify-content: center; color: #6b7280; cursor: pointer; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .search-btn:hover { transform: scale(1.15) rotate(10deg); box-shadow: 0 8px 25px rgba(27, 67, 50, 0.4); border-color: #1b4332; }
+        .search-btn.active { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); border-color: #1b4332; color: white; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; backdrop-filter: blur(5px); }
+        .modal.active { display: flex; align-items: center; justify-content: center; animation: fadeIn 0.3s ease; }
+        .modal-content { background: white; border-radius: 2rem; max-width: 800px; width: 90%; max-height: 85vh; overflow-y: auto; animation: slideUp 0.3s ease; position: relative; }
+        .modal-close { position: absolute; top: 1rem; right: 1rem; width: 3rem; height: 3rem; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .modal-close:hover { background: #f3f4f6; transform: rotate(90deg); }
+        @media (max-width: 768px) { a, button { min-height: 44px; min-width: 44px; } body { font-size: 16px; } .search-panel { width: calc(100% - 2rem); right: 1rem; } }
+    </style>
+</head>
+<body class="bg-neutral-200">
+
+<div id="header-container"></div>
+
+<div style="position: fixed; top: 5rem; right: 2rem; z-index: 100;" class="hidden lg:block">
+    <button onclick="toggleSearch()" class="search-btn" id="searchBtn" title="Search & Filter">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </button>
+</div>
+
+<div class="search-panel" id="searchPanel">
+    <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-bold text-gray-900">Search & Filter</h3>
+        <button onclick="toggleSearch()" class="text-gray-400 hover:text-gray-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+    </div>
+    <div class="mb-4"><input type="text" id="searchInput" placeholder="Search jobs..." class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary-600 focus:outline-none"></div>
+    <div class="mb-4"><label class="block text-sm font-bold text-gray-700 mb-2">Department</label><div class="flex flex-wrap gap-2" id="departmentFilters"><button onclick="filterByDepartment('')" class="filter-btn active px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200">All</button></div></div>
+    <div class="mb-4"><label class="block text-sm font-bold text-gray-700 mb-2">Job Type</label><div class="flex flex-wrap gap-2"><button onclick="filterByType('')" class="filter-btn active px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200">All Types</button><button onclick="filterByType('full-time')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200">Full-time</button><button onclick="filterByType('part-time')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200">Part-time</button><button onclick="filterByType('contract')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200">Contract</button><button onclick="filterByType('temporary')" class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200">Temporary</button></div></div>
+    <div class="pt-4 border-t-2 border-gray-100 mb-4"><label class="flex items-center gap-2"><input type="checkbox" id="bonusOnly" onchange="applyFilters()" class="w-4 h-4"><span class="text-sm font-bold text-gray-700">Show jobs with bonuses only</span></label></div>
+    <div class="pt-4 border-t-2 border-gray-100 flex items-center justify-between"><p class="text-xs text-gray-500">Showing <span id="showingCount" class="font-bold text-primary-600">0</span> of <span id="totalCount" class="font-bold">0</span></p><button onclick="resetFilters()" class="text-xs font-bold text-accent-terracotta hover:text-accent-gold">Reset</button></div>
+</div>
+
+<section class="py-24 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h1 class="text-5xl lg:text-6xl font-black text-gray-900 mb-4 animate-fade-in-up gradient-text">Career Opportunities</h1><p class="text-xl text-gray-600 max-w-2xl mx-auto font-medium animate-fade-in-up delay-200">Join our team and make a difference in education</p></div></section>
+
+<section class="py-16 bg-neutral-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div id="jobsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"><div class="col-span-full text-center py-16"><div class="text-6xl mb-4 animate-float">💼</div><p class="text-gray-600 text-lg mb-2">Loading jobs...</p></div></div><div id="noResults" class="hidden text-center py-16"><div class="text-6xl mb-4">🔍</div><h3 class="text-2xl font-black text-gray-900 mb-2">No Jobs Found</h3><p class="text-gray-600 mb-6">Try adjusting your search or filter criteria.</p><button onclick="resetFilters()" class="btn-primary px-6 py-3 rounded-xl font-bold text-white hover:scale-105 transition-transform">Reset Filters</button></div><div id="noJobs" class="hidden text-center py-16"><div class="text-6xl mb-4">💼</div><h3 class="text-2xl font-black text-gray-900 mb-2">No Jobs Available</h3><p class="text-gray-600 mb-6">We're currently updating our job openings. Check back soon!</p><a href="contact.html" class="btn-accent inline-block px-6 py-3 rounded-xl font-bold text-white hover:scale-105 transition-transform">Contact Us</a></div></div></section>
+
+<div id="jobModal" class="modal"><div class="modal-close" onclick="closeModal()"><svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></div><div class="modal-content" id="modalContent"></div></div>
+
+<section class="py-20" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h2 class="text-4xl lg:text-5xl font-black text-white mb-6 animate-fade-in-up">Ready to Join Our Team?</h2><p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">Start your career journey with us in 2026! We're looking for passionate educators and staff.</p><div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200"><a href="apply.html" class="btn-accent px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">Apply Now</a><a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg border-2 border-white/60 hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105">Contact Us</a></div></div></section>
+
+<div id="footer-container"></div>
+
+<script src="assets/js/load-components.js" defer></script>
+
+<script type="module">
+const API_URL = 'https://api.assembleeducationcommunity.org';
+let allJobs = [], filteredJobs = [], isSearchOpen = false, currentDepartment = '', currentType = '';
+
+window.toggleSearch = function() {
+    const panel = document.getElementById('searchPanel');
+    const btn = document.getElementById('searchBtn');
+    const input = document.getElementById('searchInput');
+    isSearchOpen = !isSearchOpen;
+    if (isSearchOpen) { panel.classList.add('active'); btn.classList.add('active'); input.focus(); }
+    else { panel.classList.remove('active'); btn.classList.remove('active'); }
+};
+document.addEventListener('click', function(e) {
+    const btn = document.getElementById('searchBtn');
+    const panel = document.getElementById('searchPanel');
+    if (btn && panel && !btn.contains(e.target) && !panel.contains(e.target) && isSearchOpen) toggleSearch();
+});
+
+async function loadJobs() {
+    try {
+        const response = await fetch(`${API_URL}/api/jobs`);
+        allJobs = await response.json();
+        filteredJobs = [...allJobs];
+        const departments = [...new Set(allJobs.map(j => j.department).filter(d => d))];
+        const deptContainer = document.getElementById('departmentFilters');
+        departments.forEach(dept => {
+            const btn = document.createElement('button');
+            btn.textContent = dept;
+            btn.className = 'filter-btn px-3 py-1.5 rounded-full text-xs font-semibold border-2 border-gray-200 hover:border-primary-600 transition-all';
+            btn.onclick = () => filterByDepartment(dept);
+            deptContainer.appendChild(btn);
+        });
+        updateCount(); renderJobs();
+    } catch(error) { console.error(error); document.getElementById('jobsGrid').innerHTML = `<div class="col-span-full text-center py-16"><div class="text-6xl mb-4">❌</div><p class="text-red-500 text-lg">Error loading jobs.</p></div>`; }
+}
+
+window.openJobModal = function(jobId) {
+    const job = allJobs.find(j => j.id === jobId);
+    if (!job) return;
+    const modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = `<div><div class="h-64 relative overflow-hidden rounded-t-3xl" style="background: linear-gradient(135deg, ${job.color || '#1b4332'} 0%, ${job.color || '#2d6a4f'}dd 100%)"><div class="absolute inset-0 flex items-center justify-center"><span class="text-9xl opacity-20">💼</span></div>${job.has_bonus ? `<div class="absolute top-6 right-6 bonus-badge text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">💰 Bonus Available</div>` : ''}${job.highlight ? '<div class="absolute top-6 left-6 bg-accent-gold text-white px-4 py-2 rounded-full text-sm font-bold">Featured</div>' : ''}<div class="absolute bottom-6 left-6 right-6"><span class="px-4 py-2 rounded-full text-sm font-bold bg-white/95 text-gray-700 capitalize">${job.department}</span></div></div><div class="p-8"><h2 class="text-3xl font-black text-gray-900 mb-4">${job.title}</h2><div class="grid md:grid-cols-2 gap-4 mb-6"><div class="flex items-center gap-3 p-4 rounded-xl bg-neutral-100"><div><p class="text-xs text-gray-500 font-bold">Type</p><p class="font-bold text-gray-900 capitalize">${job.type}</p></div></div><div class="flex items-center gap-3 p-4 rounded-xl bg-neutral-100"><div><p class="text-xs text-gray-500 font-bold">Location</p><p class="font-bold text-gray-900">${job.location || 'Yangon, Myanmar'}</p></div></div></div><div class="mb-6"><h3 class="text-lg font-black text-gray-900 mb-3">Description</h3><p class="text-gray-600 leading-relaxed">${job.description}</p></div>${job.requirements ? `<div class="mb-6"><h3 class="text-lg font-black text-gray-900 mb-3">Requirements</h3><p class="text-gray-600 leading-relaxed">${job.requirements}</p></div>` : ''}${job.benefits ? `<div class="mb-6"><h3 class="text-lg font-black text-gray-900 mb-3">Benefits</h3><p class="text-gray-600 leading-relaxed">${job.benefits}</p></div>` : ''}${job.has_bonus ? `<div class="p-6 rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 mb-6"><h3 class="text-lg font-black text-gray-900 mb-3">💰 Bonuses</h3><div class="space-y-2">${job.bonus_sign_in ? `<div class="flex justify-between"><span class="text-gray-700">Sign-in Bonus:</span><span class="font-bold text-accent-terracotta">${job.bonus_sign_in}</span></div>` : ''}${job.bonus_monthly ? `<div class="flex justify-between"><span class="text-gray-700">Monthly Bonus:</span><span class="font-bold text-accent-terracotta">${job.bonus_monthly}</span></div>` : ''}${job.bonus_other ? `<div class="flex justify-between"><span class="text-gray-700">Other:</span><span class="font-bold text-accent-terracotta">${job.bonus_other}</span></div>` : ''}</div></div>` : ''}${job.salary ? `<div class="p-6 rounded-2xl bg-neutral-100 border-2 border-gray-200 mb-6"><div class="flex items-center justify-between"><span class="text-lg font-bold text-gray-700">Salary:</span><p class="text-primary-600 font-black text-2xl">${job.salary}</p></div></div>` : ''}<div class="flex gap-4"><a href="apply.html?job=${encodeURIComponent(job.title)}" class="flex-1 py-4 rounded-xl font-bold text-center text-white btn-accent hover:shadow-xl text-lg">Apply Now</a><a href="contact.html" class="flex-1 py-4 rounded-xl font-bold text-center text-primary-600 bg-white border-2 border-primary-200 hover:bg-primary-50 transition-all text-lg">Contact Us</a></div></div></div>`;
+    document.getElementById('jobModal').classList.add('active'); document.body.style.overflow = 'hidden';
+};
+
+window.closeModal = function() { document.getElementById('jobModal').classList.remove('active'); document.body.style.overflow = ''; };
+document.getElementById('jobModal').addEventListener('click', e => { if (e.target === this) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); if (isSearchOpen) toggleSearch(); } });
+
+function renderJobs() {
+    const grid = document.getElementById('jobsGrid');
+    const noResults = document.getElementById('noResults');
+    const noJobs = document.getElementById('noJobs');
+    if (allJobs.length === 0) { grid.classList.add('hidden'); noResults.classList.add('hidden'); noJobs.classList.remove('hidden'); return; }
+    if (filteredJobs.length === 0) { grid.classList.add('hidden'); noResults.classList.remove('hidden'); noJobs.classList.add('hidden'); return; }
+    grid.classList.remove('hidden'); noResults.classList.add('hidden'); noJobs.classList.add('hidden');
+    grid.innerHTML = filteredJobs.map(job => `<div class="job-card bg-white rounded-2xl overflow-hidden shadow-lg relative group">${job.has_bonus ? `<div class="bonus-badge text-white px-3 py-1 rounded-full text-xs font-bold absolute top-4 right-4 animate-pulse z-10">💰 Bonus</div>` : ''}${job.highlight ? '<div class="absolute top-4 left-4 bg-accent-gold text-white px-3 py-1 rounded-full text-xs font-bold z-10">Featured</div>' : ''}<div class="h-56 relative overflow-hidden" style="background: linear-gradient(135deg, ${job.color || '#1b4332'} 0%, ${job.color || '#2d6a4f'}dd 100%)"><div class="absolute inset-0 flex items-center justify-center"><span class="text-8xl opacity-20">💼</span></div><div class="absolute bottom-4 left-4 right-4"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-white/95 text-gray-700 inline-block capitalize">${job.department}</span></div></div><div class="p-6"><h3 class="text-xl font-black text-gray-900 mb-2">${job.title}</h3><p class="text-gray-600 text-sm mb-4 line-clamp-2">${job.description}</p><div class="flex flex-wrap gap-2 mb-4"><span class="px-3 py-1.5 rounded-lg bg-neutral-100 text-xs font-semibold text-gray-700 capitalize">${job.type}</span>${job.location ? `<span class="px-3 py-1.5 rounded-lg bg-neutral-100 text-xs font-semibold text-gray-700">📍 ${job.location}</span>` : ''}</div>${job.salary ? `<div class="pt-4 border-t-2 border-gray-100 mb-4"><div class="flex items-center justify-between"><span class="text-sm text-gray-500 font-bold">Salary:</span><span class="text-primary-600 font-black text-lg">${job.salary}</span></div></div>` : ''}<div class="flex gap-3"><button onclick="openJobModal('${job.id}')" class="flex-1 py-3 rounded-xl font-bold text-center text-white transition-all hover:shadow-xl hover:scale-105" style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">View Details</button><a href="apply.html?job=${encodeURIComponent(job.title)}" class="flex-1 py-3 rounded-xl font-bold text-center transition-all hover:bg-primary-50" style="color: #1b4332; background: white; border: 2px solid #1b4332;">Apply</a></div></div></div>`).join('');
+    updateCount();
+}
+
+function updateCount() { document.getElementById('showingCount').textContent = filteredJobs.length; document.getElementById('totalCount').textContent = allJobs.length; }
+window.filterByDepartment = function(dept) { currentDepartment = dept; document.querySelectorAll('#departmentFilters .filter-btn').forEach(btn => { btn.classList.remove('active'); if ((dept === '' && btn.textContent === 'All') || btn.textContent === dept) btn.classList.add('active'); }); applyFilters(); };
+window.filterByType = function(type) { currentType = type; const buttons = document.querySelectorAll('.search-panel .filter-btn'); buttons.forEach(btn => { btn.classList.remove('active'); if ((type === '' && btn.textContent === 'All Types') || btn.textContent.toLowerCase().includes(type)) btn.classList.add('active'); }); applyFilters(); };
+window.applyFilters = function() { const search = document.getElementById('searchInput').value.toLowerCase(); const bonusOnly = document.getElementById('bonusOnly').checked; filteredJobs = allJobs.filter(job => { const matchesSearch = !search || job.title.toLowerCase().includes(search) || job.description.toLowerCase().includes(search) || job.department.toLowerCase().includes(search); const matchesDept = !currentDepartment || job.department === currentDepartment; const matchesType = !currentType || job.type === currentType; const matchesBonus = !bonusOnly || job.has_bonus === 1; return matchesSearch && matchesDept && matchesType && matchesBonus; }); renderJobs(); updateCount(); };
+window.resetFilters = function() { document.getElementById('searchInput').value = ''; document.getElementById('bonusOnly').checked = false; currentDepartment = ''; currentType = ''; document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active')); document.querySelectorAll('.filter-btn')[0].classList.add('active'); document.querySelectorAll('.search-panel .filter-btn')[0]?.classList.add('active'); if (isSearchOpen) toggleSearch(); filteredJobs = [...allJobs]; renderJobs(); updateCount(); };
+document.getElementById('searchInput').addEventListener('input', applyFilters);
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadJobs); else loadJobs();
+</script>
+</body>
+</html>

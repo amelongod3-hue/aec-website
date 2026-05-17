@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Manage Volunteers - AEC Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { primary: { 500: '#f97316', 600: '#ea580c', 700: '#c2410c' } } } } }</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f9fafb; }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100%;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            z-index: 40;
+            transition: transform 0.3s ease;
+            transform: translateX(0);
+        }
+        .main-content { margin-left: 280px; padding: 32px; transition: margin 0.3s ease; }
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 50;
+            background: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: #374151;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin: 4px 12px;
+        }
+        .nav-item:hover { background: #fff7ed; color: #ea580c; transform: translateX(4px); }
+        .nav-item.active { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; }
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+            border: 1px solid #ffedd5;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-4px); border-color: #fed7aa; }
+        .form-input { transition: all 0.2s ease; }
+        .form-input:focus { border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.1); outline: none; }
+        .volunteer-card { transition: all 0.2s; }
+        .volunteer-card:hover { transform: translateY(-2px); box-shadow: 0 12px 20px -8px rgba(0,0,0,0.1); border-color: #fed7aa; }
+        .role-badge { padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; }
+        .role-super_admin { background: #fee2e2; color: #dc2626; }
+        .media-preview { width: 100%; max-width: 300px; height: 200px; border-radius: 12px; object-fit: cover; margin-top: 12px; display: none; }
+        .media-preview.show { display: block; }
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.open { transform: translateX(0); }
+            .main-content { margin-left: 0; }
+            .mobile-menu-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars text-gray-700 text-xl"></i>
+</button>
+
+<div class="sidebar" id="sidebar">
+    <div class="p-6 border-b border-gray-100">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-xl" style="background: linear-gradient(135deg, #f97316, #ea580c);">A</div>
+            <div><div class="font-black text-gray-900">AEC Admin</div><div class="text-xs text-gray-500">Volunteers Manager</div></div>
+        </div>
+    </div>
+    <nav class="py-4">
+        <a href="dashboard.html" class="nav-item"><i class="fas fa-chart-line w-5"></i> Dashboard</a>
+        <a href="classes-manager.html" class="nav-item"><i class="fas fa-book-open w-5"></i> Manage Classes</a>
+        <a href="events-manager.html" class="nav-item"><i class="fas fa-calendar-alt w-5"></i> Manage Events</a>
+        <a href="jobs-manager.html" class="nav-item"><i class="fas fa-briefcase w-5"></i> Manage Jobs</a>
+        <a href="applications-manager.html" class="nav-item"><i class="fas fa-file-alt w-5"></i> Applications</a>
+        <a href="projects-manager.html" class="nav-item"><i class="fas fa-project-diagram w-5"></i> Projects</a>
+        <a href="volunteers-manager.html" class="nav-item active"><i class="fas fa-hand-peace w-5"></i> Volunteers</a>
+        <a href="admin-users-manager.html" class="nav-item"><i class="fas fa-users w-5"></i> Admin Users</a>
+        <a href="settings.html" class="nav-item"><i class="fas fa-sliders-h w-5"></i> Settings</a>
+        <a href="../index.html" class="nav-item mt-8 text-red-500 hover:text-red-600"><i class="fas fa-arrow-left w-5"></i> Back to Site</a>
+    </nav>
+</div>
+
+<main class="main-content" id="mainContent">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+            <div><h1 class="text-3xl md:text-4xl font-black text-gray-900">Manage Volunteers</h1><p class="text-gray-500 mt-1">Add, edit, or remove volunteer members</p></div>
+            <div class="flex items-center gap-3">
+                <span class="role-badge role-super_admin" id="roleBadgeDisplay">SUPER ADMIN</span>
+                <button id="addVolunteerBtn" onclick="showAddVolunteer()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all shadow-md"><i class="fas fa-plus-circle"></i> Add Volunteer</button>
+                <button onclick="logout()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all shadow-md"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Total Volunteers</p><p class="text-3xl font-black text-gray-900 mt-1" id="statTotal">0</p></div><div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl text-orange-600"><i class="fas fa-hand-peace"></i></div></div></div>
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">With Media</p><p class="text-3xl font-black text-gray-900 mt-1" id="statMedia">0</p></div><div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl text-blue-600"><i class="fas fa-photo-video"></i></div></div></div>
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Featured</p><p class="text-3xl font-black text-gray-900 mt-1" id="statFeatured">0</p></div><div class="w-12 h-12 rounded-2xl bg-yellow-100 flex items-center justify-center text-2xl text-yellow-600"><i class="fas fa-star"></i></div></div></div>
+            <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Unique Roles</p><p class="text-3xl font-black text-gray-900 mt-1" id="statRoles">0</p></div><div class="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center text-2xl text-purple-600"><i class="fas fa-tag"></i></div></div></div>
+        </div>
+
+        <div id="volunteerFormContainer" class="hidden bg-white rounded-2xl p-6 mb-8 shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center mb-6"><h2 class="text-xl font-bold text-gray-900" id="formTitle">Add New Volunteer</h2><button onclick="hideVolunteerForm()" class="text-gray-400 hover:text-gray-600"><i class="fas fa-times text-xl"></i></button></div>
+            <form id="volunteerForm" class="grid md:grid-cols-2 gap-5">
+                <input type="hidden" id="volunteerId">
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Full Name *</label><input type="text" id="volunteerName" required class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div><label class="form-label block text-sm font-medium text-gray-700 mb-1">Role *</label><input type="text" id="volunteerRole" required class="form-input w-full p-3 border border-gray-200 rounded-xl"></div>
+                <div class="md:col-span-2"><label class="form-label block text-sm font-medium text-gray-700 mb-1">Description *</label><textarea id="volunteerDescription" required rows="4" class="form-input w-full p-3 border border-gray-200 rounded-xl"></textarea></div>
+                <div class="md:col-span-2">
+                    <label class="form-label block text-sm font-medium text-gray-700 mb-1">Media (Image/Video URL)</label>
+                    <input type="text" id="volunteerMediaUrl" class="form-input w-full p-3 border border-gray-200 rounded-xl" onchange="previewMedia('volunteer')">
+                    <select id="volunteerMediaType" class="form-input w-full p-3 border border-gray-200 rounded-xl mt-2"><option value="">Select Media Type</option><option value="image">🖼️ Image</option><option value="video">🎥 Video</option></select>
+                    <img id="volunteerMediaPreview" class="media-preview" alt="Preview"><video id="volunteerVideoPreview" class="media-preview" controls></video>
+                </div>
+                <div class="md:col-span-2 flex items-center gap-3"><input type="checkbox" id="volunteerHighlight" class="w-5 h-5"><label class="text-sm font-medium text-gray-700">Highlight on Website</label></div>
+                <div class="md:col-span-2"><button type="submit" id="volunteerSubmitBtn" class="w-full py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transition-all shadow-md">Save Volunteer</button></div>
+            </form>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-6"><h2 class="text-xl font-bold text-gray-900">All Volunteers</h2><div class="flex gap-3"><input type="text" id="searchVolunteers" placeholder="Search by name or role..." class="form-input p-2 border border-gray-200 rounded-xl text-sm w-48" onkeyup="filterVolunteers()"></div></div>
+            <div id="volunteersList" class="space-y-4"><p class="text-center text-gray-500 py-8"><i class="fas fa-spinner fa-pulse mr-2"></i> Loading volunteers...</p></div>
+        </div>
+    </div>
+</main>
+
+<script type="module">
+    import { getAuthHeaders, getCurrentUser, logout as logoutFn, hasPermission, escapeHtml } from './js/admin-config.js';
+    const API_URL = 'https://api.assembleeducationcommunity.org';
+
+    function previewMedia(type) {
+        const url = document.getElementById(`${type}MediaUrl`).value;
+        const mediaType = document.getElementById(`${type}MediaType`).value;
+        const imgPreview = document.getElementById(`${type}MediaPreview`);
+        const videoPreview = document.getElementById(`${type}VideoPreview`);
+        if (!url) { imgPreview.classList.remove('show'); videoPreview.classList.remove('show'); return; }
+        if (mediaType === 'image' || url.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+            imgPreview.src = url; imgPreview.classList.add('show'); videoPreview.classList.remove('show');
+        } else if (mediaType === 'video' || url.match(/\.(mp4|webm|ogg)$/i)) {
+            videoPreview.src = url; videoPreview.classList.add('show'); imgPreview.classList.remove('show');
+        }
+    }
+    window.previewMedia = previewMedia;
+
+    function ensureAuth() {
+        const user = getCurrentUser();
+        if (!user || !user.username) {
+            window.location.href = 'login.html';
+            return false;
+        }
+        return true;
+    }
+
+    let allVolunteers = [], isEditing = false, editingId = null;
+
+    async function loadVolunteers() {
+        try {
+            const response = await fetch(`${API_URL}/api/volunteers`, { headers: getAuthHeaders() });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const data = await response.json();
+            allVolunteers = Array.isArray(data) ? data : (data.results || []);
+            document.getElementById('statTotal').textContent = allVolunteers.length;
+            document.getElementById('statMedia').textContent = allVolunteers.filter(v => v.media_url).length;
+            document.getElementById('statFeatured').textContent = allVolunteers.filter(v => v.highlight).length;
+            document.getElementById('statRoles').textContent = [...new Set(allVolunteers.map(v => v.role).filter(r => r))].length;
+            renderVolunteers();
+        } catch (error) {
+            document.getElementById('volunteersList').innerHTML = `<p class="text-red-500 text-center">Error: ${escapeHtml(error.message)}</p>`;
+        }
+    }
+
+    function renderVolunteers() {
+        const search = document.getElementById('searchVolunteers').value.toLowerCase();
+        const filtered = allVolunteers.filter(vol => vol.name.toLowerCase().includes(search) || (vol.role && vol.role.toLowerCase().includes(search)) || (vol.description && vol.description.toLowerCase().includes(search)));
+        const container = document.getElementById('volunteersList');
+        if (filtered.length === 0) {
+            container.innerHTML = `<div class="text-center py-12"><i class="fas fa-hand-peace text-5xl text-gray-300 mb-3"></i><p class="text-gray-500">No volunteers found.</p></div>`;
+            return;
+        }
+        const canEdit = hasPermission('edit_volunteers');
+        const canDelete = hasPermission('delete_volunteers');
+        container.innerHTML = filtered.map(vol => {
+            const mediaHtml = vol.media_url ? (vol.media_type === 'video' ? `<video src="${escapeHtml(vol.media_url)}" controls style="width: 100%; max-width: 300px; border-radius: 12px; margin-top: 12px;"></video>` : `<img src="${escapeHtml(vol.media_url)}" alt="${escapeHtml(vol.name)}" style="width: 100%; max-width: 300px; border-radius: 12px; margin-top: 12px;">`) : '';
+            return `
+                <div class="volunteer-card bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                    <div class="flex flex-wrap items-start justify-between gap-4">
+                        <div class="flex gap-5">
+                            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white text-2xl font-bold" style="background: linear-gradient(135deg, #f97316, #ea580c)"><i class="fas fa-user"></i></div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2 mb-1">
+                                    <h3 class="text-lg font-bold text-gray-900">${escapeHtml(vol.name)}</h3>
+                                    ${vol.highlight ? '<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full"><i class="fas fa-star mr-1"></i>Featured</span>' : ''}
+                                </div>
+                                <p class="text-primary-600 font-semibold text-sm mb-1">${escapeHtml(vol.role || 'Volunteer')}</p>
+                                <p class="text-gray-500 text-sm mb-2">${escapeHtml(vol.description || '')}</p>
+                                ${mediaHtml}
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            ${canEdit ? `<button onclick="editVolunteer('${vol.id}')" class="px-3 py-1.5 rounded-xl text-sm font-semibold text-primary-600 border border-primary-200 hover:bg-primary-50 transition-all"><i class="fas fa-edit mr-1"></i>Edit</button>` : ''}
+                            ${canDelete ? `<button onclick="deleteVolunteer('${vol.id}')" class="px-3 py-1.5 rounded-xl text-sm font-semibold text-red-600 border border-red-200 hover:bg-red-50 transition-all"><i class="fas fa-trash-alt mr-1"></i>Delete</button>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    window.showAddVolunteer = () => { if (!hasPermission('edit_volunteers')) { alert('You do not have permission to add volunteers.'); return; } isEditing = false; editingId = null; document.getElementById('formTitle').textContent = 'Add New Volunteer'; document.getElementById('volunteerFormContainer').classList.remove('hidden'); document.getElementById('volunteerForm').reset(); document.querySelectorAll('.media-preview').forEach(el => el.classList.remove('show')); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    window.hideVolunteerForm = () => document.getElementById('volunteerFormContainer').classList.add('hidden');
+    window.editVolunteer = (id) => { if (!hasPermission('edit_volunteers')) { alert('You do not have permission to edit volunteers.'); return; } const vol = allVolunteers.find(v => v.id === id); if (!vol) { alert('Volunteer not found!'); return; } isEditing = true; editingId = id; document.getElementById('formTitle').textContent = 'Edit Volunteer'; document.getElementById('volunteerId').value = vol.id; document.getElementById('volunteerName').value = vol.name; document.getElementById('volunteerRole').value = vol.role || ''; document.getElementById('volunteerDescription').value = vol.description || ''; document.getElementById('volunteerMediaUrl').value = vol.media_url || ''; document.getElementById('volunteerMediaType').value = vol.media_type || ''; document.getElementById('volunteerHighlight').checked = vol.highlight === 1; previewMedia('volunteer'); document.getElementById('volunteerFormContainer').classList.remove('hidden'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    window.deleteVolunteer = async (id) => { if (!hasPermission('delete_volunteers')) { alert('You do not have permission to delete volunteers.'); return; } if (!confirm('Delete this volunteer?')) return; try { const response = await fetch(`${API_URL}/api/volunteers/${id}`, { method: 'DELETE', headers: getAuthHeaders() }); if (!response.ok) throw new Error((await response.json()).error || 'Failed to delete'); alert('✅ Volunteer deleted!'); await loadVolunteers(); } catch (error) { alert('Error: ' + error.message); } };
+
+    function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        if (!ensureAuth()) return;
+        const user = getCurrentUser();
+        document.getElementById('roleBadgeDisplay').textContent = (user.role || 'viewer').replace('_', ' ').toUpperCase();
+        if (!hasPermission('edit_volunteers')) { const addBtn = document.getElementById('addVolunteerBtn'); if (addBtn) addBtn.style.display = 'none'; }
+        await loadVolunteers();
+        const form = document.getElementById('volunteerForm');
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!hasPermission('edit_volunteers')) { alert('You do not have permission to save volunteers.'); return; }
+                const btn = document.getElementById('volunteerSubmitBtn');
+                btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-pulse mr-2"></i> Saving...';
+                const volunteerData = {
+                    name: document.getElementById('volunteerName').value,
+                    role: document.getElementById('volunteerRole').value,
+                    description: document.getElementById('volunteerDescription').value,
+                    media_url: document.getElementById('volunteerMediaUrl').value,
+                    media_type: document.getElementById('volunteerMediaType').value,
+                    highlight: document.getElementById('volunteerHighlight').checked ? 1 : 0
+                };
+                try {
+                    const url = isEditing ? `${API_URL}/api/volunteers/${editingId}` : `${API_URL}/api/volunteers`;
+                    const method = isEditing ? 'PUT' : 'POST';
+                    const response = await fetch(url, { method, headers: getAuthHeaders(), body: JSON.stringify(volunteerData) });
+                    if (!response.ok) throw new Error((await response.json()).error || 'Failed to save');
+                    alert('✅ Volunteer saved!');
+                    hideVolunteerForm();
+                    await loadVolunteers();
+                } catch (error) { alert('Error: ' + error.message); }
+                finally { btn.disabled = false; btn.innerHTML = isEditing ? 'Update Volunteer' : 'Save Volunteer'; }
+            });
+        }
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
+    });
+
+    window.filterVolunteers = () => renderVolunteers();
+    window.logout = () => { if (confirm('Logout?')) logoutFn(); };
+</script>
+</body>
+</html>

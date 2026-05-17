@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>About Us - AEC Assemble Education Community</title>
+    
+    <meta name="title" content="About Us - AEC Assemble Education Community">
+    <meta name="description" content="Learn about Assemble Education Community - a modern education center where learning is fun, simple, and built for your future.">
+    <meta name="keywords" content="AEC, about, education, Yangon, Myanmar, learning, community, 2026">
+    <meta name="theme-color" content="#1b4332">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: {
+                    neutral: {
+                        50: '#f8f9fa', 100: '#f1f3f5', 200: '#e9ecef', 300: '#dee2e6',
+                        400: '#ced4da', 500: '#adb5bd', 600: '#6c757d', 700: '#495057',
+                        800: '#343a40', 900: '#212529'
+                    },
+                    primary: {
+                        50: '#f0f7f4', 100: '#d9e9e0', 200: '#b8d4c7', 300: '#8fb8a5',
+                        400: '#5f957d', 500: '#407a61', 600: '#1b4332', 700: '#0d2f22',
+                        800: '#0a261c', 900: '#051f16'
+                    },
+                    accent: { gold: '#D4AF37', terracotta: '#BC6C25', cream: '#fffcf2' }
+                }
+            }
+        }
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #e9ecef; }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slide-right { animation: slideInRight 0.8s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; } .delay-400 { animation-delay: 0.4s; }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(27, 67, 50, 0.1);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(27, 67, 50, 0.15);
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1b4332;
+            margin-bottom: 12px;
+        }
+        .feature-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            color: white;
+        }
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #D4AF37;
+            margin-bottom: 8px;
+        }
+        .stats-label {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            padding: 64px 24px;
+            text-align: center;
+            margin-top: 64px;
+        }
+        
+        @media (max-width: 768px) {
+            a, button { min-height: 44px; min-width: 44px; }
+            body { font-size: 16px; }
+        }
+    </style>
+</head>
+<body class="bg-neutral-200">
+
+<!-- ⭐ HEADER CONTAINER ⭐ -->
+<div id="header-container"></div>
+
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl lg:text-6xl font-black text-gray-900 mb-4 animate-fade-in-up">About AEC</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto font-medium animate-fade-in-up delay-200">A modern education center where learning is fun, simple, and built for your future</p>
+    </div>
+</section>
+
+<section class="py-16 bg-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-slide-left">
+                <h2 class="text-4xl font-black text-gray-900 mb-6" style="line-height: 1.2;">Welcome to <span style="color: #1b4332;">Assemble Education Community</span></h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    A modern education center where learning is fun, simple, and built for your future.
+                </p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    We use a modernized learning system designed for teenagers, making study easy to understand and enjoyable. No stress, no difficulty — just a smart way to learn and grow.
+                </p>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    At AEC, students join exciting events, learn through group activities, and explore creative projects. Everything is designed to help you gain knowledge, have fun, and improve yourself in one place.
+                </p>
+                <a href="enroll.html" class="inline-block px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105" 
+                    style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">
+                    Enroll Now
+                </a>
+            </div>
+            <div class="animate-slide-right">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="stats-card">
+                        <div class="stats-number">2026</div>
+                        <div class="stats-label">Starting Year</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-number">100%</div>
+                        <div class="stats-label">Dedication</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-number">📚</div>
+                        <div class="stats-label">Quality Education</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-number">👨‍🏫</div>
+                        <div class="stats-label">Expert Teachers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black text-gray-900 mb-4 animate-fade-in-up">Why Choose AEC?</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-200">Everything you need for a successful learning journey</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="feature-card animate-fade-in-up delay-100">
+                <div class="feature-icon">📖</div>
+                <h3 class="feature-title">Modern Learning</h3>
+                <p class="feature-description">Innovative teaching methods designed for today's students</p>
+            </div>
+            
+            <div class="feature-card animate-fade-in-up delay-200">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3 class="feature-title">Expert Teachers</h3>
+                <p class="feature-description">Experienced & qualified educators dedicated to your success</p>
+            </div>
+            
+            <div class="feature-card animate-fade-in-up delay-300">
+                <div class="feature-icon">🏫</div>
+                <h3 class="feature-title">Modern Facilities</h3>
+                <p class="feature-description">State-of-the-art learning environments and resources</p>
+            </div>
+            
+            <div class="feature-card animate-fade-in-up delay-400">
+                <div class="feature-icon">✏️</div>
+                <h3 class="feature-title">Personalized Attention</h3>
+                <p class="feature-description">Individual support to help every student reach their potential</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-neutral-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-slide-left">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="feature-card">
+                        <div class="text-4xl mb-2">🏆</div>
+                        <div class="font-bold text-primary-600">Proven</div>
+                        <div class="text-sm text-gray-600">Results</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="text-4xl mb-2">🌟</div>
+                        <div class="font-bold text-primary-600">Bright</div>
+                        <div class="text-sm text-gray-600">Future</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="text-4xl mb-2">📚</div>
+                        <div class="font-bold text-primary-600">Quality</div>
+                        <div class="text-sm text-gray-600">Education</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="text-4xl mb-2">🤝</div>
+                        <div class="font-bold text-primary-600">Holistic</div>
+                        <div class="text-sm text-gray-600">Development</div>
+                    </div>
+                </div>
+            </div>
+            <div class="animate-slide-right">
+                <h2 class="text-4xl font-black text-gray-900 mb-6" style="line-height: 1.2;">Building Tomorrow's <span style="color: #1b4332;">Leaders Today</span></h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    Assemble Education Community is committed to providing exceptional education that prepares students for success in the modern world. Our innovative teaching methods and dedicated faculty ensure every student reaches their full potential.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3"><span class="text-2xl">✅</span><span class="text-gray-700">Experienced & Qualified Teachers</span></li>
+                    <li class="flex items-start gap-3"><span class="text-2xl">✅</span><span class="text-gray-700">Modern Learning Facilities</span></li>
+                    <li class="flex items-start gap-3"><span class="text-2xl">✅</span><span class="text-gray-700">Personalized Attention</span></li>
+                    <li class="flex items-start gap-3"><span class="text-2xl">✅</span><span class="text-gray-700">Holistic Development Approach</span></li>
+                </ul>
+                <a href="contact.html" class="inline-block px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105" 
+                    style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);">
+                    Learn More About Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-black text-gray-900 mb-6 animate-fade-in-up">Always Innovating</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12 animate-fade-in-up delay-200">
+            We are always developing new ideas and projects to keep learning fresh, useful, and inspiring.
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card animate-fade-in-up delay-100">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #D4AF37 0%, #BC6C25 100%);">🚀</div>
+                <h3 class="feature-title">New Projects</h3>
+                <p class="feature-description">Exciting initiatives and developments coming soon</p>
+            </div>
+            
+            <div class="feature-card animate-fade-in-up delay-200">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #D4AF37 0%, #BC6C25 100%);">🎯</div>
+                <h3 class="feature-title">Fresh Ideas</h3>
+                <p class="feature-description">Continuously improving our teaching methods</p>
+            </div>
+            
+            <div class="feature-card animate-fade-in-up delay-300">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #D4AF37 0%, #BC6C25 100%);">💡</div>
+                <h3 class="feature-title">Inspiring Learning</h3>
+                <p class="feature-description">Making education useful and engaging</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl lg:text-5xl font-black text-white mb-6 animate-fade-in-up">Join AEC Today</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-100">Grow your skills for a better future. Enrollment is now open for 2026!</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
+            <a href="enroll.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105" 
+                style="background: linear-gradient(135deg, #BC6C25 0%, #D4AF37 100%);">
+                Apply Now
+            </a>
+            <a href="contact.html" class="px-8 py-4 rounded-xl font-bold text-white text-lg border-2 border-white/60 hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ FOOTER CONTAINER ⭐ -->
+<div id="footer-container"></div>
+
+<script src="assets/js/load-components.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dashboard - AEC Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { primary: { 500: '#f97316', 600: '#ea580c', 700: '#c2410c' } } } } }</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f9fafb; }
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100%;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            z-index: 40;
+            transition: transform 0.3s ease;
+            transform: translateX(0);
+        }
+        .main-content {
+            margin-left: 280px;
+            padding: 32px;
+            transition: margin 0.3s ease;
+        }
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 50;
+            background: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: #374151;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin: 4px 12px;
+        }
+        .nav-item:hover { background: #fff7ed; color: #ea580c; transform: translateX(4px); }
+        .nav-item.active { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; }
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+            border: 1px solid #ffedd5;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-4px); border-color: #fed7aa; }
+        .action-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #e5e7eb;
+        }
+        .action-card:hover { border-color: #f97316; transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.01); }
+        .role-badge {
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .role-super_admin { background: #fee2e2; color: #dc2626; }
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .status-dot.online { background: #10b981; box-shadow: 0 0 0 2px #a7f3d0; }
+        .status-dot.offline { background: #dc2626; }
+        .status-dot.checking { background: #f59e0b; animation: pulse 1s infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars text-gray-700 text-xl"></i>
+    </button>
+    <div class="sidebar" id="sidebar">
+        <div style="padding: 28px 24px; border-bottom: 1px solid #f3f4f6;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-xl" style="background: linear-gradient(135deg, #f97316, #ea580c);">A</div>
+                <div>
+                    <div class="font-black text-gray-900 text-lg">AEC Admin</div>
+                    <div class="text-xs text-gray-500">Dashboard</div>
+                </div>
+            </div>
+        </div>
+        <nav style="padding: 20px 0;">
+            <a href="dashboard.html" class="nav-item active"><i class="fas fa-chart-line w-5"></i><span>Dashboard</span></a>
+            <a href="classes-manager.html" class="nav-item"><i class="fas fa-book-open w-5"></i><span>Manage Classes</span></a>
+            <a href="events-manager.html" class="nav-item"><i class="fas fa-calendar-alt w-5"></i><span>Manage Events</span></a>
+            <a href="jobs-manager.html" class="nav-item"><i class="fas fa-briefcase w-5"></i><span>Manage Jobs</span></a>
+            <a href="applications-manager.html" class="nav-item"><i class="fas fa-file-alt w-5"></i><span>Applications</span></a>
+            <a href="projects-manager.html" class="nav-item"><i class="fas fa-project-diagram w-5"></i><span>Projects</span></a>
+            <a href="volunteers-manager.html" class="nav-item"><i class="fas fa-hand-peace w-5"></i><span>Volunteers</span></a>
+            <a href="admin-users-manager.html" class="nav-item"><i class="fas fa-users w-5"></i><span>Admin Users</span></a>
+            <a href="settings.html" class="nav-item"><i class="fas fa-sliders-h w-5"></i><span>Settings</span></a>
+            <a href="../index.html" class="nav-item mt-8 text-red-500 hover:text-red-600"><i class="fas fa-arrow-left w-5"></i><span>Back to Site</span></a>
+        </nav>
+    </div>
+    <main class="main-content" id="mainContent">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-black text-gray-900">Dashboard</h1>
+                    <p class="text-gray-500 mt-1">Welcome back, <span id="welcomeUsername" class="font-semibold text-primary-600">Admin</span>!</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="role-badge role-super_admin" id="roleBadgeDisplay">SUPER ADMIN</span>
+                    <button onclick="logout()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all shadow-md">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+            <!-- API Health -->
+            <div class="bg-white rounded-2xl p-5 mb-8 shadow-sm border border-gray-100">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                        <span id="apiStatusDot" class="status-dot checking"></span>
+                        <span id="apiStatusText" class="font-medium text-gray-900">Checking API Status...</span>
+                        <div id="apiStatusDetails" class="hidden md:block">
+                            <span class="text-gray-400 mx-2">|</span>
+                            <span id="apiDatabaseStatus" class="text-sm text-gray-500">Database: Checking...</span>
+                            <span class="text-gray-400 mx-2">|</span>
+                            <span id="apiLastCheck" class="text-sm text-gray-500">Last check: --</span>
+                        </div>
+                    </div>
+                    <button onclick="checkAPIHealth()" class="px-4 py-2 text-sm font-semibold text-primary-600 border border-primary-200 rounded-xl hover:bg-primary-50 transition-all">
+                        <i class="fas fa-sync-alt mr-1"></i> Refresh
+                    </button>
+                </div>
+            </div>
+            <!-- Stats -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Total Classes</p><p class="text-3xl font-black text-gray-900 mt-1" id="statClasses">0</p></div><div class="w-12 h-12 rounded-2xl bg-orange-100 flex items-center justify-center text-2xl text-orange-600"><i class="fas fa-book-open"></i></div></div></div>
+                <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Total Events</p><p class="text-3xl font-black text-gray-900 mt-1" id="statEvents">0</p></div><div class="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl text-blue-600"><i class="fas fa-calendar-alt"></i></div></div></div>
+                <div class="stat-card"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Total Jobs</p><p class="text-3xl font-black text-gray-900 mt-1" id="statJobs">0</p></div><div class="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center text-2xl text-green-600"><i class="fas fa-briefcase"></i></div></div></div>
+                <div class="stat-card" id="applicationsStatCard"><div class="flex items-center justify-between"><div><p class="text-sm text-gray-500 font-medium">Applications</p><p class="text-3xl font-black text-gray-900 mt-1" id="statApplications">0</p></div><div class="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center text-2xl text-purple-600"><i class="fas fa-file-alt"></i></div></div></div>
+            </div>
+            <!-- Quick Actions -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <h2 class="text-xl font-bold text-gray-900 mb-5">Quick Actions</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="quickActionsGrid">
+                    <div class="action-card" data-permission="edit_classes" data-href="classes-manager.html"><div class="text-4xl mb-3"><i class="fas fa-book-open text-primary-500"></i></div><h3 class="font-bold text-gray-900">Add Class</h3><p class="text-sm text-gray-500">Create new class</p></div>
+                    <div class="action-card" data-permission="edit_events" data-href="events-manager.html"><div class="text-4xl mb-3"><i class="fas fa-calendar-alt text-primary-500"></i></div><h3 class="font-bold text-gray-900">Add Event</h3><p class="text-sm text-gray-500">Create new event</p></div>
+                    <div class="action-card" data-permission="edit_jobs" data-href="jobs-manager.html"><div class="text-4xl mb-3"><i class="fas fa-briefcase text-primary-500"></i></div><h3 class="font-bold text-gray-900">Post Job</h3><p class="text-sm text-gray-500">Create job posting</p></div>
+                    <div class="action-card" data-permission="view_applications" data-href="applications-manager.html"><div class="text-4xl mb-3"><i class="fas fa-file-alt text-primary-500"></i></div><h3 class="font-bold text-gray-900">View Applications</h3><p class="text-sm text-gray-500">Review submissions</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module">
+        import { getCurrentUser, logout as logoutFn, getAuthHeaders, hasPermission } from './js/admin-config.js';
+        const API_URL = 'https://api.assembleeducationcommunity.org';
+
+        async function checkAPIHealth() {
+            const statusDot = document.getElementById('apiStatusDot');
+            const statusText = document.getElementById('apiStatusText');
+            const statusDetails = document.getElementById('apiStatusDetails');
+            const dbStatus = document.getElementById('apiDatabaseStatus');
+            const lastCheck = document.getElementById('apiLastCheck');
+            statusDot.className = 'status-dot checking';
+            statusText.innerHTML = '<i class="fas fa-spinner fa-pulse mr-1"></i> Checking...';
+            try {
+                const response = await fetch(`${API_URL}/api/health`);
+                const data = await response.json();
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+                if (data.status === 'ok' && data.database === 'connected') {
+                    statusDot.className = 'status-dot online';
+                    statusText.innerHTML = '<i class="fas fa-check-circle text-green-500 mr-1"></i> API Online';
+                    dbStatus.innerHTML = 'Database: <span class="text-green-600">Connected</span>';
+                } else if (data.status === 'ok' && data.database === 'not connected') {
+                    statusDot.className = 'status-dot offline';
+                    statusText.innerHTML = '<i class="fas fa-exclamation-triangle text-yellow-500 mr-1"></i> Database Disconnected';
+                    dbStatus.innerHTML = 'Database: <span class="text-red-500">Not Connected</span>';
+                } else {
+                    statusDot.className = 'status-dot offline';
+                    statusText.innerHTML = '<i class="fas fa-times-circle text-red-500 mr-1"></i> API Error';
+                    dbStatus.innerHTML = 'Database: <span class="text-gray-500">Unknown</span>';
+                }
+                lastCheck.textContent = `Last check: ${timeString}`;
+                statusDetails.classList.remove('hidden');
+            } catch (error) {
+                statusDot.className = 'status-dot offline';
+                statusText.innerHTML = '<i class="fas fa-times-circle text-red-500 mr-1"></i> API Unreachable';
+                dbStatus.innerHTML = 'Database: <span class="text-gray-500">Unknown</span>';
+                lastCheck.textContent = 'Last check: Failed';
+                statusDetails.classList.remove('hidden');
+            }
+        }
+
+        async function fetchStats() {
+            const stats = {};
+            const canViewClasses = hasPermission('view_classes');
+            const canViewEvents = hasPermission('view_events');
+            const canViewJobs = hasPermission('view_jobs');
+            const canViewApplications = hasPermission('view_applications');
+
+            if (canViewClasses) {
+                try {
+                    const res = await fetch(`${API_URL}/api/classes`, { headers: getAuthHeaders() });
+                    const data = await res.json();
+                    stats.classes = Array.isArray(data) ? data.length : 0;
+                } catch (e) { stats.classes = 0; }
+            } else {
+                stats.classes = '—';
+            }
+
+            if (canViewEvents) {
+                try {
+                    const res = await fetch(`${API_URL}/api/events`, { headers: getAuthHeaders() });
+                    const data = await res.json();
+                    stats.events = Array.isArray(data) ? data.length : 0;
+                } catch (e) { stats.events = 0; }
+            } else {
+                stats.events = '—';
+            }
+
+            if (canViewJobs) {
+                try {
+                    const res = await fetch(`${API_URL}/api/jobs`, { headers: getAuthHeaders() });
+                    const data = await res.json();
+                    stats.jobs = Array.isArray(data) ? data.length : 0;
+                } catch (e) { stats.jobs = 0; }
+            } else {
+                stats.jobs = '—';
+            }
+
+            if (canViewApplications) {
+                try {
+                    const res = await fetch(`${API_URL}/api/applications`, { headers: getAuthHeaders() });
+                    const data = await res.json();
+                    stats.applications = Array.isArray(data) ? data.length : 0;
+                } catch (e) { stats.applications = 0; }
+            } else {
+                stats.applications = '—';
+                document.getElementById('applicationsStatCard').style.display = 'none';
+            }
+
+            document.getElementById('statClasses').textContent = stats.classes;
+            document.getElementById('statEvents').textContent = stats.events;
+            document.getElementById('statJobs').textContent = stats.jobs;
+            document.getElementById('statApplications').textContent = stats.applications;
+        }
+
+        function setupQuickActions() {
+            const actions = document.querySelectorAll('.action-card');
+            actions.forEach(card => {
+                const requiredPerm = card.getAttribute('data-permission');
+                if (requiredPerm && !hasPermission(requiredPerm)) {
+                    card.style.display = 'none';
+                } else {
+                    const href = card.getAttribute('data-href');
+                    if (href) {
+                        card.addEventListener('click', () => {
+                            window.location.href = href;
+                        });
+                    }
+                }
+            });
+        }
+
+        // ⭐ Fixed toggleSidebar for hamburger menu
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            const user = getCurrentUser();
+            if (!user || !user.username) {
+                window.location.href = 'login.html';
+                return;
+            }
+            document.getElementById('welcomeUsername').textContent = user.username;
+            document.getElementById('roleBadgeDisplay').textContent = (user.role || 'viewer').replace('_', ' ').toUpperCase();
+
+            await checkAPIHealth();
+            await fetchStats();
+            setupQuickActions();
+
+            // Attach event listener to hamburger button
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            if (menuBtn) {
+                menuBtn.addEventListener('click', toggleSidebar);
+            }
+        });
+
+        window.checkAPIHealth = checkAPIHealth;
+        window.logout = () => { if (confirm('Logout?')) logoutFn(); };
+    </script>
+</body>
+</html>

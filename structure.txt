@@ -1,0 +1,3667 @@
+Folder PATH listing
+Volume serial number is 000000D1 D411:7829
+C:.
+¦   hash_password.py
+¦   structure.txt
+¦   
++---aec-backend
+¦   ¦   .editorconfig
+¦   ¦   .gitignore
+¦   ¦   .prettierrc
+¦   ¦   package-lock.json
+¦   ¦   package.json
+¦   ¦   vitest.config.js
+¦   ¦   wrangler.jsonc
+¦   ¦   
+¦   +---.vscode
+¦   ¦       settings.json
+¦   ¦       
+¦   +---.wrangler
+¦   ¦   +---state
+¦   ¦   ¦   +---v3
+¦   ¦   ¦       +---d1
+¦   ¦   ¦           +---miniflare-D1DatabaseObject
+¦   ¦   ¦                   2a1e5bc6df55eb5392001cfe69c19068a4d8464e5be4bc39bff7b518862b32ba.sqlite
+¦   ¦   ¦                   2a1e5bc6df55eb5392001cfe69c19068a4d8464e5be4bc39bff7b518862b32ba.sqlite-shm
+¦   ¦   ¦                   2a1e5bc6df55eb5392001cfe69c19068a4d8464e5be4bc39bff7b518862b32ba.sqlite-wal
+¦   ¦   ¦                   
+¦   ¦   +---tmp
+¦   +---node_modules
+¦   ¦   ¦   .package-lock.json
+¦   ¦   ¦   
+¦   ¦   +---.bin
+¦   ¦   ¦       esbuild
+¦   ¦   ¦       miniflare
+¦   ¦   ¦       nanoid
+¦   ¦   ¦       rollup
+¦   ¦   ¦       semver
+¦   ¦   ¦       vite
+¦   ¦   ¦       vite-node
+¦   ¦   ¦       vitest
+¦   ¦   ¦       why-is-node-running
+¦   ¦   ¦       workerd
+¦   ¦   ¦       wrangler
+¦   ¦   ¦       wrangler2
+¦   ¦   ¦       
+¦   ¦   +---.cache
+¦   ¦   ¦   +---wrangler
+¦   ¦   ¦           wrangler-account.json
+¦   ¦   ¦           
+¦   ¦   +---.mf
+¦   ¦   ¦       cf.json
+¦   ¦   ¦       
+¦   ¦   +---@cloudflare
+¦   ¦   ¦   +---kv-asset-handler
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦       index.js.map
+¦   ¦   ¦   ¦   ¦       metafile-esm.json
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---src
+¦   ¦   ¦   ¦           index.ts
+¦   ¦   ¦   ¦           types.ts
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---unenv-preset
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       ¦   index.d.mts
+¦   ¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦   ¦       ¦   index.mjs
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---runtime
+¦   ¦   ¦   ¦           +---node
+¦   ¦   ¦   ¦           ¦       console.d.ts
+¦   ¦   ¦   ¦           ¦       console.mjs
+¦   ¦   ¦   ¦           ¦       process.d.ts
+¦   ¦   ¦   ¦           ¦       process.mjs
+¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦           +---polyfill
+¦   ¦   ¦   ¦                   package.json
+¦   ¦   ¦   ¦                   performance.d.ts
+¦   ¦   ¦   ¦                   performance.mjs
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---vitest-pool-workers
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   ¦   +---config
+¦   ¦   ¦   ¦   ¦   ¦       d1.d.ts
+¦   ¦   ¦   ¦   ¦   ¦       index.cjs
+¦   ¦   ¦   ¦   ¦   ¦       index.cjs.map
+¦   ¦   ¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦   ¦   ¦       pages.d.ts
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---pool
+¦   ¦   ¦   ¦   ¦   ¦       config.d.ts
+¦   ¦   ¦   ¦   ¦   ¦       helpers.d.ts
+¦   ¦   ¦   ¦   ¦   ¦       index.mjs
+¦   ¦   ¦   ¦   ¦   ¦       index.mjs.map
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---shared
+¦   ¦   ¦   ¦   ¦   ¦       builtin-modules.d.ts
+¦   ¦   ¦   ¦   ¦   ¦       d1.d.ts
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---worker
+¦   ¦   ¦   ¦   ¦       ¦   index.mjs
+¦   ¦   ¦   ¦   ¦       ¦   index.mjs.map
+¦   ¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦   ¦       +---lib
+¦   ¦   ¦   ¦   ¦       ¦   ¦   debug.mjs
+¦   ¦   ¦   ¦   ¦       ¦   ¦   debug.mjs.map
+¦   ¦   ¦   ¦   ¦       ¦   ¦   mlly.mjs
+¦   ¦   ¦   ¦   ¦       ¦   ¦   mlly.mjs.map
+¦   ¦   ¦   ¦   ¦       ¦   ¦   tinypool.mjs
+¦   ¦   ¦   ¦   ¦       ¦   ¦   tinypool.mjs.map
+¦   ¦   ¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦   ¦   ¦       ¦   +---cloudflare
+¦   ¦   ¦   ¦   ¦       ¦           empty-internal.cjs
+¦   ¦   ¦   ¦   ¦       ¦           empty-internal.cjs.map
+¦   ¦   ¦   ¦   ¦       ¦           mock-agent.cjs
+¦   ¦   ¦   ¦   ¦       ¦           mock-agent.cjs.map
+¦   ¦   ¦   ¦   ¦       ¦           test-internal.mjs
+¦   ¦   ¦   ¦   ¦       ¦           test-internal.mjs.map
+¦   ¦   ¦   ¦   ¦       ¦           test-runner.mjs
+¦   ¦   ¦   ¦   ¦       ¦           test-runner.mjs.map
+¦   ¦   ¦   ¦   ¦       ¦           test.mjs
+¦   ¦   ¦   ¦   ¦       ¦           test.mjs.map
+¦   ¦   ¦   ¦   ¦       ¦           
+¦   ¦   ¦   ¦   ¦       +---node
+¦   ¦   ¦   ¦   ¦               console.mjs
+¦   ¦   ¦   ¦   ¦               console.mjs.map
+¦   ¦   ¦   ¦   ¦               vm.mjs
+¦   ¦   ¦   ¦   ¦               vm.mjs.map
+¦   ¦   ¦   ¦   ¦               
+¦   ¦   ¦   ¦   +---node_modules
+¦   ¦   ¦   ¦   ¦   +---.bin
+¦   ¦   ¦   ¦   ¦   ¦       wrangler
+¦   ¦   ¦   ¦   ¦   ¦       wrangler2
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---@cloudflare
+¦   ¦   ¦   ¦   ¦   ¦   +---unenv-preset
+¦   ¦   ¦   ¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦   ¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦   ¦   ¦       +---dist
+¦   ¦   ¦   ¦   ¦   ¦           ¦   index.d.mts
+¦   ¦   ¦   ¦   ¦   ¦           ¦   index.d.ts
+¦   ¦   ¦   ¦   ¦   ¦           ¦   index.mjs
+¦   ¦   ¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦   ¦   ¦           +---runtime
+¦   ¦   ¦   ¦   ¦   ¦               +---node
+¦   ¦   ¦   ¦   ¦   ¦               ¦       console.d.ts
+¦   ¦   ¦   ¦   ¦   ¦               ¦       console.mjs
+¦   ¦   ¦   ¦   ¦   ¦               ¦       process.d.ts
+¦   ¦   ¦   ¦   ¦   ¦               ¦       process.mjs
+¦   ¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦   ¦               +---polyfill
+¦   ¦   ¦   ¦   ¦   ¦                       package.json
+¦   ¦   ¦   ¦   ¦   ¦                       performance.d.ts
+¦   ¦   ¦   ¦   ¦   ¦                       performance.mjs
+¦   ¦   ¦   ¦   ¦   ¦                       
+¦   ¦   ¦   ¦   ¦   +---wrangler
+¦   ¦   ¦   ¦   ¦       ¦   config-schema.json
+¦   ¦   ¦   ¦   ¦       ¦   kv-asset-handler.js
+¦   ¦   ¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦   ¦       +---bin
+¦   ¦   ¦   ¦   ¦       ¦       wrangler.js
+¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦       +---templates
+¦   ¦   ¦   ¦   ¦       ¦   ¦   checked-fetch.js
+¦   ¦   ¦   ¦   ¦       ¦   ¦   facade.d.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   modules-watch-stub.js
+¦   ¦   ¦   ¦   ¦       ¦   ¦   new-worker-scheduled.js
+¦   ¦   ¦   ¦   ¦       ¦   ¦   new-worker-scheduled.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   new-worker.js
+¦   ¦   ¦   ¦   ¦       ¦   ¦   new-worker.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   no-op-worker.js
+¦   ¦   ¦   ¦   ¦       ¦   ¦   pages-dev-pipeline.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   pages-dev-util.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   pages-shim.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   pages-template-plugin.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   pages-template-worker.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   tsconfig-sanity.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦   tsconfig.init.json
+¦   ¦   ¦   ¦   ¦       ¦   ¦   tsconfig.json
+¦   ¦   ¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦   ¦   ¦       ¦   +---middleware
+¦   ¦   ¦   ¦   ¦       ¦   ¦       common.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       loader-modules.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       loader-sw.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       middleware-ensure-req-body-drained.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       middleware-miniflare3-json-error.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       middleware-patch-console-prefix.d.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       middleware-patch-console-prefix.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       middleware-pretty-error.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       middleware-scheduled.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦   ¦       ¦   +---remoteBindings
+¦   ¦   ¦   ¦   ¦       ¦   ¦       ProxyServerWorker.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       wrangler.jsonc
+¦   ¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦   ¦       ¦   +---startDevWorker
+¦   ¦   ¦   ¦   ¦       ¦   ¦       InspectorProxyWorker.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       ProxyWorker.ts
+¦   ¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦   ¦       ¦   +---__tests__
+¦   ¦   ¦   ¦   ¦       ¦           pages-dev-util.test.ts
+¦   ¦   ¦   ¦   ¦       ¦           tsconfig-sanity.ts
+¦   ¦   ¦   ¦   ¦       ¦           tsconfig.json
+¦   ¦   ¦   ¦   ¦       ¦           
+¦   ¦   ¦   ¦   ¦       +---wrangler-dist
+¦   ¦   ¦   ¦   ¦               cli.d.ts
+¦   ¦   ¦   ¦   ¦               cli.js
+¦   ¦   ¦   ¦   ¦               InspectorProxyWorker.js
+¦   ¦   ¦   ¦   ¦               metafile-cjs.json
+¦   ¦   ¦   ¦   ¦               ProxyServerWorker.js
+¦   ¦   ¦   ¦   ¦               ProxyWorker.js
+¦   ¦   ¦   ¦   ¦               
+¦   ¦   ¦   ¦   +---types
+¦   ¦   ¦   ¦           cloudflare-test.d.ts
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---workerd-linux-64
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---bin
+¦   ¦   ¦               workerd
+¦   ¦   ¦               
+¦   ¦   +---@cspotcode
+¦   ¦   ¦   +---source-map-support
+¦   ¦   ¦           browser-source-map-support.js
+¦   ¦   ¦           LICENSE.md
+¦   ¦   ¦           package.json
+¦   ¦   ¦           README.md
+¦   ¦   ¦           register-hook-require.d.ts
+¦   ¦   ¦           register-hook-require.js
+¦   ¦   ¦           register.d.ts
+¦   ¦   ¦           register.js
+¦   ¦   ¦           source-map-support.d.ts
+¦   ¦   ¦           source-map-support.js
+¦   ¦   ¦           
+¦   ¦   +---@emnapi
+¦   ¦   +---@esbuild
+¦   ¦   ¦   +---linux-x64
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---bin
+¦   ¦   ¦               esbuild
+¦   ¦   ¦               
+¦   ¦   +---@esbuild-plugins
+¦   ¦   +---@fastify
+¦   ¦   +---@img
+¦   ¦   ¦   +---colour
+¦   ¦   ¦   ¦       color.cjs
+¦   ¦   ¦   ¦       index.cjs
+¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦       LICENSE.md
+¦   ¦   ¦   ¦       package.json
+¦   ¦   ¦   ¦       README.md
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---sharp-libvips-linux-x64
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   versions.json
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦   ¦       ¦   libvips-cpp.so.8.17.3
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---glib-2.0
+¦   ¦   ¦   ¦           +---include
+¦   ¦   ¦   ¦                   glibconfig.h
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---sharp-libvips-linuxmusl-x64
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   versions.json
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦   ¦       ¦   libvips-cpp.so.8.17.3
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---glib-2.0
+¦   ¦   ¦   ¦           +---include
+¦   ¦   ¦   ¦                   glibconfig.h
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---sharp-linux-x64
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦           sharp-linux-x64.node
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---sharp-linuxmusl-x64
+¦   ¦   ¦       ¦   LICENSE
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---lib
+¦   ¦   ¦               sharp-linuxmusl-x64.node
+¦   ¦   ¦               
+¦   ¦   +---@jridgewell
+¦   ¦   ¦   +---resolve-uri
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       ¦   resolve-uri.mjs
+¦   ¦   ¦   ¦       ¦   resolve-uri.mjs.map
+¦   ¦   ¦   ¦       ¦   resolve-uri.umd.js
+¦   ¦   ¦   ¦       ¦   resolve-uri.umd.js.map
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---types
+¦   ¦   ¦   ¦               resolve-uri.d.ts
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---sourcemap-codec
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   ¦       sourcemap-codec.mjs
+¦   ¦   ¦   ¦   ¦       sourcemap-codec.mjs.map
+¦   ¦   ¦   ¦   ¦       sourcemap-codec.umd.js
+¦   ¦   ¦   ¦   ¦       sourcemap-codec.umd.js.map
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---src
+¦   ¦   ¦   ¦   ¦       scopes.ts
+¦   ¦   ¦   ¦   ¦       sourcemap-codec.ts
+¦   ¦   ¦   ¦   ¦       strings.ts
+¦   ¦   ¦   ¦   ¦       vlq.ts
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---types
+¦   ¦   ¦   ¦           scopes.d.cts
+¦   ¦   ¦   ¦           scopes.d.cts.map
+¦   ¦   ¦   ¦           scopes.d.mts
+¦   ¦   ¦   ¦           scopes.d.mts.map
+¦   ¦   ¦   ¦           sourcemap-codec.d.cts
+¦   ¦   ¦   ¦           sourcemap-codec.d.cts.map
+¦   ¦   ¦   ¦           sourcemap-codec.d.mts
+¦   ¦   ¦   ¦           sourcemap-codec.d.mts.map
+¦   ¦   ¦   ¦           strings.d.cts
+¦   ¦   ¦   ¦           strings.d.cts.map
+¦   ¦   ¦   ¦           strings.d.mts
+¦   ¦   ¦   ¦           strings.d.mts.map
+¦   ¦   ¦   ¦           vlq.d.cts
+¦   ¦   ¦   ¦           vlq.d.cts.map
+¦   ¦   ¦   ¦           vlq.d.mts
+¦   ¦   ¦   ¦           vlq.d.mts.map
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---trace-mapping
+¦   ¦   ¦       ¦   LICENSE
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---dist
+¦   ¦   ¦           ¦   trace-mapping.mjs
+¦   ¦   ¦           ¦   trace-mapping.mjs.map
+¦   ¦   ¦           ¦   trace-mapping.umd.js
+¦   ¦   ¦           ¦   trace-mapping.umd.js.map
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---types
+¦   ¦   ¦                   any-map.d.ts
+¦   ¦   ¦                   binary-search.d.ts
+¦   ¦   ¦                   by-source.d.ts
+¦   ¦   ¦                   resolve.d.ts
+¦   ¦   ¦                   sort.d.ts
+¦   ¦   ¦                   sourcemap-segment.d.ts
+¦   ¦   ¦                   strip-filename.d.ts
+¦   ¦   ¦                   trace-mapping.d.ts
+¦   ¦   ¦                   types.d.ts
+¦   ¦   ¦                   
+¦   ¦   +---@poppinss
+¦   ¦   ¦   +---colors
+¦   ¦   ¦   ¦   ¦   LICENSE.md
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---build
+¦   ¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---src
+¦   ¦   ¦   ¦               base.d.ts
+¦   ¦   ¦   ¦               kleur.d.ts
+¦   ¦   ¦   ¦               raw.d.ts
+¦   ¦   ¦   ¦               silent.d.ts
+¦   ¦   ¦   ¦               types.d.ts
+¦   ¦   ¦   ¦               types.js
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---dumper
+¦   ¦   ¦   ¦   ¦   LICENSE.md
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---build
+¦   ¦   ¦   ¦       ¦   chunk-26HALFTP.js
+¦   ¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---formatters
+¦   ¦   ¦   ¦       ¦   +---console
+¦   ¦   ¦   ¦       ¦   ¦   ¦   formatter.d.ts
+¦   ¦   ¦   ¦       ¦   ¦   ¦   main.d.ts
+¦   ¦   ¦   ¦       ¦   ¦   ¦   main.js
+¦   ¦   ¦   ¦       ¦   ¦   ¦   themes.d.ts
+¦   ¦   ¦   ¦       ¦   ¦   ¦   types.d.ts
+¦   ¦   ¦   ¦       ¦   ¦   ¦   types.js
+¦   ¦   ¦   ¦       ¦   ¦   ¦   
+¦   ¦   ¦   ¦       ¦   ¦   +---printers
+¦   ¦   ¦   ¦       ¦   ¦           main.d.ts
+¦   ¦   ¦   ¦       ¦   ¦           
+¦   ¦   ¦   ¦       ¦   +---html
+¦   ¦   ¦   ¦       ¦       ¦   formatter.d.ts
+¦   ¦   ¦   ¦       ¦       ¦   head.d.ts
+¦   ¦   ¦   ¦       ¦       ¦   main.d.ts
+¦   ¦   ¦   ¦       ¦       ¦   main.js
+¦   ¦   ¦   ¦       ¦       ¦   themes.d.ts
+¦   ¦   ¦   ¦       ¦       ¦   types.d.ts
+¦   ¦   ¦   ¦       ¦       ¦   types.js
+¦   ¦   ¦   ¦       ¦       ¦   
+¦   ¦   ¦   ¦       ¦       +---printers
+¦   ¦   ¦   ¦       ¦               main.d.ts
+¦   ¦   ¦   ¦       ¦               
+¦   ¦   ¦   ¦       +---src
+¦   ¦   ¦   ¦           ¦   helpers.d.ts
+¦   ¦   ¦   ¦           ¦   parser.d.ts
+¦   ¦   ¦   ¦           ¦   types.d.ts
+¦   ¦   ¦   ¦           ¦   types.js
+¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦           +---tokenizers
+¦   ¦   ¦   ¦                   main.d.ts
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---exception
+¦   ¦   ¦       ¦   LICENSE.md
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---build
+¦   ¦   ¦           ¦   index.d.ts
+¦   ¦   ¦           ¦   index.js
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---src
+¦   ¦   ¦                   exception.d.ts
+¦   ¦   ¦                   
+¦   ¦   +---@rollup
+¦   ¦   ¦   +---rollup-linux-x64-gnu
+¦   ¦   ¦   ¦       package.json
+¦   ¦   ¦   ¦       README.md
+¦   ¦   ¦   ¦       rollup.linux-x64-gnu.node
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---rollup-linux-x64-musl
+¦   ¦   ¦           package.json
+¦   ¦   ¦           README.md
+¦   ¦   ¦           rollup.linux-x64-musl.node
+¦   ¦   ¦           
+¦   ¦   +---@sindresorhus
+¦   ¦   ¦   +---is
+¦   ¦   ¦       ¦   license
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   readme.md
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---distribution
+¦   ¦   ¦               index.d.ts
+¦   ¦   ¦               index.js
+¦   ¦   ¦               types.d.ts
+¦   ¦   ¦               types.js
+¦   ¦   ¦               utilities.d.ts
+¦   ¦   ¦               utilities.js
+¦   ¦   ¦               
+¦   ¦   +---@speed-highlight
+¦   ¦   ¦   +---core
+¦   ¦   ¦       ¦   LICENSE
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---dist
+¦   ¦   ¦           ¦   common.d.ts
+¦   ¦   ¦           ¦   common.d.ts.map
+¦   ¦   ¦           ¦   common.js
+¦   ¦   ¦           ¦   detect.d.ts
+¦   ¦   ¦           ¦   detect.d.ts.map
+¦   ¦   ¦           ¦   detect.js
+¦   ¦   ¦           ¦   index.d.ts
+¦   ¦   ¦           ¦   index.d.ts.map
+¦   ¦   ¦           ¦   index.js
+¦   ¦   ¦           ¦   terminal.d.ts
+¦   ¦   ¦           ¦   terminal.d.ts.map
+¦   ¦   ¦           ¦   terminal.js
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---languages
+¦   ¦   ¦           ¦       asm.d.ts
+¦   ¦   ¦           ¦       asm.d.ts.map
+¦   ¦   ¦           ¦       asm.js
+¦   ¦   ¦           ¦       bash.d.ts
+¦   ¦   ¦           ¦       bash.d.ts.map
+¦   ¦   ¦           ¦       bash.js
+¦   ¦   ¦           ¦       bf.d.ts
+¦   ¦   ¦           ¦       bf.d.ts.map
+¦   ¦   ¦           ¦       bf.js
+¦   ¦   ¦           ¦       c.d.ts
+¦   ¦   ¦           ¦       c.d.ts.map
+¦   ¦   ¦           ¦       c.js
+¦   ¦   ¦           ¦       css.d.ts
+¦   ¦   ¦           ¦       css.d.ts.map
+¦   ¦   ¦           ¦       css.js
+¦   ¦   ¦           ¦       csv.d.ts
+¦   ¦   ¦           ¦       csv.d.ts.map
+¦   ¦   ¦           ¦       csv.js
+¦   ¦   ¦           ¦       diff.d.ts
+¦   ¦   ¦           ¦       diff.d.ts.map
+¦   ¦   ¦           ¦       diff.js
+¦   ¦   ¦           ¦       docker.d.ts
+¦   ¦   ¦           ¦       docker.d.ts.map
+¦   ¦   ¦           ¦       docker.js
+¦   ¦   ¦           ¦       git.d.ts
+¦   ¦   ¦           ¦       git.d.ts.map
+¦   ¦   ¦           ¦       git.js
+¦   ¦   ¦           ¦       go.d.ts
+¦   ¦   ¦           ¦       go.d.ts.map
+¦   ¦   ¦           ¦       go.js
+¦   ¦   ¦           ¦       html.d.ts
+¦   ¦   ¦           ¦       html.d.ts.map
+¦   ¦   ¦           ¦       html.js
+¦   ¦   ¦           ¦       http.d.ts
+¦   ¦   ¦           ¦       http.d.ts.map
+¦   ¦   ¦           ¦       http.js
+¦   ¦   ¦           ¦       ini.d.ts
+¦   ¦   ¦           ¦       ini.d.ts.map
+¦   ¦   ¦           ¦       ini.js
+¦   ¦   ¦           ¦       java.d.ts
+¦   ¦   ¦           ¦       java.d.ts.map
+¦   ¦   ¦           ¦       java.js
+¦   ¦   ¦           ¦       js.d.ts
+¦   ¦   ¦           ¦       js.d.ts.map
+¦   ¦   ¦           ¦       js.js
+¦   ¦   ¦           ¦       jsdoc.d.ts
+¦   ¦   ¦           ¦       jsdoc.d.ts.map
+¦   ¦   ¦           ¦       jsdoc.js
+¦   ¦   ¦           ¦       json.d.ts
+¦   ¦   ¦           ¦       json.d.ts.map
+¦   ¦   ¦           ¦       json.js
+¦   ¦   ¦           ¦       js_template_literals.d.ts
+¦   ¦   ¦           ¦       js_template_literals.d.ts.map
+¦   ¦   ¦           ¦       js_template_literals.js
+¦   ¦   ¦           ¦       leanpub-md.d.ts
+¦   ¦   ¦           ¦       leanpub-md.d.ts.map
+¦   ¦   ¦           ¦       leanpub-md.js
+¦   ¦   ¦           ¦       log.d.ts
+¦   ¦   ¦           ¦       log.d.ts.map
+¦   ¦   ¦           ¦       log.js
+¦   ¦   ¦           ¦       lua.d.ts
+¦   ¦   ¦           ¦       lua.d.ts.map
+¦   ¦   ¦           ¦       lua.js
+¦   ¦   ¦           ¦       make.d.ts
+¦   ¦   ¦           ¦       make.d.ts.map
+¦   ¦   ¦           ¦       make.js
+¦   ¦   ¦           ¦       md.d.ts
+¦   ¦   ¦           ¦       md.d.ts.map
+¦   ¦   ¦           ¦       md.js
+¦   ¦   ¦           ¦       pl.d.ts
+¦   ¦   ¦           ¦       pl.d.ts.map
+¦   ¦   ¦           ¦       pl.js
+¦   ¦   ¦           ¦       plain.d.ts
+¦   ¦   ¦           ¦       plain.d.ts.map
+¦   ¦   ¦           ¦       plain.js
+¦   ¦   ¦           ¦       py.d.ts
+¦   ¦   ¦           ¦       py.d.ts.map
+¦   ¦   ¦           ¦       py.js
+¦   ¦   ¦           ¦       regex.d.ts
+¦   ¦   ¦           ¦       regex.d.ts.map
+¦   ¦   ¦           ¦       regex.js
+¦   ¦   ¦           ¦       rs.d.ts
+¦   ¦   ¦           ¦       rs.d.ts.map
+¦   ¦   ¦           ¦       rs.js
+¦   ¦   ¦           ¦       sql.d.ts
+¦   ¦   ¦           ¦       sql.d.ts.map
+¦   ¦   ¦           ¦       sql.js
+¦   ¦   ¦           ¦       todo.d.ts
+¦   ¦   ¦           ¦       todo.d.ts.map
+¦   ¦   ¦           ¦       todo.js
+¦   ¦   ¦           ¦       toml.d.ts
+¦   ¦   ¦           ¦       toml.d.ts.map
+¦   ¦   ¦           ¦       toml.js
+¦   ¦   ¦           ¦       ts.d.ts
+¦   ¦   ¦           ¦       ts.d.ts.map
+¦   ¦   ¦           ¦       ts.js
+¦   ¦   ¦           ¦       uri.d.ts
+¦   ¦   ¦           ¦       uri.d.ts.map
+¦   ¦   ¦           ¦       uri.js
+¦   ¦   ¦           ¦       xml.d.ts
+¦   ¦   ¦           ¦       xml.d.ts.map
+¦   ¦   ¦           ¦       xml.js
+¦   ¦   ¦           ¦       yaml.d.ts
+¦   ¦   ¦           ¦       yaml.d.ts.map
+¦   ¦   ¦           ¦       yaml.js
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---node
+¦   ¦   ¦           ¦   ¦   common.d.ts
+¦   ¦   ¦           ¦   ¦   common.d.ts.map
+¦   ¦   ¦           ¦   ¦   common.js
+¦   ¦   ¦           ¦   ¦   detect.d.ts
+¦   ¦   ¦           ¦   ¦   detect.d.ts.map
+¦   ¦   ¦           ¦   ¦   detect.js
+¦   ¦   ¦           ¦   ¦   index.d.ts
+¦   ¦   ¦           ¦   ¦   index.d.ts.map
+¦   ¦   ¦           ¦   ¦   index.js
+¦   ¦   ¦           ¦   ¦   package.json
+¦   ¦   ¦           ¦   ¦   terminal.d.ts
+¦   ¦   ¦           ¦   ¦   terminal.d.ts.map
+¦   ¦   ¦           ¦   ¦   terminal.js
+¦   ¦   ¦           ¦   ¦   
+¦   ¦   ¦           ¦   +---languages
+¦   ¦   ¦           ¦   ¦       asm.d.ts
+¦   ¦   ¦           ¦   ¦       asm.d.ts.map
+¦   ¦   ¦           ¦   ¦       asm.js
+¦   ¦   ¦           ¦   ¦       bash.d.ts
+¦   ¦   ¦           ¦   ¦       bash.d.ts.map
+¦   ¦   ¦           ¦   ¦       bash.js
+¦   ¦   ¦           ¦   ¦       bf.d.ts
+¦   ¦   ¦           ¦   ¦       bf.d.ts.map
+¦   ¦   ¦           ¦   ¦       bf.js
+¦   ¦   ¦           ¦   ¦       c.d.ts
+¦   ¦   ¦           ¦   ¦       c.d.ts.map
+¦   ¦   ¦           ¦   ¦       c.js
+¦   ¦   ¦           ¦   ¦       css.d.ts
+¦   ¦   ¦           ¦   ¦       css.d.ts.map
+¦   ¦   ¦           ¦   ¦       css.js
+¦   ¦   ¦           ¦   ¦       csv.d.ts
+¦   ¦   ¦           ¦   ¦       csv.d.ts.map
+¦   ¦   ¦           ¦   ¦       csv.js
+¦   ¦   ¦           ¦   ¦       diff.d.ts
+¦   ¦   ¦           ¦   ¦       diff.d.ts.map
+¦   ¦   ¦           ¦   ¦       diff.js
+¦   ¦   ¦           ¦   ¦       docker.d.ts
+¦   ¦   ¦           ¦   ¦       docker.d.ts.map
+¦   ¦   ¦           ¦   ¦       docker.js
+¦   ¦   ¦           ¦   ¦       git.d.ts
+¦   ¦   ¦           ¦   ¦       git.d.ts.map
+¦   ¦   ¦           ¦   ¦       git.js
+¦   ¦   ¦           ¦   ¦       go.d.ts
+¦   ¦   ¦           ¦   ¦       go.d.ts.map
+¦   ¦   ¦           ¦   ¦       go.js
+¦   ¦   ¦           ¦   ¦       html.d.ts
+¦   ¦   ¦           ¦   ¦       html.d.ts.map
+¦   ¦   ¦           ¦   ¦       html.js
+¦   ¦   ¦           ¦   ¦       http.d.ts
+¦   ¦   ¦           ¦   ¦       http.d.ts.map
+¦   ¦   ¦           ¦   ¦       http.js
+¦   ¦   ¦           ¦   ¦       ini.d.ts
+¦   ¦   ¦           ¦   ¦       ini.d.ts.map
+¦   ¦   ¦           ¦   ¦       ini.js
+¦   ¦   ¦           ¦   ¦       java.d.ts
+¦   ¦   ¦           ¦   ¦       java.d.ts.map
+¦   ¦   ¦           ¦   ¦       java.js
+¦   ¦   ¦           ¦   ¦       js.d.ts
+¦   ¦   ¦           ¦   ¦       js.d.ts.map
+¦   ¦   ¦           ¦   ¦       js.js
+¦   ¦   ¦           ¦   ¦       jsdoc.d.ts
+¦   ¦   ¦           ¦   ¦       jsdoc.d.ts.map
+¦   ¦   ¦           ¦   ¦       jsdoc.js
+¦   ¦   ¦           ¦   ¦       json.d.ts
+¦   ¦   ¦           ¦   ¦       json.d.ts.map
+¦   ¦   ¦           ¦   ¦       json.js
+¦   ¦   ¦           ¦   ¦       js_template_literals.d.ts
+¦   ¦   ¦           ¦   ¦       js_template_literals.d.ts.map
+¦   ¦   ¦           ¦   ¦       js_template_literals.js
+¦   ¦   ¦           ¦   ¦       leanpub-md.d.ts
+¦   ¦   ¦           ¦   ¦       leanpub-md.d.ts.map
+¦   ¦   ¦           ¦   ¦       leanpub-md.js
+¦   ¦   ¦           ¦   ¦       log.d.ts
+¦   ¦   ¦           ¦   ¦       log.d.ts.map
+¦   ¦   ¦           ¦   ¦       log.js
+¦   ¦   ¦           ¦   ¦       lua.d.ts
+¦   ¦   ¦           ¦   ¦       lua.d.ts.map
+¦   ¦   ¦           ¦   ¦       lua.js
+¦   ¦   ¦           ¦   ¦       make.d.ts
+¦   ¦   ¦           ¦   ¦       make.d.ts.map
+¦   ¦   ¦           ¦   ¦       make.js
+¦   ¦   ¦           ¦   ¦       md.d.ts
+¦   ¦   ¦           ¦   ¦       md.d.ts.map
+¦   ¦   ¦           ¦   ¦       md.js
+¦   ¦   ¦           ¦   ¦       pl.d.ts
+¦   ¦   ¦           ¦   ¦       pl.d.ts.map
+¦   ¦   ¦           ¦   ¦       pl.js
+¦   ¦   ¦           ¦   ¦       plain.d.ts
+¦   ¦   ¦           ¦   ¦       plain.d.ts.map
+¦   ¦   ¦           ¦   ¦       plain.js
+¦   ¦   ¦           ¦   ¦       py.d.ts
+¦   ¦   ¦           ¦   ¦       py.d.ts.map
+¦   ¦   ¦           ¦   ¦       py.js
+¦   ¦   ¦           ¦   ¦       regex.d.ts
+¦   ¦   ¦           ¦   ¦       regex.d.ts.map
+¦   ¦   ¦           ¦   ¦       regex.js
+¦   ¦   ¦           ¦   ¦       rs.d.ts
+¦   ¦   ¦           ¦   ¦       rs.d.ts.map
+¦   ¦   ¦           ¦   ¦       rs.js
+¦   ¦   ¦           ¦   ¦       sql.d.ts
+¦   ¦   ¦           ¦   ¦       sql.d.ts.map
+¦   ¦   ¦           ¦   ¦       sql.js
+¦   ¦   ¦           ¦   ¦       todo.d.ts
+¦   ¦   ¦           ¦   ¦       todo.d.ts.map
+¦   ¦   ¦           ¦   ¦       todo.js
+¦   ¦   ¦           ¦   ¦       toml.d.ts
+¦   ¦   ¦           ¦   ¦       toml.d.ts.map
+¦   ¦   ¦           ¦   ¦       toml.js
+¦   ¦   ¦           ¦   ¦       ts.d.ts
+¦   ¦   ¦           ¦   ¦       ts.d.ts.map
+¦   ¦   ¦           ¦   ¦       ts.js
+¦   ¦   ¦           ¦   ¦       uri.d.ts
+¦   ¦   ¦           ¦   ¦       uri.d.ts.map
+¦   ¦   ¦           ¦   ¦       uri.js
+¦   ¦   ¦           ¦   ¦       xml.d.ts
+¦   ¦   ¦           ¦   ¦       xml.d.ts.map
+¦   ¦   ¦           ¦   ¦       xml.js
+¦   ¦   ¦           ¦   ¦       yaml.d.ts
+¦   ¦   ¦           ¦   ¦       yaml.d.ts.map
+¦   ¦   ¦           ¦   ¦       yaml.js
+¦   ¦   ¦           ¦   ¦       
+¦   ¦   ¦           ¦   +---themes
+¦   ¦   ¦           ¦           atom-dark.d.ts
+¦   ¦   ¦           ¦           atom-dark.d.ts.map
+¦   ¦   ¦           ¦           atom-dark.js
+¦   ¦   ¦           ¦           default.d.ts
+¦   ¦   ¦           ¦           default.d.ts.map
+¦   ¦   ¦           ¦           default.js
+¦   ¦   ¦           ¦           termcolor.d.ts
+¦   ¦   ¦           ¦           termcolor.d.ts.map
+¦   ¦   ¦           ¦           termcolor.js
+¦   ¦   ¦           ¦           
+¦   ¦   ¦           +---themes
+¦   ¦   ¦                   atom-dark.css
+¦   ¦   ¦                   atom-dark.d.ts
+¦   ¦   ¦                   atom-dark.d.ts.map
+¦   ¦   ¦                   atom-dark.js
+¦   ¦   ¦                   dark.css
+¦   ¦   ¦                   default.css
+¦   ¦   ¦                   default.d.ts
+¦   ¦   ¦                   default.d.ts.map
+¦   ¦   ¦                   default.js
+¦   ¦   ¦                   github-dark.css
+¦   ¦   ¦                   github-dim.css
+¦   ¦   ¦                   github-light.css
+¦   ¦   ¦                   termcolor.d.ts
+¦   ¦   ¦                   termcolor.d.ts.map
+¦   ¦   ¦                   termcolor.js
+¦   ¦   ¦                   visual-studio-dark.css
+¦   ¦   ¦                   
+¦   ¦   +---@types
+¦   ¦   ¦   +---chai
+¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦       LICENSE
+¦   ¦   ¦   ¦       package.json
+¦   ¦   ¦   ¦       README.md
+¦   ¦   ¦   ¦       register-should.d.ts
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---deep-eql
+¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦       LICENSE
+¦   ¦   ¦   ¦       package.json
+¦   ¦   ¦   ¦       README.md
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---estree
+¦   ¦   ¦           flow.d.ts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           LICENSE
+¦   ¦   ¦           package.json
+¦   ¦   ¦           README.md
+¦   ¦   ¦           
+¦   ¦   +---@vitest
+¦   ¦   ¦   +---expect
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦           index.d.ts
+¦   ¦   ¦   ¦           index.js
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---mocker
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦           auto-register.d.ts
+¦   ¦   ¦   ¦           auto-register.js
+¦   ¦   ¦   ¦           browser.d.ts
+¦   ¦   ¦   ¦           browser.js
+¦   ¦   ¦   ¦           chunk-interceptor-native.js
+¦   ¦   ¦   ¦           chunk-mocker.js
+¦   ¦   ¦   ¦           chunk-pathe.M-eThtNZ.js
+¦   ¦   ¦   ¦           chunk-registry.js
+¦   ¦   ¦   ¦           chunk-utils.js
+¦   ¦   ¦   ¦           index.d.ts
+¦   ¦   ¦   ¦           index.js
+¦   ¦   ¦   ¦           mocker.d-Ce9_ySj5.d.ts
+¦   ¦   ¦   ¦           node.d.ts
+¦   ¦   ¦   ¦           node.js
+¦   ¦   ¦   ¦           redirect.d.ts
+¦   ¦   ¦   ¦           redirect.js
+¦   ¦   ¦   ¦           register.d.ts
+¦   ¦   ¦   ¦           register.js
+¦   ¦   ¦   ¦           registry.d-D765pazg.d.ts
+¦   ¦   ¦   ¦           types.d-D_aRZRdy.d.ts
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---pretty-format
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦           index.d.ts
+¦   ¦   ¦   ¦           index.js
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---runner
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   types.d.ts
+¦   ¦   ¦   ¦   ¦   utils.d.ts
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦           chunk-hooks.js
+¦   ¦   ¦   ¦           index.d.ts
+¦   ¦   ¦   ¦           index.js
+¦   ¦   ¦   ¦           tasks.d-CkscK4of.d.ts
+¦   ¦   ¦   ¦           types.d.ts
+¦   ¦   ¦   ¦           types.js
+¦   ¦   ¦   ¦           utils.d.ts
+¦   ¦   ¦   ¦           utils.js
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---snapshot
+¦   ¦   ¦   ¦   ¦   environment.d.ts
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   manager.d.ts
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦           environment.d-DHdQ1Csl.d.ts
+¦   ¦   ¦   ¦           environment.d.ts
+¦   ¦   ¦   ¦           environment.js
+¦   ¦   ¦   ¦           index.d.ts
+¦   ¦   ¦   ¦           index.js
+¦   ¦   ¦   ¦           manager.d.ts
+¦   ¦   ¦   ¦           manager.js
+¦   ¦   ¦   ¦           rawSnapshot.d-lFsMJFUd.d.ts
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---spy
+¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦           index.d.ts
+¦   ¦   ¦   ¦           index.js
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---utils
+¦   ¦   ¦       ¦   diff.d.ts
+¦   ¦   ¦       ¦   error.d.ts
+¦   ¦   ¦       ¦   helpers.d.ts
+¦   ¦   ¦       ¦   LICENSE
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---dist
+¦   ¦   ¦               chunk-_commonjsHelpers.js
+¦   ¦   ¦               diff.d.ts
+¦   ¦   ¦               diff.js
+¦   ¦   ¦               error.d.ts
+¦   ¦   ¦               error.js
+¦   ¦   ¦               helpers.d.ts
+¦   ¦   ¦               helpers.js
+¦   ¦   ¦               index.d.ts
+¦   ¦   ¦               index.js
+¦   ¦   ¦               source-map.d.ts
+¦   ¦   ¦               source-map.js
+¦   ¦   ¦               types.d-BCElaP-c.d.ts
+¦   ¦   ¦               types.d.ts
+¦   ¦   ¦               types.js
+¦   ¦   ¦               
+¦   ¦   +---assertion-error
+¦   ¦   ¦       index.d.ts
+¦   ¦   ¦       index.js
+¦   ¦   ¦       LICENSE
+¦   ¦   ¦       package.json
+¦   ¦   ¦       README.md
+¦   ¦   ¦       
+¦   ¦   +---blake3-wasm
+¦   ¦   ¦   ¦   benchmark.js
+¦   ¦   ¦   ¦   browser-async.d.ts
+¦   ¦   ¦   ¦   browser-async.js
+¦   ¦   ¦   ¦   browser.d.ts
+¦   ¦   ¦   ¦   browser.js
+¦   ¦   ¦   ¦   changelog.md
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   readme.md
+¦   ¦   ¦   ¦   targets.json
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   ¦   browser.test.d.ts
+¦   ¦   ¦   ¦   ¦   browser.test.js
+¦   ¦   ¦   ¦   ¦   browser.test.js.map
+¦   ¦   ¦   ¦   ¦   index.d.ts
+¦   ¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   ¦   index.js.map
+¦   ¦   ¦   ¦   ¦   node.test.d.ts
+¦   ¦   ¦   ¦   ¦   node.test.js
+¦   ¦   ¦   ¦   ¦   node.test.js.map
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---base
+¦   ¦   ¦   ¦   ¦       disposable.d.ts
+¦   ¦   ¦   ¦   ¦       disposable.js
+¦   ¦   ¦   ¦   ¦       disposable.js.map
+¦   ¦   ¦   ¦   ¦       disposable.test.d.ts
+¦   ¦   ¦   ¦   ¦       disposable.test.js
+¦   ¦   ¦   ¦   ¦       disposable.test.js.map
+¦   ¦   ¦   ¦   ¦       hash-fn.d.ts
+¦   ¦   ¦   ¦   ¦       hash-fn.js
+¦   ¦   ¦   ¦   ¦       hash-fn.js.map
+¦   ¦   ¦   ¦   ¦       hash-instance.d.ts
+¦   ¦   ¦   ¦   ¦       hash-instance.js
+¦   ¦   ¦   ¦   ¦       hash-instance.js.map
+¦   ¦   ¦   ¦   ¦       hash-reader.d.ts
+¦   ¦   ¦   ¦   ¦       hash-reader.js
+¦   ¦   ¦   ¦   ¦       hash-reader.js.map
+¦   ¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦       index.js.map
+¦   ¦   ¦   ¦   ¦       test-helpers.d.ts
+¦   ¦   ¦   ¦   ¦       test-helpers.js
+¦   ¦   ¦   ¦   ¦       test-helpers.js.map
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---browser
+¦   ¦   ¦   ¦   ¦       encoding.d.ts
+¦   ¦   ¦   ¦   ¦       encoding.js
+¦   ¦   ¦   ¦   ¦       encoding.js.map
+¦   ¦   ¦   ¦   ¦       hash-fn.d.ts
+¦   ¦   ¦   ¦   ¦       hash-fn.js
+¦   ¦   ¦   ¦   ¦       hash-fn.js.map
+¦   ¦   ¦   ¦   ¦       hash-instance.d.ts
+¦   ¦   ¦   ¦   ¦       hash-instance.js
+¦   ¦   ¦   ¦   ¦       hash-instance.js.map
+¦   ¦   ¦   ¦   ¦       hash-reader.d.ts
+¦   ¦   ¦   ¦   ¦       hash-reader.js
+¦   ¦   ¦   ¦   ¦       hash-reader.js.map
+¦   ¦   ¦   ¦   ¦       hash.d.ts
+¦   ¦   ¦   ¦   ¦       hash.js
+¦   ¦   ¦   ¦   ¦       hash.js.map
+¦   ¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦       index.js.map
+¦   ¦   ¦   ¦   ¦       wasm.d.ts
+¦   ¦   ¦   ¦   ¦       wasm.js
+¦   ¦   ¦   ¦   ¦       wasm.js.map
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---build
+¦   ¦   ¦   ¦   ¦       add-js-extensions.d.ts
+¦   ¦   ¦   ¦   ¦       add-js-extensions.js
+¦   ¦   ¦   ¦   ¦       add-js-extensions.js.map
+¦   ¦   ¦   ¦   ¦       generate-tasks.d.ts
+¦   ¦   ¦   ¦   ¦       generate-tasks.js
+¦   ¦   ¦   ¦   ¦       generate-tasks.js.map
+¦   ¦   ¦   ¦   ¦       install.d.ts
+¦   ¦   ¦   ¦   ¦       install.js
+¦   ¦   ¦   ¦   ¦       install.js.map
+¦   ¦   ¦   ¦   ¦       versions.d.ts
+¦   ¦   ¦   ¦   ¦       versions.js
+¦   ¦   ¦   ¦   ¦       versions.js.map
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---node
+¦   ¦   ¦   ¦   ¦       hash-fn.d.ts
+¦   ¦   ¦   ¦   ¦       hash-fn.js
+¦   ¦   ¦   ¦   ¦       hash-fn.js.map
+¦   ¦   ¦   ¦   ¦       hash-instance.d.ts
+¦   ¦   ¦   ¦   ¦       hash-instance.js
+¦   ¦   ¦   ¦   ¦       hash-instance.js.map
+¦   ¦   ¦   ¦   ¦       hash-reader.d.ts
+¦   ¦   ¦   ¦   ¦       hash-reader.js
+¦   ¦   ¦   ¦   ¦       hash-reader.js.map
+¦   ¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦       index.js.map
+¦   ¦   ¦   ¦   ¦       wasm.d.ts
+¦   ¦   ¦   ¦   ¦       wasm.js
+¦   ¦   ¦   ¦   ¦       wasm.js.map
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---node-native
+¦   ¦   ¦   ¦   ¦       hash-fn.d.ts
+¦   ¦   ¦   ¦   ¦       hash-fn.js
+¦   ¦   ¦   ¦   ¦       hash-fn.js.map
+¦   ¦   ¦   ¦   ¦       hash-instance.d.ts
+¦   ¦   ¦   ¦   ¦       hash-instance.js
+¦   ¦   ¦   ¦   ¦       hash-instance.js.map
+¦   ¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦       index.js.map
+¦   ¦   ¦   ¦   ¦       native.d.ts
+¦   ¦   ¦   ¦   ¦       native.js
+¦   ¦   ¦   ¦   ¦       native.js.map
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---wasm
+¦   ¦   ¦   ¦       +---browser
+¦   ¦   ¦   ¦       ¦       blake3_js.d.ts
+¦   ¦   ¦   ¦       ¦       blake3_js.js
+¦   ¦   ¦   ¦       ¦       blake3_js_bg.wasm
+¦   ¦   ¦   ¦       ¦       package.json
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---nodejs
+¦   ¦   ¦   ¦       ¦       blake3_js.d.ts
+¦   ¦   ¦   ¦       ¦       blake3_js.js
+¦   ¦   ¦   ¦       ¦       blake3_js_bg.wasm
+¦   ¦   ¦   ¦       ¦       package.json
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---web
+¦   ¦   ¦   ¦               blake3_js.d.ts
+¦   ¦   ¦   ¦               blake3_js.js
+¦   ¦   ¦   ¦               blake3_js_bg.wasm
+¦   ¦   ¦   ¦               package.json
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---esm
+¦   ¦   ¦       ¦   browser.test.d.ts
+¦   ¦   ¦       ¦   browser.test.js
+¦   ¦   ¦       ¦   browser.test.js.map
+¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦       ¦   index.js.map
+¦   ¦   ¦       ¦   node.test.d.ts
+¦   ¦   ¦       ¦   node.test.js
+¦   ¦   ¦       ¦   node.test.js.map
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---base
+¦   ¦   ¦       ¦       disposable.d.ts
+¦   ¦   ¦       ¦       disposable.js
+¦   ¦   ¦       ¦       disposable.js.map
+¦   ¦   ¦       ¦       disposable.test.d.ts
+¦   ¦   ¦       ¦       disposable.test.js
+¦   ¦   ¦       ¦       disposable.test.js.map
+¦   ¦   ¦       ¦       hash-fn.d.ts
+¦   ¦   ¦       ¦       hash-fn.js
+¦   ¦   ¦       ¦       hash-fn.js.map
+¦   ¦   ¦       ¦       hash-instance.d.ts
+¦   ¦   ¦       ¦       hash-instance.js
+¦   ¦   ¦       ¦       hash-instance.js.map
+¦   ¦   ¦       ¦       hash-reader.d.ts
+¦   ¦   ¦       ¦       hash-reader.js
+¦   ¦   ¦       ¦       hash-reader.js.map
+¦   ¦   ¦       ¦       index.d.ts
+¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦       ¦       index.js.map
+¦   ¦   ¦       ¦       test-helpers.d.ts
+¦   ¦   ¦       ¦       test-helpers.js
+¦   ¦   ¦       ¦       test-helpers.js.map
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---browser
+¦   ¦   ¦       ¦       encoding.d.ts
+¦   ¦   ¦       ¦       encoding.js
+¦   ¦   ¦       ¦       encoding.js.map
+¦   ¦   ¦       ¦       hash-fn.d.ts
+¦   ¦   ¦       ¦       hash-fn.js
+¦   ¦   ¦       ¦       hash-fn.js.map
+¦   ¦   ¦       ¦       hash-instance.d.ts
+¦   ¦   ¦       ¦       hash-instance.js
+¦   ¦   ¦       ¦       hash-instance.js.map
+¦   ¦   ¦       ¦       hash-reader.d.ts
+¦   ¦   ¦       ¦       hash-reader.js
+¦   ¦   ¦       ¦       hash-reader.js.map
+¦   ¦   ¦       ¦       hash.d.ts
+¦   ¦   ¦       ¦       hash.js
+¦   ¦   ¦       ¦       hash.js.map
+¦   ¦   ¦       ¦       index.d.ts
+¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦       ¦       index.js.map
+¦   ¦   ¦       ¦       wasm.d.ts
+¦   ¦   ¦       ¦       wasm.js
+¦   ¦   ¦       ¦       wasm.js.map
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---build
+¦   ¦   ¦       ¦       add-js-extensions.d.ts
+¦   ¦   ¦       ¦       add-js-extensions.js
+¦   ¦   ¦       ¦       add-js-extensions.js.map
+¦   ¦   ¦       ¦       generate-tasks.d.ts
+¦   ¦   ¦       ¦       generate-tasks.js
+¦   ¦   ¦       ¦       generate-tasks.js.map
+¦   ¦   ¦       ¦       install.d.ts
+¦   ¦   ¦       ¦       install.js
+¦   ¦   ¦       ¦       install.js.map
+¦   ¦   ¦       ¦       versions.d.ts
+¦   ¦   ¦       ¦       versions.js
+¦   ¦   ¦       ¦       versions.js.map
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---node
+¦   ¦   ¦       ¦       hash-fn.d.ts
+¦   ¦   ¦       ¦       hash-fn.js
+¦   ¦   ¦       ¦       hash-fn.js.map
+¦   ¦   ¦       ¦       hash-instance.d.ts
+¦   ¦   ¦       ¦       hash-instance.js
+¦   ¦   ¦       ¦       hash-instance.js.map
+¦   ¦   ¦       ¦       hash-reader.d.ts
+¦   ¦   ¦       ¦       hash-reader.js
+¦   ¦   ¦       ¦       hash-reader.js.map
+¦   ¦   ¦       ¦       index.d.ts
+¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦       ¦       index.js.map
+¦   ¦   ¦       ¦       wasm.d.ts
+¦   ¦   ¦       ¦       wasm.js
+¦   ¦   ¦       ¦       wasm.js.map
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---node-native
+¦   ¦   ¦               hash-fn.d.ts
+¦   ¦   ¦               hash-fn.js
+¦   ¦   ¦               hash-fn.js.map
+¦   ¦   ¦               hash-instance.d.ts
+¦   ¦   ¦               hash-instance.js
+¦   ¦   ¦               hash-instance.js.map
+¦   ¦   ¦               index.d.ts
+¦   ¦   ¦               index.js
+¦   ¦   ¦               index.js.map
+¦   ¦   ¦               native.d.ts
+¦   ¦   ¦               native.js
+¦   ¦   ¦               native.js.map
+¦   ¦   ¦               
+¦   ¦   +---cac
+¦   ¦   ¦   ¦   index-compat.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   mod.js
+¦   ¦   ¦   ¦   mod.ts
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---deno
+¦   ¦   ¦   ¦       CAC.ts
+¦   ¦   ¦   ¦       Command.ts
+¦   ¦   ¦   ¦       deno.ts
+¦   ¦   ¦   ¦       index.ts
+¦   ¦   ¦   ¦       Option.ts
+¦   ¦   ¦   ¦       utils.ts
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.js
+¦   ¦   ¦           index.mjs
+¦   ¦   ¦           
+¦   ¦   +---chai
+¦   ¦   ¦   ¦   chai.js
+¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   register-assert.js
+¦   ¦   ¦   ¦   register-expect.js
+¦   ¦   ¦   ¦   register-should.js
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---lib
+¦   ¦   ¦       ¦   chai.js
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---chai
+¦   ¦   ¦           ¦   assertion.js
+¦   ¦   ¦           ¦   config.js
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---core
+¦   ¦   ¦           ¦       assertions.js
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---interface
+¦   ¦   ¦           ¦       assert.js
+¦   ¦   ¦           ¦       expect.js
+¦   ¦   ¦           ¦       should.js
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---utils
+¦   ¦   ¦                   addChainableMethod.js
+¦   ¦   ¦                   addLengthGuard.js
+¦   ¦   ¦                   addMethod.js
+¦   ¦   ¦                   addProperty.js
+¦   ¦   ¦                   compareByInspect.js
+¦   ¦   ¦                   expectTypes.js
+¦   ¦   ¦                   flag.js
+¦   ¦   ¦                   getActual.js
+¦   ¦   ¦                   getMessage.js
+¦   ¦   ¦                   getOperator.js
+¦   ¦   ¦                   getOwnEnumerableProperties.js
+¦   ¦   ¦                   getOwnEnumerablePropertySymbols.js
+¦   ¦   ¦                   getProperties.js
+¦   ¦   ¦                   index.js
+¦   ¦   ¦                   inspect.js
+¦   ¦   ¦                   isNaN.js
+¦   ¦   ¦                   isProxyEnabled.js
+¦   ¦   ¦                   objDisplay.js
+¦   ¦   ¦                   overwriteChainableMethod.js
+¦   ¦   ¦                   overwriteMethod.js
+¦   ¦   ¦                   overwriteProperty.js
+¦   ¦   ¦                   proxify.js
+¦   ¦   ¦                   test.js
+¦   ¦   ¦                   transferFlags.js
+¦   ¦   ¦                   type-detect.js
+¦   ¦   ¦                   
+¦   ¦   +---check-error
+¦   ¦   ¦       index.js
+¦   ¦   ¦       LICENSE
+¦   ¦   ¦       package.json
+¦   ¦   ¦       README.md
+¦   ¦   ¦       
+¦   ¦   +---cjs-module-lexer
+¦   ¦   ¦   ¦   lexer.d.ts
+¦   ¦   ¦   ¦   lexer.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           lexer.js
+¦   ¦   ¦           lexer.mjs
+¦   ¦   ¦           
+¦   ¦   +---cookie
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.js
+¦   ¦   ¦           index.js.map
+¦   ¦   ¦           
+¦   ¦   +---debug
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---src
+¦   ¦   ¦           browser.js
+¦   ¦   ¦           common.js
+¦   ¦   ¦           index.js
+¦   ¦   ¦           node.js
+¦   ¦   ¦           
+¦   ¦   +---deep-eql
+¦   ¦   ¦       index.js
+¦   ¦   ¦       LICENSE
+¦   ¦   ¦       package.json
+¦   ¦   ¦       README.md
+¦   ¦   ¦       
+¦   ¦   +---detect-libc
+¦   ¦   ¦   ¦   index.d.ts
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           detect-libc.js
+¦   ¦   ¦           elf.js
+¦   ¦   ¦           filesystem.js
+¦   ¦   ¦           process.js
+¦   ¦   ¦           
+¦   ¦   +---error-stack-parser-es
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.d.cts
+¦   ¦   ¦           index.d.mts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.mjs
+¦   ¦   ¦           lite.cjs
+¦   ¦   ¦           lite.d.cts
+¦   ¦   ¦           lite.d.mts
+¦   ¦   ¦           lite.d.ts
+¦   ¦   ¦           lite.mjs
+¦   ¦   ¦           
+¦   ¦   +---es-module-lexer
+¦   ¦   ¦   ¦   lexer.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       lexer.asm.js
+¦   ¦   ¦   ¦       lexer.cjs
+¦   ¦   ¦   ¦       lexer.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---types
+¦   ¦   ¦           lexer.d.ts
+¦   ¦   ¦           
+¦   ¦   +---esbuild
+¦   ¦   ¦   ¦   install.js
+¦   ¦   ¦   ¦   LICENSE.md
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   ¦       esbuild
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           main.d.ts
+¦   ¦   ¦           main.js
+¦   ¦   ¦           
+¦   ¦   +---estree-walker
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---src
+¦   ¦   ¦   ¦       async.js
+¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦       sync.js
+¦   ¦   ¦   ¦       walker.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---types
+¦   ¦   ¦           async.d.ts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           sync.d.ts
+¦   ¦   ¦           walker.d.ts
+¦   ¦   ¦           
+¦   ¦   +---expect-type
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   SECURITY.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           branding.d.ts
+¦   ¦   ¦           branding.js
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.js
+¦   ¦   ¦           messages.d.ts
+¦   ¦   ¦           messages.js
+¦   ¦   ¦           overloads.d.ts
+¦   ¦   ¦           overloads.js
+¦   ¦   ¦           utils.d.ts
+¦   ¦   ¦           utils.js
+¦   ¦   ¦           
+¦   ¦   +---fdir
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.d.cts
+¦   ¦   ¦           index.d.mts
+¦   ¦   ¦           index.mjs
+¦   ¦   ¦           
+¦   ¦   +---js-tokens
+¦   ¦   ¦       index.d.ts
+¦   ¦   ¦       index.js
+¦   ¦   ¦       LICENSE
+¦   ¦   ¦       package.json
+¦   ¦   ¦       README.md
+¦   ¦   ¦       
+¦   ¦   +---kleur
+¦   ¦   ¦       colors.d.ts
+¦   ¦   ¦       colors.js
+¦   ¦   ¦       colors.mjs
+¦   ¦   ¦       index.d.ts
+¦   ¦   ¦       index.js
+¦   ¦   ¦       index.mjs
+¦   ¦   ¦       license
+¦   ¦   ¦       package.json
+¦   ¦   ¦       readme.md
+¦   ¦   ¦       
+¦   ¦   +---loupe
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   loupe.js
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           arguments.d.ts
+¦   ¦   ¦           arguments.d.ts.map
+¦   ¦   ¦           arguments.js
+¦   ¦   ¦           array.d.ts
+¦   ¦   ¦           array.d.ts.map
+¦   ¦   ¦           array.js
+¦   ¦   ¦           bigint.d.ts
+¦   ¦   ¦           bigint.d.ts.map
+¦   ¦   ¦           bigint.js
+¦   ¦   ¦           class.d.ts
+¦   ¦   ¦           class.d.ts.map
+¦   ¦   ¦           class.js
+¦   ¦   ¦           date.d.ts
+¦   ¦   ¦           date.d.ts.map
+¦   ¦   ¦           date.js
+¦   ¦   ¦           error.d.ts
+¦   ¦   ¦           error.d.ts.map
+¦   ¦   ¦           error.js
+¦   ¦   ¦           function.d.ts
+¦   ¦   ¦           function.d.ts.map
+¦   ¦   ¦           function.js
+¦   ¦   ¦           helpers.d.ts
+¦   ¦   ¦           helpers.d.ts.map
+¦   ¦   ¦           helpers.js
+¦   ¦   ¦           html.d.ts
+¦   ¦   ¦           html.d.ts.map
+¦   ¦   ¦           html.js
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.d.ts.map
+¦   ¦   ¦           index.js
+¦   ¦   ¦           map.d.ts
+¦   ¦   ¦           map.d.ts.map
+¦   ¦   ¦           map.js
+¦   ¦   ¦           number.d.ts
+¦   ¦   ¦           number.d.ts.map
+¦   ¦   ¦           number.js
+¦   ¦   ¦           object.d.ts
+¦   ¦   ¦           object.d.ts.map
+¦   ¦   ¦           object.js
+¦   ¦   ¦           promise.d.ts
+¦   ¦   ¦           promise.d.ts.map
+¦   ¦   ¦           promise.js
+¦   ¦   ¦           regexp.d.ts
+¦   ¦   ¦           regexp.d.ts.map
+¦   ¦   ¦           regexp.js
+¦   ¦   ¦           set.d.ts
+¦   ¦   ¦           set.d.ts.map
+¦   ¦   ¦           set.js
+¦   ¦   ¦           string.d.ts
+¦   ¦   ¦           string.d.ts.map
+¦   ¦   ¦           string.js
+¦   ¦   ¦           symbol.d.ts
+¦   ¦   ¦           symbol.d.ts.map
+¦   ¦   ¦           symbol.js
+¦   ¦   ¦           typedarray.d.ts
+¦   ¦   ¦           typedarray.d.ts.map
+¦   ¦   ¦           typedarray.js
+¦   ¦   ¦           types.d.ts
+¦   ¦   ¦           types.d.ts.map
+¦   ¦   ¦           types.js
+¦   ¦   ¦           
+¦   ¦   +---magic-string
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           magic-string.cjs.d.ts
+¦   ¦   ¦           magic-string.cjs.js
+¦   ¦   ¦           magic-string.cjs.js.map
+¦   ¦   ¦           magic-string.es.d.mts
+¦   ¦   ¦           magic-string.es.mjs
+¦   ¦   ¦           magic-string.es.mjs.map
+¦   ¦   ¦           magic-string.umd.js
+¦   ¦   ¦           magic-string.umd.js.map
+¦   ¦   ¦           
+¦   ¦   +---miniflare
+¦   ¦   ¦   ¦   bootstrap.js
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       +---local-explorer-ui
+¦   ¦   ¦       ¦   ¦   favicon.svg
+¦   ¦   ¦       ¦   ¦   index.html
+¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦       ¦   +---assets
+¦   ¦   ¦       ¦           ActionsDropdown-q-9MDOpc.js
+¦   ¦   ¦       ¦           Breadcrumbs--TWNuJCy.js
+¦   ¦   ¦       ¦           Button-CIw4apuU.js
+¦   ¦   ¦       ¦           getPseudoElementBounds-BYLHjZjA.js
+¦   ¦   ¦       ¦           index-B6JP8Nye.css
+¦   ¦   ¦       ¦           index-BGpud55P.js
+¦   ¦   ¦       ¦           index-C0QPA-Mi.js
+¦   ¦   ¦       ¦           index-CULuikBf.js
+¦   ¦   ¦       ¦           _className-BF4-gYxz.js
+¦   ¦   ¦       ¦           _databaseId-D1Ck2pn-.js
+¦   ¦   ¦       ¦           _namespaceId-BMKKrU4G.js
+¦   ¦   ¦       ¦           _objectId-kAmWgDbF.js
+¦   ¦   ¦       ¦           
+¦   ¦   ¦       +---src
+¦   ¦   ¦           ¦   index.d.ts
+¦   ¦   ¦           ¦   index.js
+¦   ¦   ¦           ¦   index.js.map
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---shared
+¦   ¦   ¦           ¦       dev-registry.worker.js
+¦   ¦   ¦           ¦       dev-registry.worker.js.map
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---workers
+¦   ¦   ¦               +---analytics-engine
+¦   ¦   ¦               ¦       analytics-engine.worker.js
+¦   ¦   ¦               ¦       analytics-engine.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---assets
+¦   ¦   ¦               ¦       assets-kv.worker.js
+¦   ¦   ¦               ¦       assets-kv.worker.js.map
+¦   ¦   ¦               ¦       assets.worker.js
+¦   ¦   ¦               ¦       assets.worker.js.map
+¦   ¦   ¦               ¦       router.worker.js
+¦   ¦   ¦               ¦       router.worker.js.map
+¦   ¦   ¦               ¦       rpc-proxy.worker.js
+¦   ¦   ¦               ¦       rpc-proxy.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---browser-rendering
+¦   ¦   ¦               ¦       binding.worker.js
+¦   ¦   ¦               ¦       binding.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---cache
+¦   ¦   ¦               ¦       cache-entry-noop.worker.js
+¦   ¦   ¦               ¦       cache-entry-noop.worker.js.map
+¦   ¦   ¦               ¦       cache-entry.worker.js
+¦   ¦   ¦               ¦       cache-entry.worker.js.map
+¦   ¦   ¦               ¦       cache.worker.js
+¦   ¦   ¦               ¦       cache.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---core
+¦   ¦   ¦               ¦       do-wrapper.worker.js
+¦   ¦   ¦               ¦       do-wrapper.worker.js.map
+¦   ¦   ¦               ¦       entry.worker.js
+¦   ¦   ¦               ¦       entry.worker.js.map
+¦   ¦   ¦               ¦       strip-cf-connecting-ip.worker.js
+¦   ¦   ¦               ¦       strip-cf-connecting-ip.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---d1
+¦   ¦   ¦               ¦       database.worker.js
+¦   ¦   ¦               ¦       database.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---dispatch-namespace
+¦   ¦   ¦               ¦       dispatch-namespace-proxy.worker.js
+¦   ¦   ¦               ¦       dispatch-namespace-proxy.worker.js.map
+¦   ¦   ¦               ¦       dispatch-namespace.worker.js
+¦   ¦   ¦               ¦       dispatch-namespace.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---email
+¦   ¦   ¦               ¦       email.worker.js
+¦   ¦   ¦               ¦       email.worker.js.map
+¦   ¦   ¦               ¦       send_email.worker.js
+¦   ¦   ¦               ¦       send_email.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---hello-world
+¦   ¦   ¦               ¦       binding.worker.js
+¦   ¦   ¦               ¦       binding.worker.js.map
+¦   ¦   ¦               ¦       object.worker.js
+¦   ¦   ¦               ¦       object.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---images
+¦   ¦   ¦               ¦       images.worker.js
+¦   ¦   ¦               ¦       images.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---kv
+¦   ¦   ¦               ¦       namespace.worker.js
+¦   ¦   ¦               ¦       namespace.worker.js.map
+¦   ¦   ¦               ¦       sites.worker.js
+¦   ¦   ¦               ¦       sites.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---local-explorer
+¦   ¦   ¦               ¦       explorer.worker.js
+¦   ¦   ¦               ¦       explorer.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---pipelines
+¦   ¦   ¦               ¦       pipeline.worker.js
+¦   ¦   ¦               ¦       pipeline.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---queues
+¦   ¦   ¦               ¦       broker.worker.js
+¦   ¦   ¦               ¦       broker.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---r2
+¦   ¦   ¦               ¦       bucket.worker.js
+¦   ¦   ¦               ¦       bucket.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---ratelimit
+¦   ¦   ¦               ¦       ratelimit.worker.js
+¦   ¦   ¦               ¦       ratelimit.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---secrets-store
+¦   ¦   ¦               ¦       secret.worker.js
+¦   ¦   ¦               ¦       secret.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---shared
+¦   ¦   ¦               ¦       index.worker.js
+¦   ¦   ¦               ¦       index.worker.js.map
+¦   ¦   ¦               ¦       object-entry.worker.js
+¦   ¦   ¦               ¦       object-entry.worker.js.map
+¦   ¦   ¦               ¦       remote-proxy-client.worker.js
+¦   ¦   ¦               ¦       remote-proxy-client.worker.js.map
+¦   ¦   ¦               ¦       zod.worker.js
+¦   ¦   ¦               ¦       zod.worker.js.map
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---workflows
+¦   ¦   ¦                       binding.worker.js
+¦   ¦   ¦                       binding.worker.js.map
+¦   ¦   ¦                       wrapped-binding.worker.js
+¦   ¦   ¦                       wrapped-binding.worker.js.map
+¦   ¦   ¦                       
+¦   ¦   +---ms
+¦   ¦   ¦       index.js
+¦   ¦   ¦       license.md
+¦   ¦   ¦       package.json
+¦   ¦   ¦       readme.md
+¦   ¦   ¦       
+¦   ¦   +---nanoid
+¦   ¦   ¦   ¦   index.browser.cjs
+¦   ¦   ¦   ¦   index.browser.js
+¦   ¦   ¦   ¦   index.cjs
+¦   ¦   ¦   ¦   index.d.cts
+¦   ¦   ¦   ¦   index.d.ts
+¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   nanoid.js
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---async
+¦   ¦   ¦   ¦       index.browser.cjs
+¦   ¦   ¦   ¦       index.browser.js
+¦   ¦   ¦   ¦       index.cjs
+¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦       index.native.js
+¦   ¦   ¦   ¦       package.json
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   ¦       nanoid.cjs
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---non-secure
+¦   ¦   ¦   ¦       index.cjs
+¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦       package.json
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---url-alphabet
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.js
+¦   ¦   ¦           package.json
+¦   ¦   ¦           
+¦   ¦   +---path-to-regexp
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   Readme.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦       index.js.map
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---dist.es2015
+¦   ¦   ¦           index.js
+¦   ¦   ¦           index.js.map
+¦   ¦   ¦           
+¦   ¦   +---pathe
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   utils.d.ts
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       ¦   index.cjs
+¦   ¦   ¦       ¦   index.d.cts
+¦   ¦   ¦       ¦   index.d.mts
+¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦       ¦   index.mjs
+¦   ¦   ¦       ¦   utils.cjs
+¦   ¦   ¦       ¦   utils.d.cts
+¦   ¦   ¦       ¦   utils.d.mts
+¦   ¦   ¦       ¦   utils.d.ts
+¦   ¦   ¦       ¦   utils.mjs
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---shared
+¦   ¦   ¦               pathe.BSlhyZSM.cjs
+¦   ¦   ¦               pathe.M-eThtNZ.mjs
+¦   ¦   ¦               
+¦   ¦   +---pathval
+¦   ¦   ¦       index.js
+¦   ¦   ¦       LICENSE
+¦   ¦   ¦       package.json
+¦   ¦   ¦       README.md
+¦   ¦   ¦       
+¦   ¦   +---picocolors
+¦   ¦   ¦       LICENSE
+¦   ¦   ¦       package.json
+¦   ¦   ¦       picocolors.browser.js
+¦   ¦   ¦       picocolors.d.ts
+¦   ¦   ¦       picocolors.js
+¦   ¦   ¦       README.md
+¦   ¦   ¦       types.d.ts
+¦   ¦   ¦       
+¦   ¦   +---picomatch
+¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   posix.js
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           constants.js
+¦   ¦   ¦           parse.js
+¦   ¦   ¦           picomatch.js
+¦   ¦   ¦           scan.js
+¦   ¦   ¦           utils.js
+¦   ¦   ¦           
+¦   ¦   +---postcss
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           at-rule.d.ts
+¦   ¦   ¦           at-rule.js
+¦   ¦   ¦           comment.d.ts
+¦   ¦   ¦           comment.js
+¦   ¦   ¦           container.d.ts
+¦   ¦   ¦           container.js
+¦   ¦   ¦           css-syntax-error.d.ts
+¦   ¦   ¦           css-syntax-error.js
+¦   ¦   ¦           declaration.d.ts
+¦   ¦   ¦           declaration.js
+¦   ¦   ¦           document.d.ts
+¦   ¦   ¦           document.js
+¦   ¦   ¦           fromJSON.d.ts
+¦   ¦   ¦           fromJSON.js
+¦   ¦   ¦           input.d.ts
+¦   ¦   ¦           input.js
+¦   ¦   ¦           lazy-result.d.ts
+¦   ¦   ¦           lazy-result.js
+¦   ¦   ¦           list.d.ts
+¦   ¦   ¦           list.js
+¦   ¦   ¦           map-generator.js
+¦   ¦   ¦           no-work-result.d.ts
+¦   ¦   ¦           no-work-result.js
+¦   ¦   ¦           node.d.ts
+¦   ¦   ¦           node.js
+¦   ¦   ¦           parse.d.ts
+¦   ¦   ¦           parse.js
+¦   ¦   ¦           parser.js
+¦   ¦   ¦           postcss.d.mts
+¦   ¦   ¦           postcss.d.ts
+¦   ¦   ¦           postcss.js
+¦   ¦   ¦           postcss.mjs
+¦   ¦   ¦           previous-map.d.ts
+¦   ¦   ¦           previous-map.js
+¦   ¦   ¦           processor.d.ts
+¦   ¦   ¦           processor.js
+¦   ¦   ¦           result.d.ts
+¦   ¦   ¦           result.js
+¦   ¦   ¦           root.d.ts
+¦   ¦   ¦           root.js
+¦   ¦   ¦           rule.d.ts
+¦   ¦   ¦           rule.js
+¦   ¦   ¦           stringifier.d.ts
+¦   ¦   ¦           stringifier.js
+¦   ¦   ¦           stringify.d.ts
+¦   ¦   ¦           stringify.js
+¦   ¦   ¦           symbols.js
+¦   ¦   ¦           terminal-highlight.js
+¦   ¦   ¦           tokenize.js
+¦   ¦   ¦           warn-once.js
+¦   ¦   ¦           warning.d.ts
+¦   ¦   ¦           warning.js
+¦   ¦   ¦           
+¦   ¦   +---rollup
+¦   ¦   ¦   ¦   LICENSE.md
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       ¦   getLogFilter.d.ts
+¦   ¦   ¦       ¦   getLogFilter.js
+¦   ¦   ¦       ¦   loadConfigFile.d.ts
+¦   ¦   ¦       ¦   loadConfigFile.js
+¦   ¦   ¦       ¦   native.js
+¦   ¦   ¦       ¦   parseAst.d.ts
+¦   ¦   ¦       ¦   parseAst.js
+¦   ¦   ¦       ¦   rollup.d.ts
+¦   ¦   ¦       ¦   rollup.js
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---bin
+¦   ¦   ¦       ¦       rollup
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---es
+¦   ¦   ¦       ¦   ¦   getLogFilter.js
+¦   ¦   ¦       ¦   ¦   package.json
+¦   ¦   ¦       ¦   ¦   parseAst.js
+¦   ¦   ¦       ¦   ¦   rollup.js
+¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦       ¦   +---shared
+¦   ¦   ¦       ¦           node-entry.js
+¦   ¦   ¦       ¦           parseAst.js
+¦   ¦   ¦       ¦           watch.js
+¦   ¦   ¦       ¦           
+¦   ¦   ¦       +---shared
+¦   ¦   ¦               fsevents-importer.js
+¦   ¦   ¦               index.js
+¦   ¦   ¦               loadConfigFile.js
+¦   ¦   ¦               parseAst.js
+¦   ¦   ¦               rollup.js
+¦   ¦   ¦               watch-cli.js
+¦   ¦   ¦               watch.js
+¦   ¦   ¦               
+¦   ¦   +---semver
+¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   preload.js
+¦   ¦   ¦   ¦   range.bnf
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   ¦       semver.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---classes
+¦   ¦   ¦   ¦       comparator.js
+¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦       range.js
+¦   ¦   ¦   ¦       semver.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---functions
+¦   ¦   ¦   ¦       clean.js
+¦   ¦   ¦   ¦       cmp.js
+¦   ¦   ¦   ¦       coerce.js
+¦   ¦   ¦   ¦       compare-build.js
+¦   ¦   ¦   ¦       compare-loose.js
+¦   ¦   ¦   ¦       compare.js
+¦   ¦   ¦   ¦       diff.js
+¦   ¦   ¦   ¦       eq.js
+¦   ¦   ¦   ¦       gt.js
+¦   ¦   ¦   ¦       gte.js
+¦   ¦   ¦   ¦       inc.js
+¦   ¦   ¦   ¦       lt.js
+¦   ¦   ¦   ¦       lte.js
+¦   ¦   ¦   ¦       major.js
+¦   ¦   ¦   ¦       minor.js
+¦   ¦   ¦   ¦       neq.js
+¦   ¦   ¦   ¦       parse.js
+¦   ¦   ¦   ¦       patch.js
+¦   ¦   ¦   ¦       prerelease.js
+¦   ¦   ¦   ¦       rcompare.js
+¦   ¦   ¦   ¦       rsort.js
+¦   ¦   ¦   ¦       satisfies.js
+¦   ¦   ¦   ¦       sort.js
+¦   ¦   ¦   ¦       valid.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---internal
+¦   ¦   ¦   ¦       constants.js
+¦   ¦   ¦   ¦       debug.js
+¦   ¦   ¦   ¦       identifiers.js
+¦   ¦   ¦   ¦       lrucache.js
+¦   ¦   ¦   ¦       parse-options.js
+¦   ¦   ¦   ¦       re.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---ranges
+¦   ¦   ¦           gtr.js
+¦   ¦   ¦           intersects.js
+¦   ¦   ¦           ltr.js
+¦   ¦   ¦           max-satisfying.js
+¦   ¦   ¦           min-satisfying.js
+¦   ¦   ¦           min-version.js
+¦   ¦   ¦           outside.js
+¦   ¦   ¦           simplify.js
+¦   ¦   ¦           subset.js
+¦   ¦   ¦           to-comparators.js
+¦   ¦   ¦           valid.js
+¦   ¦   ¦           
+¦   ¦   +---sharp
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---install
+¦   ¦   ¦   ¦       build.js
+¦   ¦   ¦   ¦       check.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦       channel.js
+¦   ¦   ¦   ¦       colour.js
+¦   ¦   ¦   ¦       composite.js
+¦   ¦   ¦   ¦       constructor.js
+¦   ¦   ¦   ¦       index.d.ts
+¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦       input.js
+¦   ¦   ¦   ¦       is.js
+¦   ¦   ¦   ¦       libvips.js
+¦   ¦   ¦   ¦       operation.js
+¦   ¦   ¦   ¦       output.js
+¦   ¦   ¦   ¦       resize.js
+¦   ¦   ¦   ¦       sharp.js
+¦   ¦   ¦   ¦       utility.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---src
+¦   ¦   ¦           binding.gyp
+¦   ¦   ¦           common.cc
+¦   ¦   ¦           common.h
+¦   ¦   ¦           metadata.cc
+¦   ¦   ¦           metadata.h
+¦   ¦   ¦           operations.cc
+¦   ¦   ¦           operations.h
+¦   ¦   ¦           pipeline.cc
+¦   ¦   ¦           pipeline.h
+¦   ¦   ¦           sharp.cc
+¦   ¦   ¦           stats.cc
+¦   ¦   ¦           stats.h
+¦   ¦   ¦           utilities.cc
+¦   ¦   ¦           utilities.h
+¦   ¦   ¦           
+¦   ¦   +---siginfo
+¦   ¦   ¦       .travis.yml
+¦   ¦   ¦       index.js
+¦   ¦   ¦       LICENSE
+¦   ¦   ¦       package.json
+¦   ¦   ¦       README.md
+¦   ¦   ¦       test.js
+¦   ¦   ¦       
+¦   ¦   +---source-map-js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   source-map.d.ts
+¦   ¦   ¦   ¦   source-map.js
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           array-set.js
+¦   ¦   ¦           base64-vlq.js
+¦   ¦   ¦           base64.js
+¦   ¦   ¦           binary-search.js
+¦   ¦   ¦           mapping-list.js
+¦   ¦   ¦           quick-sort.js
+¦   ¦   ¦           source-map-consumer.d.ts
+¦   ¦   ¦           source-map-consumer.js
+¦   ¦   ¦           source-map-generator.d.ts
+¦   ¦   ¦           source-map-generator.js
+¦   ¦   ¦           source-node.d.ts
+¦   ¦   ¦           source-node.js
+¦   ¦   ¦           util.js
+¦   ¦   ¦           
+¦   ¦   +---stackback
+¦   ¦   ¦       .npmignore
+¦   ¦   ¦       .travis.yml
+¦   ¦   ¦       formatstack.js
+¦   ¦   ¦       index.js
+¦   ¦   ¦       package.json
+¦   ¦   ¦       README.md
+¦   ¦   ¦       test.js
+¦   ¦   ¦       
+¦   ¦   +---std-env
+¦   ¦   ¦   ¦   LICENCE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.d.cts
+¦   ¦   ¦           index.d.mts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.mjs
+¦   ¦   ¦           
+¦   ¦   +---strip-literal
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.d.cts
+¦   ¦   ¦           index.d.mts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.mjs
+¦   ¦   ¦           
+¦   ¦   +---supports-color
+¦   ¦   ¦       browser.d.ts
+¦   ¦   ¦       browser.js
+¦   ¦   ¦       index.d.ts
+¦   ¦   ¦       index.js
+¦   ¦   ¦       license
+¦   ¦   ¦       package.json
+¦   ¦   ¦       readme.md
+¦   ¦   ¦       
+¦   ¦   +---tinybench
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.d.cts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.js
+¦   ¦   ¦           
+¦   ¦   +---tinyexec
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           main.cjs
+¦   ¦   ¦           main.d.cts
+¦   ¦   ¦           main.d.ts
+¦   ¦   ¦           main.js
+¦   ¦   ¦           
+¦   ¦   +---tinyglobby
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.d.cts
+¦   ¦   ¦           index.d.mts
+¦   ¦   ¦           index.mjs
+¦   ¦   ¦           
+¦   ¦   +---tinypool
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       ¦   common-Qw-RoVFD.js
+¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦       ¦   utils-B--2TaWv.js
+¦   ¦   ¦       ¦   utils-De75vAgL.js
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---entry
+¦   ¦   ¦               process.d.ts
+¦   ¦   ¦               process.js
+¦   ¦   ¦               utils.d.ts
+¦   ¦   ¦               utils.js
+¦   ¦   ¦               worker.d.ts
+¦   ¦   ¦               worker.js
+¦   ¦   ¦               
+¦   ¦   +---tinyrainbow
+¦   ¦   ¦   ¦   LICENCE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           browser.d.ts
+¦   ¦   ¦           browser.js
+¦   ¦   ¦           chunk-BVHSVHOK.js
+¦   ¦   ¦           index-8b61d5bc.d.ts
+¦   ¦   ¦           node.d.ts
+¦   ¦   ¦           node.js
+¦   ¦   ¦           
+¦   ¦   +---tinyspy
+¦   ¦   ¦   ¦   LICENCE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.js
+¦   ¦   ¦           
+¦   ¦   +---undici
+¦   ¦   ¦   ¦   index-fetch.js
+¦   ¦   ¦   ¦   index.d.ts
+¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---docs
+¦   ¦   ¦   ¦   +---docs
+¦   ¦   ¦   ¦       +---api
+¦   ¦   ¦   ¦       ¦       Agent.md
+¦   ¦   ¦   ¦       ¦       api-lifecycle.md
+¦   ¦   ¦   ¦       ¦       BalancedPool.md
+¦   ¦   ¦   ¦       ¦       CacheStorage.md
+¦   ¦   ¦   ¦       ¦       CacheStore.md
+¦   ¦   ¦   ¦       ¦       Client.md
+¦   ¦   ¦   ¦       ¦       ClientStats.md
+¦   ¦   ¦   ¦       ¦       Connector.md
+¦   ¦   ¦   ¦       ¦       ContentType.md
+¦   ¦   ¦   ¦       ¦       Cookies.md
+¦   ¦   ¦   ¦       ¦       Debug.md
+¦   ¦   ¦   ¦       ¦       DiagnosticsChannel.md
+¦   ¦   ¦   ¦       ¦       Dispatcher.md
+¦   ¦   ¦   ¦       ¦       EnvHttpProxyAgent.md
+¦   ¦   ¦   ¦       ¦       Errors.md
+¦   ¦   ¦   ¦       ¦       EventSource.md
+¦   ¦   ¦   ¦       ¦       Fetch.md
+¦   ¦   ¦   ¦       ¦       GlobalInstallation.md
+¦   ¦   ¦   ¦       ¦       H2CClient.md
+¦   ¦   ¦   ¦       ¦       MockAgent.md
+¦   ¦   ¦   ¦       ¦       MockCallHistory.md
+¦   ¦   ¦   ¦       ¦       MockCallHistoryLog.md
+¦   ¦   ¦   ¦       ¦       MockClient.md
+¦   ¦   ¦   ¦       ¦       MockErrors.md
+¦   ¦   ¦   ¦       ¦       MockPool.md
+¦   ¦   ¦   ¦       ¦       Pool.md
+¦   ¦   ¦   ¦       ¦       PoolStats.md
+¦   ¦   ¦   ¦       ¦       ProxyAgent.md
+¦   ¦   ¦   ¦       ¦       RedirectHandler.md
+¦   ¦   ¦   ¦       ¦       RetryAgent.md
+¦   ¦   ¦   ¦       ¦       RetryHandler.md
+¦   ¦   ¦   ¦       ¦       RoundRobinPool.md
+¦   ¦   ¦   ¦       ¦       SnapshotAgent.md
+¦   ¦   ¦   ¦       ¦       Util.md
+¦   ¦   ¦   ¦       ¦       WebSocket.md
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---best-practices
+¦   ¦   ¦   ¦               client-certificate.md
+¦   ¦   ¦   ¦               crawling.md
+¦   ¦   ¦   ¦               mocking-request.md
+¦   ¦   ¦   ¦               proxy.md
+¦   ¦   ¦   ¦               writing-tests.md
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦   ¦   global.js
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---api
+¦   ¦   ¦   ¦   ¦       abort-signal.js
+¦   ¦   ¦   ¦   ¦       api-connect.js
+¦   ¦   ¦   ¦   ¦       api-pipeline.js
+¦   ¦   ¦   ¦   ¦       api-request.js
+¦   ¦   ¦   ¦   ¦       api-stream.js
+¦   ¦   ¦   ¦   ¦       api-upgrade.js
+¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦       readable.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---cache
+¦   ¦   ¦   ¦   ¦       memory-cache-store.js
+¦   ¦   ¦   ¦   ¦       sqlite-cache-store.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---core
+¦   ¦   ¦   ¦   ¦       connect.js
+¦   ¦   ¦   ¦   ¦       constants.js
+¦   ¦   ¦   ¦   ¦       diagnostics.js
+¦   ¦   ¦   ¦   ¦       errors.js
+¦   ¦   ¦   ¦   ¦       request.js
+¦   ¦   ¦   ¦   ¦       symbols.js
+¦   ¦   ¦   ¦   ¦       tree.js
+¦   ¦   ¦   ¦   ¦       util.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---dispatcher
+¦   ¦   ¦   ¦   ¦       agent.js
+¦   ¦   ¦   ¦   ¦       balanced-pool.js
+¦   ¦   ¦   ¦   ¦       client-h1.js
+¦   ¦   ¦   ¦   ¦       client-h2.js
+¦   ¦   ¦   ¦   ¦       client.js
+¦   ¦   ¦   ¦   ¦       dispatcher-base.js
+¦   ¦   ¦   ¦   ¦       dispatcher.js
+¦   ¦   ¦   ¦   ¦       env-http-proxy-agent.js
+¦   ¦   ¦   ¦   ¦       fixed-queue.js
+¦   ¦   ¦   ¦   ¦       h2c-client.js
+¦   ¦   ¦   ¦   ¦       pool-base.js
+¦   ¦   ¦   ¦   ¦       pool.js
+¦   ¦   ¦   ¦   ¦       proxy-agent.js
+¦   ¦   ¦   ¦   ¦       retry-agent.js
+¦   ¦   ¦   ¦   ¦       round-robin-pool.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---encoding
+¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---handler
+¦   ¦   ¦   ¦   ¦       cache-handler.js
+¦   ¦   ¦   ¦   ¦       cache-revalidation-handler.js
+¦   ¦   ¦   ¦   ¦       decorator-handler.js
+¦   ¦   ¦   ¦   ¦       deduplication-handler.js
+¦   ¦   ¦   ¦   ¦       redirect-handler.js
+¦   ¦   ¦   ¦   ¦       retry-handler.js
+¦   ¦   ¦   ¦   ¦       unwrap-handler.js
+¦   ¦   ¦   ¦   ¦       wrap-handler.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---interceptor
+¦   ¦   ¦   ¦   ¦       cache.js
+¦   ¦   ¦   ¦   ¦       decompress.js
+¦   ¦   ¦   ¦   ¦       deduplicate.js
+¦   ¦   ¦   ¦   ¦       dns.js
+¦   ¦   ¦   ¦   ¦       dump.js
+¦   ¦   ¦   ¦   ¦       redirect.js
+¦   ¦   ¦   ¦   ¦       response-error.js
+¦   ¦   ¦   ¦   ¦       retry.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---llhttp
+¦   ¦   ¦   ¦   ¦       .gitkeep
+¦   ¦   ¦   ¦   ¦       constants.d.ts
+¦   ¦   ¦   ¦   ¦       constants.js
+¦   ¦   ¦   ¦   ¦       llhttp-wasm.js
+¦   ¦   ¦   ¦   ¦       llhttp_simd-wasm.js
+¦   ¦   ¦   ¦   ¦       utils.d.ts
+¦   ¦   ¦   ¦   ¦       utils.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---mock
+¦   ¦   ¦   ¦   ¦       mock-agent.js
+¦   ¦   ¦   ¦   ¦       mock-call-history.js
+¦   ¦   ¦   ¦   ¦       mock-client.js
+¦   ¦   ¦   ¦   ¦       mock-errors.js
+¦   ¦   ¦   ¦   ¦       mock-interceptor.js
+¦   ¦   ¦   ¦   ¦       mock-pool.js
+¦   ¦   ¦   ¦   ¦       mock-symbols.js
+¦   ¦   ¦   ¦   ¦       mock-utils.js
+¦   ¦   ¦   ¦   ¦       pending-interceptors-formatter.js
+¦   ¦   ¦   ¦   ¦       snapshot-agent.js
+¦   ¦   ¦   ¦   ¦       snapshot-recorder.js
+¦   ¦   ¦   ¦   ¦       snapshot-utils.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---util
+¦   ¦   ¦   ¦   ¦       cache.js
+¦   ¦   ¦   ¦   ¦       date.js
+¦   ¦   ¦   ¦   ¦       promise.js
+¦   ¦   ¦   ¦   ¦       runtime-features.js
+¦   ¦   ¦   ¦   ¦       stats.js
+¦   ¦   ¦   ¦   ¦       timers.js
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---web
+¦   ¦   ¦   ¦       +---cache
+¦   ¦   ¦   ¦       ¦       cache.js
+¦   ¦   ¦   ¦       ¦       cachestorage.js
+¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---cookies
+¦   ¦   ¦   ¦       ¦       constants.js
+¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦       ¦       parse.js
+¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---eventsource
+¦   ¦   ¦   ¦       ¦       eventsource-stream.js
+¦   ¦   ¦   ¦       ¦       eventsource.js
+¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---fetch
+¦   ¦   ¦   ¦       ¦       body.js
+¦   ¦   ¦   ¦       ¦       constants.js
+¦   ¦   ¦   ¦       ¦       data-url.js
+¦   ¦   ¦   ¦       ¦       formdata-parser.js
+¦   ¦   ¦   ¦       ¦       formdata.js
+¦   ¦   ¦   ¦       ¦       global.js
+¦   ¦   ¦   ¦       ¦       headers.js
+¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦       ¦       LICENSE
+¦   ¦   ¦   ¦       ¦       request.js
+¦   ¦   ¦   ¦       ¦       response.js
+¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---infra
+¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---subresource-integrity
+¦   ¦   ¦   ¦       ¦       Readme.md
+¦   ¦   ¦   ¦       ¦       subresource-integrity.js
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---webidl
+¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---websocket
+¦   ¦   ¦   ¦           ¦   connection.js
+¦   ¦   ¦   ¦           ¦   constants.js
+¦   ¦   ¦   ¦           ¦   events.js
+¦   ¦   ¦   ¦           ¦   frame.js
+¦   ¦   ¦   ¦           ¦   permessage-deflate.js
+¦   ¦   ¦   ¦           ¦   receiver.js
+¦   ¦   ¦   ¦           ¦   sender.js
+¦   ¦   ¦   ¦           ¦   util.js
+¦   ¦   ¦   ¦           ¦   websocket.js
+¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦           +---stream
+¦   ¦   ¦   ¦                   websocketerror.js
+¦   ¦   ¦   ¦                   websocketstream.js
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---scripts
+¦   ¦   ¦   ¦       strip-comments.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---types
+¦   ¦   ¦           agent.d.ts
+¦   ¦   ¦           api.d.ts
+¦   ¦   ¦           balanced-pool.d.ts
+¦   ¦   ¦           cache-interceptor.d.ts
+¦   ¦   ¦           cache.d.ts
+¦   ¦   ¦           client-stats.d.ts
+¦   ¦   ¦           client.d.ts
+¦   ¦   ¦           connector.d.ts
+¦   ¦   ¦           content-type.d.ts
+¦   ¦   ¦           cookies.d.ts
+¦   ¦   ¦           diagnostics-channel.d.ts
+¦   ¦   ¦           dispatcher.d.ts
+¦   ¦   ¦           env-http-proxy-agent.d.ts
+¦   ¦   ¦           errors.d.ts
+¦   ¦   ¦           eventsource.d.ts
+¦   ¦   ¦           fetch.d.ts
+¦   ¦   ¦           formdata.d.ts
+¦   ¦   ¦           global-dispatcher.d.ts
+¦   ¦   ¦           global-origin.d.ts
+¦   ¦   ¦           h2c-client.d.ts
+¦   ¦   ¦           handlers.d.ts
+¦   ¦   ¦           header.d.ts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           interceptors.d.ts
+¦   ¦   ¦           mock-agent.d.ts
+¦   ¦   ¦           mock-call-history.d.ts
+¦   ¦   ¦           mock-client.d.ts
+¦   ¦   ¦           mock-errors.d.ts
+¦   ¦   ¦           mock-interceptor.d.ts
+¦   ¦   ¦           mock-pool.d.ts
+¦   ¦   ¦           patch.d.ts
+¦   ¦   ¦           pool-stats.d.ts
+¦   ¦   ¦           pool.d.ts
+¦   ¦   ¦           proxy-agent.d.ts
+¦   ¦   ¦           readable.d.ts
+¦   ¦   ¦           README.md
+¦   ¦   ¦           retry-agent.d.ts
+¦   ¦   ¦           retry-handler.d.ts
+¦   ¦   ¦           round-robin-pool.d.ts
+¦   ¦   ¦           snapshot-agent.d.ts
+¦   ¦   ¦           util.d.ts
+¦   ¦   ¦           utility.d.ts
+¦   ¦   ¦           webidl.d.ts
+¦   ¦   ¦           websocket.d.ts
+¦   ¦   ¦           
+¦   ¦   +---unenv
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   ¦   index.d.mts
+¦   ¦   ¦   ¦   ¦   index.mjs
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---runtime
+¦   ¦   ¦   ¦       +---mock
+¦   ¦   ¦   ¦       ¦       empty.d.mts
+¦   ¦   ¦   ¦       ¦       empty.mjs
+¦   ¦   ¦   ¦       ¦       noop.d.mts
+¦   ¦   ¦   ¦       ¦       noop.mjs
+¦   ¦   ¦   ¦       ¦       proxy.d.mts
+¦   ¦   ¦   ¦       ¦       proxy.mjs
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---node
+¦   ¦   ¦   ¦       ¦   ¦   assert.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   assert.mjs
+¦   ¦   ¦   ¦       ¦   ¦   async_hooks.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   async_hooks.mjs
+¦   ¦   ¦   ¦       ¦   ¦   buffer.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   buffer.mjs
+¦   ¦   ¦   ¦       ¦   ¦   child_process.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   child_process.mjs
+¦   ¦   ¦   ¦       ¦   ¦   cluster.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   cluster.mjs
+¦   ¦   ¦   ¦       ¦   ¦   console.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   console.mjs
+¦   ¦   ¦   ¦       ¦   ¦   constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   crypto.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   crypto.mjs
+¦   ¦   ¦   ¦       ¦   ¦   dgram.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   dgram.mjs
+¦   ¦   ¦   ¦       ¦   ¦   diagnostics_channel.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   diagnostics_channel.mjs
+¦   ¦   ¦   ¦       ¦   ¦   dns.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   dns.mjs
+¦   ¦   ¦   ¦       ¦   ¦   domain.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   domain.mjs
+¦   ¦   ¦   ¦       ¦   ¦   events.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   events.mjs
+¦   ¦   ¦   ¦       ¦   ¦   fs.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   fs.mjs
+¦   ¦   ¦   ¦       ¦   ¦   http.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   http.mjs
+¦   ¦   ¦   ¦       ¦   ¦   http2.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   http2.mjs
+¦   ¦   ¦   ¦       ¦   ¦   https.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   https.mjs
+¦   ¦   ¦   ¦       ¦   ¦   inspector.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   inspector.mjs
+¦   ¦   ¦   ¦       ¦   ¦   module.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   module.mjs
+¦   ¦   ¦   ¦       ¦   ¦   net.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   net.mjs
+¦   ¦   ¦   ¦       ¦   ¦   os.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   os.mjs
+¦   ¦   ¦   ¦       ¦   ¦   path.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   path.mjs
+¦   ¦   ¦   ¦       ¦   ¦   perf_hooks.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   perf_hooks.mjs
+¦   ¦   ¦   ¦       ¦   ¦   process.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   process.mjs
+¦   ¦   ¦   ¦       ¦   ¦   punycode.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   punycode.mjs
+¦   ¦   ¦   ¦       ¦   ¦   querystring.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   querystring.mjs
+¦   ¦   ¦   ¦       ¦   ¦   readline.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   readline.mjs
+¦   ¦   ¦   ¦       ¦   ¦   repl.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   repl.mjs
+¦   ¦   ¦   ¦       ¦   ¦   sqlite.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   sqlite.mjs
+¦   ¦   ¦   ¦       ¦   ¦   stream.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   stream.mjs
+¦   ¦   ¦   ¦       ¦   ¦   string_decoder.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   string_decoder.mjs
+¦   ¦   ¦   ¦       ¦   ¦   sys.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   sys.mjs
+¦   ¦   ¦   ¦       ¦   ¦   timers.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   timers.mjs
+¦   ¦   ¦   ¦       ¦   ¦   tls.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   tls.mjs
+¦   ¦   ¦   ¦       ¦   ¦   trace_events.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   trace_events.mjs
+¦   ¦   ¦   ¦       ¦   ¦   tty.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   tty.mjs
+¦   ¦   ¦   ¦       ¦   ¦   url.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   url.mjs
+¦   ¦   ¦   ¦       ¦   ¦   util.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   util.mjs
+¦   ¦   ¦   ¦       ¦   ¦   v8.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   v8.mjs
+¦   ¦   ¦   ¦       ¦   ¦   vm.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   vm.mjs
+¦   ¦   ¦   ¦       ¦   ¦   wasi.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   wasi.mjs
+¦   ¦   ¦   ¦       ¦   ¦   worker_threads.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   worker_threads.mjs
+¦   ¦   ¦   ¦       ¦   ¦   zlib.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   zlib.mjs
+¦   ¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦   ¦       ¦   +---assert
+¦   ¦   ¦   ¦       ¦   ¦       strict.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       strict.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---dns
+¦   ¦   ¦   ¦       ¦   ¦       promises.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       promises.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---fs
+¦   ¦   ¦   ¦       ¦   ¦       promises.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       promises.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---inspector
+¦   ¦   ¦   ¦       ¦   ¦       promises.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       promises.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---internal
+¦   ¦   ¦   ¦       ¦   ¦   +---async_hooks
+¦   ¦   ¦   ¦       ¦   ¦   ¦       async-hook.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       async-hook.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       async-local-storage.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       async-local-storage.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       async-resource.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       async-resource.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---buffer
+¦   ¦   ¦   ¦       ¦   ¦   ¦       base64.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       base64.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       buffer.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       buffer.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       file.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       file.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       ieee754.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       ieee754.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---crypto
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       node.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       node.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       web.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       web.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---dgram
+¦   ¦   ¦   ¦       ¦   ¦   ¦       socket.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       socket.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---diagnostics_channel
+¦   ¦   ¦   ¦       ¦   ¦   ¦       channel.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       channel.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       tracing-channel.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       tracing-channel.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---dns
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---domain
+¦   ¦   ¦   ¦       ¦   ¦   ¦       domain.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       domain.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---events
+¦   ¦   ¦   ¦       ¦   ¦   ¦       events.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       events.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---fs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       classes.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       classes.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       fs.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       fs.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       promises.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       promises.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---http
+¦   ¦   ¦   ¦       ¦   ¦   ¦       agent.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       agent.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       request.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       request.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       response.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       response.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---http2
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---net
+¦   ¦   ¦   ¦       ¦   ¦   ¦       server.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       server.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       socket.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       socket.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---os
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---perf_hooks
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       histogram.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       histogram.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       performance.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       performance.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---process
+¦   ¦   ¦   ¦       ¦   ¦   ¦       env.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       env.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       hrtime.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       hrtime.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       nexttick.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       nexttick.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       node-version.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       node-version.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       process.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       process.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---punycode
+¦   ¦   ¦   ¦       ¦   ¦   ¦       punycode.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       punycode.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---querystring
+¦   ¦   ¦   ¦       ¦   ¦   ¦       querystring.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       querystring.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---readline
+¦   ¦   ¦   ¦       ¦   ¦   ¦   ¦   interface.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦   ¦   interface.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦       ¦   ¦   ¦   +---promises
+¦   ¦   ¦   ¦       ¦   ¦   ¦           interface.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦           interface.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦           readline.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦           readline.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦           
+¦   ¦   ¦   ¦       ¦   ¦   +---stream
+¦   ¦   ¦   ¦       ¦   ¦   ¦       duplex.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       duplex.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       readable.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       readable.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       transform.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       transform.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       writable.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       writable.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---timers
+¦   ¦   ¦   ¦       ¦   ¦   ¦       immediate.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       immediate.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       scheduler.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       scheduler.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       set-immediate.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       set-immediate.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       set-interval.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       set-interval.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       set-timeout.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       set-timeout.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       timeout.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       timeout.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---tls
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       secure-context.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       secure-context.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       server.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       server.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       tls-socket.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       tls-socket.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---trace_events
+¦   ¦   ¦   ¦       ¦   ¦   ¦       tracing.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       tracing.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---tty
+¦   ¦   ¦   ¦       ¦   ¦   ¦       read-stream.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       read-stream.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       write-stream.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       write-stream.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---url
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       errors.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       errors.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       url.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       url.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       util.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       util.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---util
+¦   ¦   ¦   ¦       ¦   ¦   ¦       inherits.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       inherits.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       legacy-types.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       legacy-types.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       log.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       log.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       mime.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       mime.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       promisify.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       promisify.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       types.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       types.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---v8
+¦   ¦   ¦   ¦       ¦   ¦   ¦       deserializer.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       deserializer.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       profiler.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       profiler.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       serializer.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       serializer.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---vm
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       script.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       script.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---worker_threads
+¦   ¦   ¦   ¦       ¦   ¦   ¦       broadcast-channel.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       broadcast-channel.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       message-channel.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       message-channel.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       message-port.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       message-port.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       worker.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   ¦       worker.mjs
+¦   ¦   ¦   ¦       ¦   ¦   ¦       
+¦   ¦   ¦   ¦       ¦   ¦   +---zlib
+¦   ¦   ¦   ¦       ¦   ¦       ¦   codes.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       ¦   codes.mjs
+¦   ¦   ¦   ¦       ¦   ¦       ¦   constants.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       ¦   constants.mjs
+¦   ¦   ¦   ¦       ¦   ¦       ¦   
+¦   ¦   ¦   ¦       ¦   ¦       +---formats
+¦   ¦   ¦   ¦       ¦   ¦               brotli.d.mts
+¦   ¦   ¦   ¦       ¦   ¦               brotli.mjs
+¦   ¦   ¦   ¦       ¦   ¦               deflate.d.mts
+¦   ¦   ¦   ¦       ¦   ¦               deflate.mjs
+¦   ¦   ¦   ¦       ¦   ¦               gzip.d.mts
+¦   ¦   ¦   ¦       ¦   ¦               gzip.mjs
+¦   ¦   ¦   ¦       ¦   ¦               zip.d.mts
+¦   ¦   ¦   ¦       ¦   ¦               zip.mjs
+¦   ¦   ¦   ¦       ¦   ¦               _shared.d.mts
+¦   ¦   ¦   ¦       ¦   ¦               _shared.mjs
+¦   ¦   ¦   ¦       ¦   ¦               
+¦   ¦   ¦   ¦       ¦   +---path
+¦   ¦   ¦   ¦       ¦   ¦       posix.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       posix.mjs
+¦   ¦   ¦   ¦       ¦   ¦       win32.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       win32.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---readline
+¦   ¦   ¦   ¦       ¦   ¦       promises.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       promises.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---stream
+¦   ¦   ¦   ¦       ¦   ¦       consumers.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       consumers.mjs
+¦   ¦   ¦   ¦       ¦   ¦       promises.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       promises.mjs
+¦   ¦   ¦   ¦       ¦   ¦       web.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       web.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---timers
+¦   ¦   ¦   ¦       ¦   ¦       promises.d.mts
+¦   ¦   ¦   ¦       ¦   ¦       promises.mjs
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---util
+¦   ¦   ¦   ¦       ¦           types.d.mts
+¦   ¦   ¦   ¦       ¦           types.mjs
+¦   ¦   ¦   ¦       ¦           
+¦   ¦   ¦   ¦       +---npm
+¦   ¦   ¦   ¦       ¦   ¦   cross-fetch.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   cross-fetch.mjs
+¦   ¦   ¦   ¦       ¦   ¦   debug.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   debug.mjs
+¦   ¦   ¦   ¦       ¦   ¦   fsevents.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   fsevents.mjs
+¦   ¦   ¦   ¦       ¦   ¦   inherits.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   inherits.mjs
+¦   ¦   ¦   ¦       ¦   ¦   node-fetch.d.mts
+¦   ¦   ¦   ¦       ¦   ¦   node-fetch.mjs
+¦   ¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦   ¦       ¦   +---whatwg-url
+¦   ¦   ¦   ¦       ¦           index.d.mts
+¦   ¦   ¦   ¦       ¦           index.mjs
+¦   ¦   ¦   ¦       ¦           webidl2js-wrapper.d.mts
+¦   ¦   ¦   ¦       ¦           webidl2js-wrapper.mjs
+¦   ¦   ¦   ¦       ¦           
+¦   ¦   ¦   ¦       +---polyfill
+¦   ¦   ¦   ¦       ¦       buffer.d.mts
+¦   ¦   ¦   ¦       ¦       buffer.mjs
+¦   ¦   ¦   ¦       ¦       globalthis-global.d.mts
+¦   ¦   ¦   ¦       ¦       globalthis-global.mjs
+¦   ¦   ¦   ¦       ¦       globalthis.d.mts
+¦   ¦   ¦   ¦       ¦       globalthis.mjs
+¦   ¦   ¦   ¦       ¦       package.json
+¦   ¦   ¦   ¦       ¦       performance.d.mts
+¦   ¦   ¦   ¦       ¦       performance.mjs
+¦   ¦   ¦   ¦       ¦       process.d.mts
+¦   ¦   ¦   ¦       ¦       process.mjs
+¦   ¦   ¦   ¦       ¦       source-maps.mjs
+¦   ¦   ¦   ¦       ¦       timers.d.mts
+¦   ¦   ¦   ¦       ¦       timers.mjs
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---web
+¦   ¦   ¦   ¦       ¦   +---performance
+¦   ¦   ¦   ¦       ¦           index.d.mts
+¦   ¦   ¦   ¦       ¦           index.mjs
+¦   ¦   ¦   ¦       ¦           _polyfills.d.mts
+¦   ¦   ¦   ¦       ¦           _polyfills.mjs
+¦   ¦   ¦   ¦       ¦           
+¦   ¦   ¦   ¦       +---_internal
+¦   ¦   ¦   ¦               types.d.mts
+¦   ¦   ¦   ¦               types.mjs
+¦   ¦   ¦   ¦               utils.d.mts
+¦   ¦   ¦   ¦               utils.mjs
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           mock.cjs
+¦   ¦   ¦           mock.d.cts
+¦   ¦   ¦           
+¦   ¦   +---vite
+¦   ¦   ¦   ¦   client.d.ts
+¦   ¦   ¦   ¦   LICENSE.md
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   ¦       openChrome.js
+¦   ¦   ¦   ¦       vite.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   +---client
+¦   ¦   ¦   ¦   ¦       client.mjs
+¦   ¦   ¦   ¦   ¦       env.mjs
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---node
+¦   ¦   ¦   ¦       ¦   cli.js
+¦   ¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦   ¦       ¦   module-runner.d.ts
+¦   ¦   ¦   ¦       ¦   module-runner.js
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---chunks
+¦   ¦   ¦   ¦               build.js
+¦   ¦   ¦   ¦               build2.js
+¦   ¦   ¦   ¦               chunk.js
+¦   ¦   ¦   ¦               config.js
+¦   ¦   ¦   ¦               config2.js
+¦   ¦   ¦   ¦               dist.js
+¦   ¦   ¦   ¦               lib.js
+¦   ¦   ¦   ¦               logger.js
+¦   ¦   ¦   ¦               moduleRunnerTransport.d.ts
+¦   ¦   ¦   ¦               optimizer.js
+¦   ¦   ¦   ¦               postcss-import.js
+¦   ¦   ¦   ¦               preview.js
+¦   ¦   ¦   ¦               server.js
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---misc
+¦   ¦   ¦   ¦       false.js
+¦   ¦   ¦   ¦       true.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---types
+¦   ¦   ¦       ¦   customEvent.d.ts
+¦   ¦   ¦       ¦   hmrPayload.d.ts
+¦   ¦   ¦       ¦   hot.d.ts
+¦   ¦   ¦       ¦   import-meta.d.ts
+¦   ¦   ¦       ¦   importGlob.d.ts
+¦   ¦   ¦       ¦   importMeta.d.ts
+¦   ¦   ¦       ¦   metadata.d.ts
+¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---internal
+¦   ¦   ¦               cssPreprocessorOptions.d.ts
+¦   ¦   ¦               lightningcssOptions.d.ts
+¦   ¦   ¦               terserOptions.d.ts
+¦   ¦   ¦               
+¦   ¦   +---vite-node
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   vite-node.mjs
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦           chunk-browser.cjs
+¦   ¦   ¦           chunk-browser.mjs
+¦   ¦   ¦           chunk-hmr.cjs
+¦   ¦   ¦           chunk-hmr.mjs
+¦   ¦   ¦           cli.cjs
+¦   ¦   ¦           cli.d.ts
+¦   ¦   ¦           cli.mjs
+¦   ¦   ¦           client.cjs
+¦   ¦   ¦           client.d.ts
+¦   ¦   ¦           client.mjs
+¦   ¦   ¦           constants.cjs
+¦   ¦   ¦           constants.d.ts
+¦   ¦   ¦           constants.mjs
+¦   ¦   ¦           hmr.cjs
+¦   ¦   ¦           hmr.d.ts
+¦   ¦   ¦           hmr.mjs
+¦   ¦   ¦           index.cjs
+¦   ¦   ¦           index.d-DGmxD2U7.d.ts
+¦   ¦   ¦           index.d.ts
+¦   ¦   ¦           index.mjs
+¦   ¦   ¦           server.cjs
+¦   ¦   ¦           server.d.ts
+¦   ¦   ¦           server.mjs
+¦   ¦   ¦           source-map.cjs
+¦   ¦   ¦           source-map.d.ts
+¦   ¦   ¦           source-map.mjs
+¦   ¦   ¦           trace-mapping.d-DLVdEqOp.d.ts
+¦   ¦   ¦           types.cjs
+¦   ¦   ¦           types.d.ts
+¦   ¦   ¦           types.mjs
+¦   ¦   ¦           utils.cjs
+¦   ¦   ¦           utils.d.ts
+¦   ¦   ¦           utils.mjs
+¦   ¦   ¦           
+¦   ¦   +---vitest
+¦   ¦   ¦   ¦   browser.d.ts
+¦   ¦   ¦   ¦   config.d.ts
+¦   ¦   ¦   ¦   coverage.d.ts
+¦   ¦   ¦   ¦   environments.d.ts
+¦   ¦   ¦   ¦   execute.d.ts
+¦   ¦   ¦   ¦   globals.d.ts
+¦   ¦   ¦   ¦   import-meta.d.ts
+¦   ¦   ¦   ¦   importMeta.d.ts
+¦   ¦   ¦   ¦   index.cjs
+¦   ¦   ¦   ¦   index.d.cts
+¦   ¦   ¦   ¦   jsdom.d.ts
+¦   ¦   ¦   ¦   LICENSE.md
+¦   ¦   ¦   ¦   mocker.d.ts
+¦   ¦   ¦   ¦   node.d.ts
+¦   ¦   ¦   ¦   optional-types.d.ts
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   reporters.d.ts
+¦   ¦   ¦   ¦   runners.d.ts
+¦   ¦   ¦   ¦   snapshot.d.ts
+¦   ¦   ¦   ¦   suite.d.ts
+¦   ¦   ¦   ¦   suppress-warnings.cjs
+¦   ¦   ¦   ¦   utils.d.ts
+¦   ¦   ¦   ¦   vitest.mjs
+¦   ¦   ¦   ¦   workers.d.ts
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---dist
+¦   ¦   ¦       ¦   browser.d.ts
+¦   ¦   ¦       ¦   browser.js
+¦   ¦   ¦       ¦   cli.js
+¦   ¦   ¦       ¦   config.cjs
+¦   ¦   ¦       ¦   config.d.ts
+¦   ¦   ¦       ¦   config.js
+¦   ¦   ¦       ¦   coverage.d.ts
+¦   ¦   ¦       ¦   coverage.js
+¦   ¦   ¦       ¦   environments.d.ts
+¦   ¦   ¦       ¦   environments.js
+¦   ¦   ¦       ¦   execute.d.ts
+¦   ¦   ¦       ¦   execute.js
+¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦       ¦   mocker.d.ts
+¦   ¦   ¦       ¦   mocker.js
+¦   ¦   ¦       ¦   node.d.ts
+¦   ¦   ¦       ¦   node.js
+¦   ¦   ¦       ¦   path.js
+¦   ¦   ¦       ¦   reporters.d.ts
+¦   ¦   ¦       ¦   reporters.js
+¦   ¦   ¦       ¦   runners.d.ts
+¦   ¦   ¦       ¦   runners.js
+¦   ¦   ¦       ¦   snapshot.d.ts
+¦   ¦   ¦       ¦   snapshot.js
+¦   ¦   ¦       ¦   spy.js
+¦   ¦   ¦       ¦   suite.d.ts
+¦   ¦   ¦       ¦   suite.js
+¦   ¦   ¦       ¦   worker.js
+¦   ¦   ¦       ¦   workers.d.ts
+¦   ¦   ¦       ¦   workers.js
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---chunks
+¦   ¦   ¦       ¦       base.DfmxU-tU.js
+¦   ¦   ¦       ¦       benchmark.CYdenmiT.js
+¦   ¦   ¦       ¦       benchmark.d.BwvBVTda.d.ts
+¦   ¦   ¦       ¦       cac.Cb-PYCCB.js
+¦   ¦   ¦       ¦       cli-api.BkDphVBG.js
+¦   ¦   ¦       ¦       config.d.D2ROskhv.d.ts
+¦   ¦   ¦       ¦       console.CtFJOzRO.js
+¦   ¦   ¦       ¦       constants.DnKduX2e.js
+¦   ¦   ¦       ¦       coverage.d.S9RMNXIe.d.ts
+¦   ¦   ¦       ¦       coverage.DL5VHqXY.js
+¦   ¦   ¦       ¦       coverage.DVF1vEu8.js
+¦   ¦   ¦       ¦       creator.GK6I-cL4.js
+¦   ¦   ¦       ¦       date.Bq6ZW5rf.js
+¦   ¦   ¦       ¦       defaults.B7q_naMc.js
+¦   ¦   ¦       ¦       env.D4Lgay0q.js
+¦   ¦   ¦       ¦       environment.d.cL3nLXbE.d.ts
+¦   ¦   ¦       ¦       execute.B7h3T_Hc.js
+¦   ¦   ¦       ¦       git.BVQ8w_Sw.js
+¦   ¦   ¦       ¦       global.d.MAmajcmJ.d.ts
+¦   ¦   ¦       ¦       globals.DEHgCU4V.js
+¦   ¦   ¦       ¦       index.B521nVV-.js
+¦   ¦   ¦       ¦       index.BCWujgDG.js
+¦   ¦   ¦       ¦       index.CdQS2e2Q.js
+¦   ¦   ¦       ¦       index.CmSc2RE5.js
+¦   ¦   ¦       ¦       index.CwejwG0H.js
+¦   ¦   ¦       ¦       index.D3XRDfWc.js
+¦   ¦   ¦       ¦       index.VByaPkjc.js
+¦   ¦   ¦       ¦       index.X0nbfr6-.js
+¦   ¦   ¦       ¦       inspector.C914Efll.js
+¦   ¦   ¦       ¦       mocker.d.BE_2ls6u.d.ts
+¦   ¦   ¦       ¦       node.fjCdwEIl.js
+¦   ¦   ¦       ¦       reporters.d.BFLkQcL6.d.ts
+¦   ¦   ¦       ¦       rpc.-pEldfrD.js
+¦   ¦   ¦       ¦       runBaseTests.9Ij9_de-.js
+¦   ¦   ¦       ¦       setup-common.Dd054P77.js
+¦   ¦   ¦       ¦       suite.d.FvehnV49.d.ts
+¦   ¦   ¦       ¦       typechecker.DRKU1-1g.js
+¦   ¦   ¦       ¦       utils.CAioKnHs.js
+¦   ¦   ¦       ¦       utils.XdZDrNZV.js
+¦   ¦   ¦       ¦       vi.bdSIJ99Y.js
+¦   ¦   ¦       ¦       vite.d.CMLlLIFP.d.ts
+¦   ¦   ¦       ¦       vm.BThCzidc.js
+¦   ¦   ¦       ¦       worker.d.1GmBbd7G.d.ts
+¦   ¦   ¦       ¦       worker.d.CKwWzBSj.d.ts
+¦   ¦   ¦       ¦       _commonjsHelpers.BFTU3MAI.js
+¦   ¦   ¦       ¦       
+¦   ¦   ¦       +---workers
+¦   ¦   ¦               forks.js
+¦   ¦   ¦               runVmTests.js
+¦   ¦   ¦               threads.js
+¦   ¦   ¦               vmForks.js
+¦   ¦   ¦               vmThreads.js
+¦   ¦   ¦               
+¦   ¦   +---why-is-node-running
+¦   ¦   ¦   ¦   cli.js
+¦   ¦   ¦   ¦   example.js
+¦   ¦   ¦   ¦   include.js
+¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---.github
+¦   ¦   ¦           FUNDING.yml
+¦   ¦   ¦           
+¦   ¦   +---workerd
+¦   ¦   ¦   ¦   install.js
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   worker.mjs
+¦   ¦   ¦   ¦   workerd.capnp
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   ¦       workerd
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           main.js
+¦   ¦   ¦           
+¦   ¦   +---wrangler
+¦   ¦   ¦   ¦   config-schema.json
+¦   ¦   ¦   ¦   kv-asset-handler.js
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---bin
+¦   ¦   ¦   ¦       wrangler.js
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---node_modules
+¦   ¦   ¦   ¦   +---.bin
+¦   ¦   ¦   ¦   ¦       miniflare
+¦   ¦   ¦   ¦   ¦       workerd
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---@cloudflare
+¦   ¦   ¦   ¦   ¦   +---workerd-linux-64
+¦   ¦   ¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦   ¦       +---bin
+¦   ¦   ¦   ¦   ¦               workerd
+¦   ¦   ¦   ¦   ¦               
+¦   ¦   ¦   ¦   +---miniflare
+¦   ¦   ¦   ¦   ¦   ¦   bootstrap.js
+¦   ¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---dist
+¦   ¦   ¦   ¦   ¦       +---local-explorer-ui
+¦   ¦   ¦   ¦   ¦       ¦   ¦   favicon.svg
+¦   ¦   ¦   ¦   ¦       ¦   ¦   index.html
+¦   ¦   ¦   ¦   ¦       ¦   ¦   
+¦   ¦   ¦   ¦   ¦       ¦   +---assets
+¦   ¦   ¦   ¦   ¦       ¦           Breadcrumbs-C6_BvUSi.js
+¦   ¦   ¦   ¦   ¦       ¦           checkbox-CWANiedi-CRhyuyE0.js
+¦   ¦   ¦   ¦   ¦       ¦           CopyButton-B-JFlnlZ.js
+¦   ¦   ¦   ¦   ¦       ¦           dialog-CpCeOqSZ-hTWqzHIC.js
+¦   ¦   ¦   ¦   ¦       ¦           DotsThree.es-BMQWzTiX.js
+¦   ¦   ¦   ¦   ¦       ¦           dropdown-DFeFcKfn-ClUTiem2.js
+¦   ¦   ¦   ¦   ¦       ¦           format-I1JvgFob.js
+¦   ¦   ¦   ¦   ¦       ¦           index-B5_iUaEs.css
+¦   ¦   ¦   ¦   ¦       ¦           index-BlENPcI3.js
+¦   ¦   ¦   ¦   ¦       ¦           index-CNx_-vS8.js
+¦   ¦   ¦   ¦   ¦       ¦           index-CRazmIcc.js
+¦   ¦   ¦   ¦   ¦       ¦           index-DPt5HRk4.js
+¦   ¦   ¦   ¦   ¦       ¦           object._-DbxtT9aj.js
+¦   ¦   ¦   ¦   ¦       ¦           Pencil.es-zSdK6sd6.js
+¦   ¦   ¦   ¦   ¦       ¦           Plus.es-DrHpJfd8.js
+¦   ¦   ¦   ¦   ¦       ¦           table-BUmvaBj8-CogZxIZ0.js
+¦   ¦   ¦   ¦   ¦       ¦           TableSelect-Z-L8sBdm.js
+¦   ¦   ¦   ¦   ¦       ¦           _bucketName-5Hr5q5M4.js
+¦   ¦   ¦   ¦   ¦       ¦           _className-B-Qyuv4r.js
+¦   ¦   ¦   ¦   ¦       ¦           _databaseId-sDyQUOfI.js
+¦   ¦   ¦   ¦   ¦       ¦           _namespaceId-BBBmakAw.js
+¦   ¦   ¦   ¦   ¦       ¦           _objectId-C8zBEu_I.js
+¦   ¦   ¦   ¦   ¦       ¦           
+¦   ¦   ¦   ¦   ¦       +---src
+¦   ¦   ¦   ¦   ¦           ¦   index.d.ts
+¦   ¦   ¦   ¦   ¦           ¦   index.js
+¦   ¦   ¦   ¦   ¦           ¦   index.js.map
+¦   ¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦   ¦           +---shared
+¦   ¦   ¦   ¦   ¦           ¦       dev-registry.worker.js
+¦   ¦   ¦   ¦   ¦           ¦       dev-registry.worker.js.map
+¦   ¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦   ¦           +---workers
+¦   ¦   ¦   ¦   ¦               +---analytics-engine
+¦   ¦   ¦   ¦   ¦               ¦       analytics-engine.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       analytics-engine.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---assets
+¦   ¦   ¦   ¦   ¦               ¦       assets-kv.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       assets-kv.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       assets.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       assets.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       router.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       router.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       rpc-proxy.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       rpc-proxy.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---browser-rendering
+¦   ¦   ¦   ¦   ¦               ¦       binding.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       binding.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---cache
+¦   ¦   ¦   ¦   ¦               ¦       cache-entry-noop.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       cache-entry-noop.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       cache-entry.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       cache-entry.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       cache.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       cache.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---core
+¦   ¦   ¦   ¦   ¦               ¦       do-wrapper.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       do-wrapper.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       entry.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       entry.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       strip-cf-connecting-ip.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       strip-cf-connecting-ip.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---d1
+¦   ¦   ¦   ¦   ¦               ¦       database.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       database.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---dispatch-namespace
+¦   ¦   ¦   ¦   ¦               ¦       dispatch-namespace-proxy.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       dispatch-namespace-proxy.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       dispatch-namespace.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       dispatch-namespace.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---email
+¦   ¦   ¦   ¦   ¦               ¦       email.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       email.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       send_email.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       send_email.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---hello-world
+¦   ¦   ¦   ¦   ¦               ¦       binding.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       binding.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       object.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       object.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---images
+¦   ¦   ¦   ¦   ¦               ¦       images.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       images.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---kv
+¦   ¦   ¦   ¦   ¦               ¦       namespace.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       namespace.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       sites.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       sites.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---local-explorer
+¦   ¦   ¦   ¦   ¦               ¦       explorer.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       explorer.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---pipelines
+¦   ¦   ¦   ¦   ¦               ¦       pipeline.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       pipeline.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---queues
+¦   ¦   ¦   ¦   ¦               ¦       broker.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       broker.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---r2
+¦   ¦   ¦   ¦   ¦               ¦       bucket.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       bucket.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---ratelimit
+¦   ¦   ¦   ¦   ¦               ¦       ratelimit.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       ratelimit.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---secrets-store
+¦   ¦   ¦   ¦   ¦               ¦       secret.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       secret.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---shared
+¦   ¦   ¦   ¦   ¦               ¦       index.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       index.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       object-entry.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       object-entry.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       remote-proxy-client.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       remote-proxy-client.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       zod.worker.js
+¦   ¦   ¦   ¦   ¦               ¦       zod.worker.js.map
+¦   ¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦   ¦               +---workflows
+¦   ¦   ¦   ¦   ¦                       binding.worker.js
+¦   ¦   ¦   ¦   ¦                       binding.worker.js.map
+¦   ¦   ¦   ¦   ¦                       wrapped-binding.worker.js
+¦   ¦   ¦   ¦   ¦                       wrapped-binding.worker.js.map
+¦   ¦   ¦   ¦   ¦                       
+¦   ¦   ¦   ¦   +---undici
+¦   ¦   ¦   ¦   ¦   ¦   index-fetch.js
+¦   ¦   ¦   ¦   ¦   ¦   index.d.ts
+¦   ¦   ¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---docs
+¦   ¦   ¦   ¦   ¦   ¦   +---docs
+¦   ¦   ¦   ¦   ¦   ¦       +---api
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Agent.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       api-lifecycle.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       BalancedPool.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       CacheStorage.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       CacheStore.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Client.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       ClientStats.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Connector.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       ContentType.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Cookies.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Debug.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       DiagnosticsChannel.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Dispatcher.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       EnvHttpProxyAgent.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Errors.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       EventSource.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Fetch.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       GlobalInstallation.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       H2CClient.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       MockAgent.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       MockCallHistory.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       MockCallHistoryLog.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       MockClient.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       MockErrors.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       MockPool.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Pool.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       PoolStats.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       ProxyAgent.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       RedirectHandler.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       RetryAgent.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       RetryHandler.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       RoundRobinPool.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       SnapshotAgent.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Socks5ProxyAgent.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Util.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       WebSocket.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---best-practices
+¦   ¦   ¦   ¦   ¦   ¦               client-certificate.md
+¦   ¦   ¦   ¦   ¦   ¦               crawling.md
+¦   ¦   ¦   ¦   ¦   ¦               mocking-request.md
+¦   ¦   ¦   ¦   ¦   ¦               proxy.md
+¦   ¦   ¦   ¦   ¦   ¦               undici-vs-builtin-fetch.md
+¦   ¦   ¦   ¦   ¦   ¦               writing-tests.md
+¦   ¦   ¦   ¦   ¦   ¦               
+¦   ¦   ¦   ¦   ¦   +---lib
+¦   ¦   ¦   ¦   ¦   ¦   ¦   global.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   ¦   +---api
+¦   ¦   ¦   ¦   ¦   ¦   ¦       abort-signal.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       api-connect.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       api-pipeline.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       api-request.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       api-stream.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       api-upgrade.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       readable.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---cache
+¦   ¦   ¦   ¦   ¦   ¦   ¦       memory-cache-store.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       sqlite-cache-store.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---core
+¦   ¦   ¦   ¦   ¦   ¦   ¦       connect.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       constants.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       diagnostics.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       errors.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       request.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       socks5-client.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       socks5-utils.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       symbols.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       tree.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       util.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---dispatcher
+¦   ¦   ¦   ¦   ¦   ¦   ¦       agent.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       balanced-pool.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       client-h1.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       client-h2.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       client.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       dispatcher-base.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       dispatcher.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       env-http-proxy-agent.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       fixed-queue.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       h2c-client.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       pool-base.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       pool.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       proxy-agent.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       retry-agent.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       round-robin-pool.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       socks5-proxy-agent.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---encoding
+¦   ¦   ¦   ¦   ¦   ¦   ¦       index.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---handler
+¦   ¦   ¦   ¦   ¦   ¦   ¦       cache-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       cache-revalidation-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       decorator-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       deduplication-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       redirect-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       retry-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       unwrap-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       wrap-handler.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---interceptor
+¦   ¦   ¦   ¦   ¦   ¦   ¦       cache.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       decompress.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       deduplicate.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       dns.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       dump.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       redirect.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       response-error.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       retry.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---llhttp
+¦   ¦   ¦   ¦   ¦   ¦   ¦       .gitkeep
+¦   ¦   ¦   ¦   ¦   ¦   ¦       constants.d.ts
+¦   ¦   ¦   ¦   ¦   ¦   ¦       constants.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       llhttp-wasm.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       llhttp_simd-wasm.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       utils.d.ts
+¦   ¦   ¦   ¦   ¦   ¦   ¦       utils.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---mock
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-agent.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-call-history.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-client.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-errors.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-interceptor.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-pool.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-symbols.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       mock-utils.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       pending-interceptors-formatter.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       snapshot-agent.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       snapshot-recorder.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       snapshot-utils.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---util
+¦   ¦   ¦   ¦   ¦   ¦   ¦       cache.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       date.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       promise.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       runtime-features.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       stats.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       timers.js
+¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   +---web
+¦   ¦   ¦   ¦   ¦   ¦       +---cache
+¦   ¦   ¦   ¦   ¦   ¦       ¦       cache.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       cachestorage.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---cookies
+¦   ¦   ¦   ¦   ¦   ¦       ¦       constants.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       parse.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---eventsource
+¦   ¦   ¦   ¦   ¦   ¦       ¦       eventsource-stream.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       eventsource.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---fetch
+¦   ¦   ¦   ¦   ¦   ¦       ¦       body.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       constants.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       data-url.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       formdata-parser.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       formdata.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       global.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       headers.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       LICENSE
+¦   ¦   ¦   ¦   ¦   ¦       ¦       request.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       response.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       util.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---infra
+¦   ¦   ¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---subresource-integrity
+¦   ¦   ¦   ¦   ¦   ¦       ¦       Readme.md
+¦   ¦   ¦   ¦   ¦   ¦       ¦       subresource-integrity.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---webidl
+¦   ¦   ¦   ¦   ¦   ¦       ¦       index.js
+¦   ¦   ¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦   ¦   ¦       +---websocket
+¦   ¦   ¦   ¦   ¦   ¦           ¦   connection.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   constants.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   events.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   frame.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   permessage-deflate.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   receiver.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   sender.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   util.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   websocket.js
+¦   ¦   ¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦   ¦   ¦           +---stream
+¦   ¦   ¦   ¦   ¦   ¦                   websocketerror.js
+¦   ¦   ¦   ¦   ¦   ¦                   websocketstream.js
+¦   ¦   ¦   ¦   ¦   ¦                   
+¦   ¦   ¦   ¦   ¦   +---scripts
+¦   ¦   ¦   ¦   ¦   ¦       strip-comments.js
+¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   +---types
+¦   ¦   ¦   ¦   ¦           agent.d.ts
+¦   ¦   ¦   ¦   ¦           api.d.ts
+¦   ¦   ¦   ¦   ¦           balanced-pool.d.ts
+¦   ¦   ¦   ¦   ¦           cache-interceptor.d.ts
+¦   ¦   ¦   ¦   ¦           cache.d.ts
+¦   ¦   ¦   ¦   ¦           client-stats.d.ts
+¦   ¦   ¦   ¦   ¦           client.d.ts
+¦   ¦   ¦   ¦   ¦           connector.d.ts
+¦   ¦   ¦   ¦   ¦           content-type.d.ts
+¦   ¦   ¦   ¦   ¦           cookies.d.ts
+¦   ¦   ¦   ¦   ¦           diagnostics-channel.d.ts
+¦   ¦   ¦   ¦   ¦           dispatcher.d.ts
+¦   ¦   ¦   ¦   ¦           env-http-proxy-agent.d.ts
+¦   ¦   ¦   ¦   ¦           errors.d.ts
+¦   ¦   ¦   ¦   ¦           eventsource.d.ts
+¦   ¦   ¦   ¦   ¦           fetch.d.ts
+¦   ¦   ¦   ¦   ¦           formdata.d.ts
+¦   ¦   ¦   ¦   ¦           global-dispatcher.d.ts
+¦   ¦   ¦   ¦   ¦           global-origin.d.ts
+¦   ¦   ¦   ¦   ¦           h2c-client.d.ts
+¦   ¦   ¦   ¦   ¦           handlers.d.ts
+¦   ¦   ¦   ¦   ¦           header.d.ts
+¦   ¦   ¦   ¦   ¦           index.d.ts
+¦   ¦   ¦   ¦   ¦           interceptors.d.ts
+¦   ¦   ¦   ¦   ¦           mock-agent.d.ts
+¦   ¦   ¦   ¦   ¦           mock-call-history.d.ts
+¦   ¦   ¦   ¦   ¦           mock-client.d.ts
+¦   ¦   ¦   ¦   ¦           mock-errors.d.ts
+¦   ¦   ¦   ¦   ¦           mock-interceptor.d.ts
+¦   ¦   ¦   ¦   ¦           mock-pool.d.ts
+¦   ¦   ¦   ¦   ¦           patch.d.ts
+¦   ¦   ¦   ¦   ¦           pool-stats.d.ts
+¦   ¦   ¦   ¦   ¦           pool.d.ts
+¦   ¦   ¦   ¦   ¦           proxy-agent.d.ts
+¦   ¦   ¦   ¦   ¦           readable.d.ts
+¦   ¦   ¦   ¦   ¦           README.md
+¦   ¦   ¦   ¦   ¦           retry-agent.d.ts
+¦   ¦   ¦   ¦   ¦           retry-handler.d.ts
+¦   ¦   ¦   ¦   ¦           round-robin-pool.d.ts
+¦   ¦   ¦   ¦   ¦           snapshot-agent.d.ts
+¦   ¦   ¦   ¦   ¦           socks5-proxy-agent.d.ts
+¦   ¦   ¦   ¦   ¦           util.d.ts
+¦   ¦   ¦   ¦   ¦           utility.d.ts
+¦   ¦   ¦   ¦   ¦           webidl.d.ts
+¦   ¦   ¦   ¦   ¦           websocket.d.ts
+¦   ¦   ¦   ¦   ¦           
+¦   ¦   ¦   ¦   +---workerd
+¦   ¦   ¦   ¦       ¦   install.js
+¦   ¦   ¦   ¦       ¦   package.json
+¦   ¦   ¦   ¦       ¦   README.md
+¦   ¦   ¦   ¦       ¦   worker.mjs
+¦   ¦   ¦   ¦       ¦   workerd.capnp
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---bin
+¦   ¦   ¦   ¦       ¦       workerd
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---lib
+¦   ¦   ¦   ¦               main.js
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---templates
+¦   ¦   ¦   ¦   ¦   checked-fetch.js
+¦   ¦   ¦   ¦   ¦   facade.d.ts
+¦   ¦   ¦   ¦   ¦   modules-watch-stub.js
+¦   ¦   ¦   ¦   ¦   new-worker-scheduled.js
+¦   ¦   ¦   ¦   ¦   new-worker-scheduled.ts
+¦   ¦   ¦   ¦   ¦   new-worker.js
+¦   ¦   ¦   ¦   ¦   new-worker.ts
+¦   ¦   ¦   ¦   ¦   no-op-worker.js
+¦   ¦   ¦   ¦   ¦   pages-dev-pipeline.ts
+¦   ¦   ¦   ¦   ¦   pages-dev-util.ts
+¦   ¦   ¦   ¦   ¦   pages-shim.ts
+¦   ¦   ¦   ¦   ¦   pages-template-plugin.ts
+¦   ¦   ¦   ¦   ¦   pages-template-worker.ts
+¦   ¦   ¦   ¦   ¦   tsconfig-sanity.ts
+¦   ¦   ¦   ¦   ¦   tsconfig.init.json
+¦   ¦   ¦   ¦   ¦   tsconfig.json
+¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   +---middleware
+¦   ¦   ¦   ¦   ¦       common.ts
+¦   ¦   ¦   ¦   ¦       loader-modules.ts
+¦   ¦   ¦   ¦   ¦       loader-sw.ts
+¦   ¦   ¦   ¦   ¦       middleware-ensure-req-body-drained.ts
+¦   ¦   ¦   ¦   ¦       middleware-miniflare3-json-error.ts
+¦   ¦   ¦   ¦   ¦       middleware-patch-console-prefix.d.ts
+¦   ¦   ¦   ¦   ¦       middleware-patch-console-prefix.ts
+¦   ¦   ¦   ¦   ¦       middleware-pretty-error.ts
+¦   ¦   ¦   ¦   ¦       middleware-scheduled.ts
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---remoteBindings
+¦   ¦   ¦   ¦   ¦       ProxyServerWorker.ts
+¦   ¦   ¦   ¦   ¦       wrangler.jsonc
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---startDevWorker
+¦   ¦   ¦   ¦   ¦       InspectorProxyWorker.ts
+¦   ¦   ¦   ¦   ¦       ProxyWorker.ts
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---__tests__
+¦   ¦   ¦   ¦           pages-dev-util.test.ts
+¦   ¦   ¦   ¦           tsconfig-sanity.ts
+¦   ¦   ¦   ¦           tsconfig.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---wrangler-dist
+¦   ¦   ¦           cli.d.ts
+¦   ¦   ¦           cli.js
+¦   ¦   ¦           InspectorProxyWorker.js
+¦   ¦   ¦           metafile-cjs.json
+¦   ¦   ¦           ProxyServerWorker.js
+¦   ¦   ¦           ProxyWorker.js
+¦   ¦   ¦           
+¦   ¦   +---ws
+¦   ¦   ¦   ¦   browser.js
+¦   ¦   ¦   ¦   index.js
+¦   ¦   ¦   ¦   LICENSE
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   wrapper.mjs
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---lib
+¦   ¦   ¦           buffer-util.js
+¦   ¦   ¦           constants.js
+¦   ¦   ¦           event-target.js
+¦   ¦   ¦           extension.js
+¦   ¦   ¦           limiter.js
+¦   ¦   ¦           permessage-deflate.js
+¦   ¦   ¦           receiver.js
+¦   ¦   ¦           sender.js
+¦   ¦   ¦           stream.js
+¦   ¦   ¦           subprotocol.js
+¦   ¦   ¦           validation.js
+¦   ¦   ¦           websocket-server.js
+¦   ¦   ¦           websocket.js
+¦   ¦   ¦           
+¦   ¦   +---youch
+¦   ¦   ¦   ¦   LICENSE.md
+¦   ¦   ¦   ¦   package.json
+¦   ¦   ¦   ¦   README.md
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---build
+¦   ¦   ¦       ¦   chunk-3X66E37A.js
+¦   ¦   ¦       ¦   chunk-4L7RY2JA.js
+¦   ¦   ¦       ¦   chunk-4XB2BYKC.js
+¦   ¦   ¦       ¦   chunk-4YEN7HVQ.js
+¦   ¦   ¦       ¦   chunk-HFSXRSKS.js
+¦   ¦   ¦       ¦   chunk-JAN2TFI2.js
+¦   ¦   ¦       ¦   chunk-OSUFJZHZ.js
+¦   ¦   ¦       ¦   chunk-PINJDICN.js
+¦   ¦   ¦       ¦   chunk-PUHGL6HA.js
+¦   ¦   ¦       ¦   chunk-VE4LENUR.js
+¦   ¦   ¦       ¦   index.d.ts
+¦   ¦   ¦       ¦   index.js
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---public
+¦   ¦   ¦       ¦   +---error_cause
+¦   ¦   ¦       ¦   ¦       style.css
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---error_info
+¦   ¦   ¦       ¦   ¦       style.css
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---error_stack
+¦   ¦   ¦       ¦   ¦       script.js
+¦   ¦   ¦       ¦   ¦       style.css
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---error_stack_source
+¦   ¦   ¦       ¦   ¦       style.css
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---header
+¦   ¦   ¦       ¦   ¦       script.js
+¦   ¦   ¦       ¦   ¦       style.css
+¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦       ¦   +---layout
+¦   ¦   ¦       ¦           script.js
+¦   ¦   ¦       ¦           style.css
+¦   ¦   ¦       ¦           
+¦   ¦   ¦       +---src
+¦   ¦   ¦           ¦   component.d.ts
+¦   ¦   ¦           ¦   helpers.d.ts
+¦   ¦   ¦           ¦   metadata.d.ts
+¦   ¦   ¦           ¦   public_dir.d.ts
+¦   ¦   ¦           ¦   templates.d.ts
+¦   ¦   ¦           ¦   types.d.ts
+¦   ¦   ¦           ¦   types.js
+¦   ¦   ¦           ¦   youch.d.ts
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---templates
+¦   ¦   ¦               +---error_cause
+¦   ¦   ¦               ¦       main.d.ts
+¦   ¦   ¦               ¦       main.js
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---error_info
+¦   ¦   ¦               ¦       main.d.ts
+¦   ¦   ¦               ¦       main.js
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---error_metadata
+¦   ¦   ¦               ¦       main.d.ts
+¦   ¦   ¦               ¦       main.js
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---error_stack
+¦   ¦   ¦               ¦       main.d.ts
+¦   ¦   ¦               ¦       main.js
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---error_stack_source
+¦   ¦   ¦               ¦       main.d.ts
+¦   ¦   ¦               ¦       main.js
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---header
+¦   ¦   ¦               ¦       main.d.ts
+¦   ¦   ¦               ¦       main.js
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---layout
+¦   ¦   ¦                       main.d.ts
+¦   ¦   ¦                       main.js
+¦   ¦   ¦                       
+¦   ¦   +---youch-core
+¦   ¦       ¦   LICENSE.md
+¦   ¦       ¦   package.json
+¦   ¦       ¦   README.md
+¦   ¦       ¦   
+¦   ¦       +---build
+¦   ¦           ¦   index.d.ts
+¦   ¦           ¦   index.js
+¦   ¦           ¦   
+¦   ¦           +---src
+¦   ¦                   debug.d.ts
+¦   ¦                   parser.d.ts
+¦   ¦                   source_file.d.ts
+¦   ¦                   types.d.ts
+¦   ¦                   types.js
+¦   ¦                   
+¦   +---src
+¦   ¦       index.js
+¦   ¦       
+¦   +---test
+¦           index.spec.js
+¦           
++---aec-website
+    ¦   about.html
+    ¦   apply.html
+    ¦   classes.html
+    ¦   contact.html
+    ¦   enroll.html
+    ¦   events.html
+    ¦   index.html
+    ¦   jobs.html
+    ¦   projects.html
+    ¦   volunteers.html
+    ¦   
+    +---.wrangler
+    ¦   +---cache
+    ¦   ¦       pages.json
+    ¦   ¦       wrangler-account.json
+    ¦   ¦       
+    ¦   +---tmp
+    +---assets
+    ¦   +---css
+    ¦   ¦       components.css
+    ¦   ¦       responsive.css
+    ¦   ¦       style.css
+    ¦   ¦       variables.css
+    ¦   ¦       
+    ¦   +---images
+    ¦   ¦       logo.jpg
+    ¦   ¦       me.jpg
+    ¦   ¦       raven.jpg
+    ¦   ¦       
+    ¦   +---js
+    ¦   ¦       cloudflare-config.js
+    ¦   ¦       load-components.js
+    ¦   ¦       main.js
+    ¦   ¦       navbar.js
+    ¦   ¦       
+    ¦   +---videos
+    ¦           vid.mp4
+    ¦           
+    +---includes
+    ¦       footer.html
+    ¦       header.html
+    ¦       seo-meta.html
+    ¦       
+    +---KiminoNawasparkle
+        ¦   admin-users-manager.html
+        ¦   applications-manager.html
+        ¦   classes-manager.html
+        ¦   dashboard.html
+        ¦   events-manager.html
+        ¦   jobs-manager.html
+        ¦   login.html
+        ¦   projects-manager.html
+        ¦   settings.html
+        ¦   volunteers-manager.html
+        ¦   
+        +---.wrangler
+        ¦   +---cache
+        ¦   ¦       pages.json
+        ¦   ¦       wrangler-account.json
+        ¦   ¦       
+        ¦   +---tmp
+        +---components
+        +---js
+        ¦       admin-config.js
+        ¦       role-check.js
+        ¦       
+        +---secret
+            +---something
+                +---doncheck
+                        puplic-application.html
+                        
